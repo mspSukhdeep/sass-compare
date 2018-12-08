@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS Compare | A copy of G2Crowd</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:700" rel="stylesheet" />
-</head>
+<link href="css/style.css" rel="stylesheet"></head>
 <body>
     <header class="hdr">
         <div class="hdr__inr container">
@@ -16,12 +16,17 @@
                 <div class="logo__wrpr column column-20">
                     <img src="https://placem.at/things?w=180&h=40&random=1" alt="Logo" class="logo">
                 </div>
-                <div class="srch__wrpr column column-33">
+                <div class="srch__wrpr column">
                     <input type="search" class="srch__inpt" placeholder="Search">
                 </div>
-                <div class="menu__wrpr column column-25">
-                    <nav class="menu">
-                        <ul>
+                <div class="menu__wrpr column column-50">
+                    <div class="lgn__wrpr float-right">
+                        <a class="lgn__btn lgn__btn--sign-up" href="#">Sign up</a>
+                        or
+                        <button class="lgn__btn lgn__btn--log-in button button-outline">Log in</button>
+                    </div>
+                    <nav class="menu float-right">
+                        <ul class="clearfix">
                             <li class="float-left">
                                 <ul class="card card--pdng">
                                     <li>
@@ -50,11 +55,6 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
-                <div class="lgn__wrpr column column-20">
-                    <button class="lgn__btn lgn__btn--sign-up button button-clear">Sign up</button>
-                    or
-                    <button class="lgn__btn lgn__btn--log-in button button-outline">Log in</button>
                 </div>
             </div>
         </div>

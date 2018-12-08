@@ -1,6 +1,6 @@
 .hdr
-    height: 130px
-    padding: 45px 0
+    height: 110px
+    padding: 31px 0
 
     background-color: $color-white
 
@@ -8,39 +8,54 @@
         width: $site-width
         margin: 0 auto
 
+.logo
+    width: 180px
+    height: 40px
+    margin: 4px 0
+
 .menu
-    font-size: $font-xs
+    &__wrpr
+        line-height: 48px
+
+    margin-right: 50px
+
+    font-size: $font-s
     font-weight: $font-bold
 
     text-transform: uppercase
     
     a
+        text-decoration: none
+
         color: $color-black
 
     ul
         list-style-type: none
 
-        margin-bottom: 1rem
+        margin: 0
 
     & > ul
         & > li
             position: relative
 
+            margin-bottom: 0
+
             & + li
-                margin-left: 15px
+                margin-left: 20px
 
             & > a
                 transition: 0.2s color
 
             ul
                 position: absolute
-                top: 0
+                top: 48px
                 left: 0
 
                 z-index: 1
                 overflow: hidden
 
                 width: 250px
+                line-height: 1.5
                 max-height: 0
                 padding-top: 0
                 padding-bottom: 0
@@ -92,5 +107,10 @@
 
 .lgn
     &__btn
+        &--sign-up
+            display: inline-block
+
+            margin-right: 5px
+
         &--log-in
-            margin-left: 15px
+            margin-left: 5px
