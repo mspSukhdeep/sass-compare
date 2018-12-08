@@ -1,0 +1,25 @@
+$box-shadow: 0 1px 3px 1px rgba(60,64,67,0.15), 0 1px 2px 0 rgba(60,64,67,0.3);
+
+.pill
+	color: $color-primary
+	font-size: 1.4rem
+	font-weight: 500
+	padding: .6rem 1.8rem
+	border-radius: 2.0rem
+	cursor: pointer
+
+	&+&
+		margin-left: 2.0rem
+
+	&:hover
+		color: $color-secondary
+
+	&--active
+		box-shadow: $box-shadow
+
+	&-wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: .5rem 0
+		margin-bottom: 1.0rem
