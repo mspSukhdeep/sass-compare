@@ -1,0 +1,79 @@
+
+
+// Button
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit']
+	background-color: $color-primary
+	border: .1rem solid $color-primary
+	border-radius: .4rem
+	color: $color-initial
+	cursor: pointer
+	display: inline-block
+	font-size: 1.4rem
+	font-weight: 600
+	height: 3.6rem
+	letter-spacing: .025rem
+	line-height: 3.6rem
+	padding: 0 2.0rem
+	text-align: center
+	text-decoration: none
+	white-space: nowrap
+			
+	&:focus,
+	&:hover
+		background-color: transparentize($color-primary, .20)
+		border-color: transparent
+		color: $color-initial
+		outline: 0
+		box-shadow: 0 2px 1px -1px transparentize($color-primary, .85), 0 1px 1px 0 transparentize($color-primary, .9), 0 1px 3px 0 transparentize($color-primary, .93)
+
+	&:active
+		border-color: transparent
+		background-color: transparentize($color-primary, .28)
+		box-shadow: none
+
+	&[disabled]
+		cursor: default
+		opacity: .5
+
+		&:focus,
+		&:hover
+			background-color: $color-primary
+			border-color: $color-primary
+
+	&.button-outline
+		background-color: transparent
+		color: $color-primary
+		border-color: $color-border-box
+
+		&:focus,
+		&:hover
+			background-color: transparentize($color-primary, .95)
+			border-color: transparentize($color-primary, .7)
+
+		&[disabled]
+
+			&:focus,
+			&:hover
+				border-color: inherit
+				color: $color-primary
+
+	&.button-clear
+		background-color: transparent
+		border-color: transparent
+		color: $color-primary
+
+		&:hover
+			background-color: transparent
+			border-color: transparentize($color-primary, .7)
+
+		&[disabled]
+
+			&:focus,
+			&:hover
+				color: $color-primary
