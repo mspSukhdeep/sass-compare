@@ -1,0 +1,96 @@
+.hdr
+    height: 130px
+    padding: 45px 0
+
+    background-color: $color-white
+
+    &__inr
+        width: $site-width
+        margin: 0 auto
+
+.menu
+    font-size: $font-xs
+    font-weight: $font-bold
+
+    text-transform: uppercase
+    
+    a
+        color: $color-black
+
+    ul
+        list-style-type: none
+
+        margin-bottom: 1rem
+
+    & > ul
+        & > li
+            position: relative
+
+            & + li
+                margin-left: 15px
+
+            & > a
+                transition: 0.2s color
+
+            ul
+                position: absolute
+                top: 0
+                left: 0
+
+                z-index: 1
+                overflow: hidden
+
+                width: 250px
+                max-height: 0
+                padding-top: 0
+                padding-bottom: 0
+                margin-left: 0
+
+                transition: 0.1s max-height,  0.1s padding-top,  0.1s padding-bottom
+
+                & + a
+                    &:after
+                            content: '';
+
+                            display: inline-block;
+
+                            border-top: 4px solid $color-black;
+                            border-left: 3px solid transparent;
+                            border-right: 3px solid transparent;
+                            margin-left: 4px;
+
+                            vertical-align: 2px;
+
+                li
+                    a
+                        display: block
+
+                        padding: 24px 14px
+                        border-radius: 3px
+
+                        background-color: $color-light-grey
+
+                        transition: 0.2s background-color
+
+                        &:hover
+                            background-color: $color-blue
+                            color: $color-white
+
+                p
+                    margin-bottom: 0
+
+                    text-transform: none
+
+            &:hover
+                & > a
+                    color: $color-blue
+
+                ul
+                    max-height: 400px
+                    padding-top: 26px
+                    padding-bottom: 16px
+
+.lgn
+    &__btn
+        &--log-in
+            margin-left: 15px

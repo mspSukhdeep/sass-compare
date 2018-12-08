@@ -513,4 +513,89 @@ img {
 .float-right {
   float: right; }
 
+body {
+  margin: 0;
+  background-color: #f2f3f5; }
+
+.main {
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid #dfe1e8;
+  background-color: #fff; }
+
+.card {
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff; }
+  .card--pdng {
+    padding: 16px; }
+
+.hdr {
+  height: 130px;
+  padding: 45px 0;
+  background-color: #fff; }
+  .hdr__inr {
+    width: 1200px;
+    margin: 0 auto; }
+
+.menu {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .menu a {
+    color: #111; }
+  .menu ul {
+    list-style-type: none;
+    margin-bottom: 1rem; }
+  .menu > ul > li {
+    position: relative; }
+    .menu > ul > li + li {
+      margin-left: 15px; }
+    .menu > ul > li > a {
+      transition: 0.2s color; }
+    .menu > ul > li ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+      width: 250px;
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 0;
+      transition: 0.1s max-height,  0.1s padding-top,  0.1s padding-bottom; }
+      .menu > ul > li ul + a:after {
+        content: '';
+        display: inline-block;
+        border-top: 4px solid #111;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        margin-left: 4px;
+        vertical-align: 2px; }
+      .menu > ul > li ul li a {
+        display: block;
+        padding: 24px 14px;
+        border-radius: 3px;
+        background-color: #f2f3f5;
+        transition: 0.2s background-color; }
+        .menu > ul > li ul li a:hover {
+          background-color: #1a73e8;
+          color: #fff; }
+      .menu > ul > li ul p {
+        margin-bottom: 0;
+        text-transform: none; }
+    .menu > ul > li:hover > a {
+      color: #1a73e8; }
+    .menu > ul > li:hover ul {
+      max-height: 400px;
+      padding-top: 26px;
+      padding-bottom: 16px; }
+
+.lgn__btn--log-in {
+  margin-left: 15px; }
+
 /*# sourceMappingURL=style.css.map*/
