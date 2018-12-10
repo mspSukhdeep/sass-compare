@@ -1,6 +1,7 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/main.js',
@@ -40,9 +41,14 @@ module.exports = {
             files: ['./dist/*', '**/*.html']
         }),
         new HtmlWebpackPlugin({
-            title: 'My App',
+            title: 'Main Page',
             template: 'src/index.html',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Page',
+            template: 'src/single.html',
+            filename: 'single.html'
         })
     ],
     watch: true,

@@ -1,0 +1,22 @@
+.product-overview
+	display: flex
+	
+	&__title
+		font-weight: 600
+		font-size: 3.6rem
+		line-height: 1.2
+	
+	&__image
+		display: block
+
+	&__property
+		display: flex
+
+		&-item
+			padding-right: 1.0rem
+			& + &
+				border-left: 1px solid $color-border
+				padding-left: 1.0rem
+
+	&__description
+		margin-top: 15px

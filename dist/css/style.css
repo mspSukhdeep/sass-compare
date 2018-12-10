@@ -128,7 +128,8 @@ input[type='submit'] {
     border-color: transparent;
     color: #fff;
     outline: 0;
-    box-shadow: 0 2px 1px -1px rgba(26, 115, 232, 0.15), 0 1px 1px 0 rgba(26, 115, 232, 0.1), 0 1px 3px 0 rgba(26, 115, 232, 0.07); }
+    box-shadow: 0 2px 1px -1px rgba(26, 115, 232, 0.15), 0 1px 1px 0 rgba(26, 115, 232, 0.1), 0 1px 3px 0 rgba(26, 115, 232, 0.07);
+    text-decoration: none; }
   .button:active,
   button:active,
   input[type='button']:active,
@@ -477,13 +478,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
   letter-spacing: .04rem;
   margin-top: 0;
   margin-bottom: 1.0rem; }
 
 h1 {
-  font-size: 4.6rem; }
+  font-size: 3.6rem;
+  line-height: 1.2; }
 
 h2 {
   font-size: 2.4rem; }
@@ -492,13 +493,13 @@ h3 {
   font-size: 2.2rem; }
 
 h4 {
-  font-size: 2.2rem; }
+  font-size: 1.8rem; }
 
 h5 {
   font-size: 1.8rem; }
 
 h6 {
-  font-size: 1.6rem; }
+  font-size: 1.8rem; }
 
 img {
   max-width: 100%; }
@@ -535,14 +536,67 @@ img {
   .pill + .pill {
     margin-left: 2.0rem; }
   .pill:hover {
-    color: #174ea6; }
+    color: #174ea6;
+    text-decoration: none; }
   .pill--active {
     box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3); }
   .pill-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: .5rem 0;
-    margin-bottom: 1.0rem; }
+    justify-content: center; }
+
+.breadcrumb {
+  display: flex;
+  padding: .5rem 0;
+  margin: 0 0 2.0rem 0; }
+  .breadcrumb-item {
+    list-style-type: none;
+    margin: 0; }
+    .breadcrumb-item + .breadcrumb-item {
+      margin-left: 1.0rem; }
+      .breadcrumb-item + .breadcrumb-item:before {
+        content: '/';
+        padding-right: 5px; }
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-right: 1.0rem; }
+  .rating__star {
+    width: 9rem;
+    height: 1.8rem;
+    background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png") repeat-x left center/1.8rem; }
+    .rating__star-inr {
+      height: 1.8rem;
+      background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/1.8rem; }
+  .rating__num {
+    margin-left: .5rem; }
+
+.sidebar {
+  border-right: 1px solid #f1f3f4;
+  height: 200px; }
+
+.product-overview {
+  display: flex; }
+  .product-overview__title {
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 1.2; }
+  .product-overview__image {
+    display: block; }
+  .product-overview__property {
+    display: flex; }
+    .product-overview__property-item {
+      padding-right: 1.0rem; }
+      .product-overview__property-item + .product-overview__property-item {
+        border-left: 1px solid #f1f3f4;
+        padding-left: 1.0rem; }
+  .product-overview__description {
+    margin-top: 15px; }
+
+.content {
+  margin-top: 30px; }
+  .content__main {
+    padding: 20px; }
 
 /*# sourceMappingURL=style.css.map*/
