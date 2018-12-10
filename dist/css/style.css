@@ -1547,5 +1547,34 @@ tr.pricing__column--feature td {
     .footer__india:hover .footer__heart {
       color: #c00; }
 
+@media (max-width: 480px) {
+  .srch__wrpr.srch__wrpr {
+    display: none; } }
+
+.rvw__user {
+  font-size: 1.4rem; }
+  .rvw__user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+  .rvw__user-name {
+    font-weight: 600; }
+  .rvw__user-info {
+    color: #555; }
+    .rvw__user-info-item {
+      padding-left: 20px;
+      margin-top: 2px;
+      background: url("https://placem.at/things?w=16&h=16&random=3") left center/16px no-repeat; }
+
+.rvw__date {
+  font-size: 1.4rem;
+  color: #555; }
+
+.rvw__ttl {
+  color: #1a73e8; }
+
+.rvw__sctn-hdng {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map*/
