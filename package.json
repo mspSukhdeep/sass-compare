@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "copy-webpack-plugin": "^4.6.0"
+    "copy-webpack-plugin": "^4.6.0",
+    "slendr": "^1.4.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.5",
