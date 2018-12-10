@@ -652,15 +652,18 @@ img {
     padding: 20px; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #fff; }
 
 .main {
   box-sizing: border-box;
   width: 114rem;
   padding: 20px;
   margin: 0 auto;
-  border: 1px solid #dfe1e8;
-  background-color: #fff; }
+  border: 1px solid #dfe1e8; }
+
+.sctn {
+  margin-top: 20px; }
 
 .section + .section {
   margin-top: 30px; }
@@ -676,8 +679,6 @@ body {
     margin: 0 auto; }
 
 .logo {
-  width: 180px;
-  height: 40px;
   margin: 4px 0; }
 
 .menu {
@@ -1124,5 +1125,34 @@ input[type="search"] {
   .profile__link {
     white-space: nowrap; }
 
+@media (max-width: 480px) {
+  .srch__wrpr.srch__wrpr {
+    display: none; } }
+
+.rvw__user {
+  font-size: 1.4rem; }
+  .rvw__user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+  .rvw__user-name {
+    font-weight: 600; }
+  .rvw__user-info {
+    color: #555; }
+    .rvw__user-info-item {
+      padding-left: 20px;
+      margin-top: 2px;
+      background: url("https://placem.at/things?w=16&h=16&random=3") left center/16px no-repeat; }
+
+.rvw__date {
+  font-size: 1.4rem;
+  color: #555; }
+
+.rvw__ttl {
+  color: #1a73e8; }
+
+.rvw__sctn-hdng {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map*/
