@@ -1,34 +1,74 @@
-.rvw
+.review
+    &__heading
+        &.review__heading
+            margin-bottom: 0.8rem
+
+    &__count
+        margin-bottom: 2.5rem
+
+        font-size: $font-s
+
     &__user
         font-size: $font-s
 
-        &-img
+        &-image
             width: 80px
             height: 80px
             border-radius: 50%
         
         &-name
+            margin: 0.3rem 0 0.6rem
+
             font-weight: $font-bold
 
         &-info
             color: $color-dark-grey
 
             &-item
-                padding-left: 20px
-                margin-top: 2px
+                padding-left: 2rem
+                margin-top: 0.3rem
 
                 background: url('https://placem.at/things?w=16&h=16&random=3') left center / 16px no-repeat
 
     &__date
+        padding-left: 1rem
+        border-left: 1px solid $color-border
+        margin-left: 1rem
+
         font-size: $font-s
 
         color: $color-dark-grey
 
-    &__ttl
-        color: $color-blue
+    &__title
+        margin: 1rem 0 2.5rem
 
-    &__sctn
-        &-hdng
+    &__question
+        &-title
             margin: 1rem 0 0.5rem
 
             font-weight: $font-bold
+
+    &__footer
+        font-size: $font-s
+
+        color: $color-dark-grey
+
+        label
+            margin-left: 1.5rem
+
+            font-size: inherit
+
+        input
+            margin-right: 0.5rem
+
+            vertical-align: -1px
+
+    &__helpful
+        &-form
+            display: inline-block
+
+    &__report
+        &-link
+            padding-left: 1rem
+            border-left: 1px solid $color-border
+            margin-left: 1rem
