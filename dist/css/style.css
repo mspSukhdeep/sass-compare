@@ -566,6 +566,8 @@ img {
 
 .semi-bold {
   font-weight: 500; }
+.section + .section {
+  margin-top: 2.5rem; }
 
 .section + .section {
   margin-top: 2.5rem; }
@@ -642,12 +644,12 @@ h1.section__title {
   display: flex;
   align-items: center; }
   .rating__star {
-    width: 12rem;
-    height: 2.4rem;
-    background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png") repeat-x left center/2.4rem; }
+    width: 9rem;
+    height: 1.8rem;
+    background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png") repeat-x left center/1.8rem; }
     .rating__star-inr {
-      height: 2.4rem;
-      background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/2.4rem; }
+      height: 1.8rem;
+      background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/1.8rem; }
   .rating__num {
     margin-left: 1rem;
     font-size: 1.8rem;
@@ -1121,6 +1123,14 @@ input[type="search"] {
         line-height: 3.0rem; }
       .intro-footer .intro__form {
         margin-bottom: 0; } }
+@media (max-width: 480px) {
+  .srch__wrpr.srch__wrpr {
+    display: none; } }
+
+.content {
+  margin-top: 30px; }
+  .content__main.content__main {
+    padding-left: 2rem; }
 
 .product-overview {
   display: flex;
@@ -1576,5 +1586,83 @@ tr.pricing__column--feature td {
 .rvw__sctn-hdng {
   margin: 1rem 0 0.5rem;
   font-weight: 600; }
+
+.review__heading.review__heading {
+  margin-bottom: 0.8rem; }
+
+.review__count {
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem; }
+
+.review__user {
+  font-size: 1.4rem; }
+  .review__user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+  .review__user-name {
+    margin: 0.3rem 0 0.6rem;
+    font-weight: 600; }
+  .review__user-info {
+    color: #5f6368; }
+    .review__user-info-item {
+      padding-left: 2rem;
+      margin-top: 0.3rem;
+      background: url("https://placem.at/things?w=16&h=16&random=3") left center/16px no-repeat; }
+
+.review__date {
+  padding-left: 1rem;
+  border-left: 1px solid #f1f3f4;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  color: #5f6368; }
+
+.review__title {
+  margin: 1rem 0 2.5rem; }
+
+.review__question-title {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600; }
+
+.review__footer {
+  font-size: 1.4rem;
+  color: #5f6368; }
+  .review__footer label {
+    margin-left: 1.5rem;
+    font-size: inherit; }
+  .review__footer input {
+    margin-right: 0.5rem;
+    vertical-align: -1px; }
+
+.review__helpful-form {
+  display: inline-block; }
+
+.review__report-link {
+  padding-left: 1rem;
+  border-left: 1px solid #f1f3f4;
+  margin-left: 1rem; }
+
+.pricing__table {
+  border-collapse: separate;
+  border-spacing: 1.2rem 0; }
+  .pricing__table tr th {
+    border-radius: 5px 5px 0 0; }
+  .pricing__table tr:first-child th, .pricing__table tr:first-child td {
+    border-top: 0.1rem solid #f1f3f4; }
+  .pricing__table tr:last-child td {
+    border-bottom: 0.1rem solid #f1f3f4;
+    border-radius: 0 0 5px 5px; }
+  .pricing__table tr th, .pricing__table tr td {
+    border-right: 0.1rem solid #f1f3f4;
+    border-bottom: none;
+    border-left: 0.1rem solid #f1f3f4;
+    text-align: center; }
+    .pricing__table tr th:first-child, .pricing__table tr td:first-child {
+      padding-left: 1.5rem; }
+    .pricing__table tr th:last-child, .pricing__table tr td:last-child {
+      padding-right: 1.5rem; }
+
+tr.pricing__column--feature td {
+  text-align: left; }
 
 /*# sourceMappingURL=style.css.map*/
