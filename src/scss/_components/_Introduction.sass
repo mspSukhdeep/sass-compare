@@ -1,0 +1,114 @@
+$color-dark: #111
+$color-light: #444
+
+.intro
+	padding-top: 9rem
+	&__inr
+		height: 41.8rem
+
+	&__title
+		font-weight: 600
+		font-size: 4.2rem
+		color: $color-dark
+		&-sub
+			margin-top: 3rem
+			font-size: 2.0rem
+
+	&__form
+		display: flex
+		margin-top: 3rem
+
+		&-sub
+			font-weight: 300
+
+		&-button
+			margin-left: 1.0rem
+
+		&-success
+			background: url('https://assets.mspcdn.net/zariance/icon/thumb-up.svg') no-repeat left center / 3.0rem
+			padding-left: 4.0rem
+			margin: 2.5rem 0
+
+	&__body
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 70rem
+		font-size: 2.0rem
+		
+		&-inr
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			right: 0
+			background: url('https://assets.mspcdn.net/zariance/bg/home.svg') no-repeat top right / 60rem		
+	
+	&-section
+		text-align: center
+		margin: 11.0rem auto 0 auto
+		color: $color-light
+		width: 96rem
+
+		&__title
+			font-weight: 600
+			font-size: 4.2rem
+			color: $color-dark
+
+			&-sub
+				font-weight: 600
+				font-size: 3.6rem
+				margin-top: 2.0rem
+
+		& &__body
+			justify-content: center
+			font-size: 1.8rem
+
+			&-item
+				display: flex
+				align-items: center
+				flex-direction: column
+				box-sizing: content-box
+				width: 47rem
+				max-width: 47rem
+
+				& + .intro-section__body-item
+					margin-left: 10rem
+			
+			&-para
+				margin-bottom: 1.2rem
+		&__img
+			width: 50px
+
+			&-wrpr
+				background-color: #f2f3f5
+				border-radius: 50%
+				width: 120px
+				height: 120px
+				display: flex
+				justify-content: center
+	
+	&-footer
+		background: #f2f3f5
+		text-align: center
+		padding: 6rem 0
+		margin-top: 7rem
+
+		&__title
+			font-size: 4.2rem
+			font-weight: 600
+			color: $color-dark
+			line-height: 5.0rem
+
+		&__inr
+			width: 75rem
+			margin: 0 auto
+
+		.intro__form
+			&-input
+				background-color: $color-white
+
+			&-wrapper
+				width: 45rem
+				margin: 3.6rem auto 0 auto

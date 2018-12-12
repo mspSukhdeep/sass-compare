@@ -4,7 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "npx webpack --mode=development",
+    "dev": "npx webpack --mode=production"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +14,9 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "copy-webpack-plugin": "^4.6.0",
-    "slendr": "^1.4.0"
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "slendr": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.23.5",
@@ -20,11 +24,13 @@
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.9",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.7.2",
     "prettier": "^1.10.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }
