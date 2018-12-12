@@ -1127,6 +1127,41 @@ input[type="search"] {
   .srch__wrpr.srch__wrpr {
     display: none; } }
 
+.product-list__item {
+  min-height: 12rem;
+  margin-top: 2.5rem; }
+  .product-list__item + .product-list__item {
+    padding-top: 2.5rem;
+    border-top: 1px solid #f1f3f4; }
+
+.product-list__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  margin: auto; }
+  .product-list__img-wrpr {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border: 1px solid #f1f3f4; }
+
+.product-list__details {
+  margin-left: 14rem; }
+
+.product-list__rating {
+  font-size: 1.4rem; }
+
+.product-list__description {
+  margin: 1rem 0 1.5rem; }
+
+.product-list__PDP-link {
+  line-height: 3.6rem; }
+
 .content {
   margin-top: 30px; }
   .content__main.content__main {
@@ -1664,5 +1699,18 @@ tr.pricing__column--feature td {
 
 tr.pricing__column--feature td {
   text-align: left; }
+
+.footer {
+  margin: 6rem 0 4rem; }
+  .footer__logo {
+    height: 4rem; }
+  .footer__copyright {
+    font-size: 1.4rem; }
+  .footer__india {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    cursor: default; }
+    .footer__india:hover .footer__heart {
+      color: #c00; }
 
 /*# sourceMappingURL=style.css.map*/
