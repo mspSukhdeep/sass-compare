@@ -50,6 +50,11 @@ module.exports = {
             title: 'All Components Page',
             template: 'src/all.html',
             filename: 'all.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Review Page',
+            template: 'src/review.html',
+            filename: 'review.html'
         })
     ],
     watch: true,

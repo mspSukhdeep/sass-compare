@@ -1,0 +1,60 @@
+$image-size: 12rem
+
+.write-review
+    &__section
+        width: 60%
+
+    &__form
+        textarea
+            resize: vertical
+
+            height: 9rem
+
+            font-family: inherit
+
+        .rating
+            margin: 1rem 0 2rem
+
+            &__star,
+            &__star-inr
+                height: 3rem
+                background-size: 3rem
+
+            &__star
+                width: 15rem
+
+                cursor: pointer
+
+                &-inr
+                    width: 0
+
+    &__img
+        &-wrpr
+            position: relative
+
+            width: $image-size
+            height: $image-size
+            padding: 1rem
+            border: 1px solid $color-border
+
+        @include absolute-center
+
+    &__title
+        @include ellipsis
+
+        line-height: $image-size
+        margin: 0 0 2rem $image-size + 2rem
+
+    &__field
+        & + &
+            margin-top: 1rem
+
+    &__limit
+        font-weight: $font-normal
+        font-size: $font-s
+
+    &__required
+        color: $color-red
+
+    &__input
+        margin-top: 1rem
