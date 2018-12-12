@@ -37,6 +37,11 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'List Page',
+            template: 'src/list.html',
+            filename: 'list.html'
+        }),
+        new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single.html',
             filename: 'single.html'

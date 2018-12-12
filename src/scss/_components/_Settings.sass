@@ -4,6 +4,7 @@ $font-xs: 1.3rem
 $font-s: 1.4rem
 $font-m: 1.6rem
 
+$font-semibold: 500
 $font-bold: 600
 
 $color-white: #fff
@@ -11,4 +12,17 @@ $color-light-grey: #f2f3f5
 $color-grey: #dfe1e8
 $color-dark-grey: #5f6368
 $color-blue: #1a73e8
+$color-red: #c00
 $color-black: #111
+
+@mixin absolute-center
+    position: absolute
+
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    max-width: 100%
+    min-height: 100%
+    margin: auto
