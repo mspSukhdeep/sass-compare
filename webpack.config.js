@@ -37,14 +37,34 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'List Page',
+            template: 'src/list.html',
+            filename: 'list.html'
+        }),
+        new HtmlWebpackPlugin({
             title: 'Single Page',
-            template: 'src/single.html',
-            filename: 'single.html'
+            template: 'src/single-reviews.html',
+            filename: 'single-reviews.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Page',
+            template: 'src/single-profile.html',
+            filename: 'single-profile.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Page',
+            template: 'src/single-pricing.html',
+            filename: 'single-pricing.html'
         }),
         new HtmlWebpackPlugin({
             title: 'All Components Page',
             template: 'src/all.html',
             filename: 'all.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Review Page',
+            template: 'src/review.html',
+            filename: 'review.html'
         })
     ],
     watch: true,

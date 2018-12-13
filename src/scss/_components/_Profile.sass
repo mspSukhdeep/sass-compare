@@ -1,22 +1,27 @@
 .profile
-	padding-top: 30px
 	& &__user
-		display: flex
-		border-left: 1px solid $color-border
+		padding: 2.4rem
+		border: 1px solid $color-border
+		border-radius: $border-radius
 
 		&-img
 			border-radius: 50%
 			overflow: hidden
-			width: 128px
-			
-			&-wrpr
-				padding: 0 15px
+			width: 100px
+			height: 100px
+
 		&-name
+			margin-top: 1.5rem
+
 			font-size: 1.8rem
 			font-weight: 500
 		
 		&-designation
-			margin-top: 15px
+			margin-top: 1.5rem
 
 	&__link
 		white-space: nowrap
+
+	&__info
+		dl
+			margin: 2.4rem 0 0 1.4rem
