@@ -566,6 +566,7 @@ img {
 
 .semi-bold {
   font-weight: 500; }
+
 .section + .section {
   margin-top: 2.5rem; }
 
@@ -644,12 +645,12 @@ h1.section__title {
   display: flex;
   align-items: center; }
   .rating__star {
-    width: 9rem;
-    height: 1.8rem;
-    background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png") repeat-x left center/1.8rem; }
+    width: 12rem;
+    height: 2.4rem;
+    background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png") repeat-x left center/2.4rem; }
     .rating__star-inr {
-      height: 1.8rem;
-      background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/1.8rem; }
+      height: 2.4rem;
+      background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/2.4rem; }
   .rating__num {
     margin-left: 1rem;
     font-size: 1.8rem;
@@ -995,6 +996,46 @@ input[type="search"] {
     .content__main.content__main {
       padding-left: 0; } }
 
+.product-list__item {
+  min-height: 12rem;
+  margin-top: 2.5rem; }
+  .product-list__item + .product-list__item {
+    padding-top: 2.5rem;
+    border-top: 1px solid #f1f3f4; }
+
+.product-list__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  margin: auto; }
+  .product-list__img-wrpr {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border: 1px solid #f1f3f4; }
+
+.product-list__details {
+  margin-left: 14rem; }
+
+.product-list__rating {
+  font-size: 1.4rem; }
+
+.product-list__description {
+  margin: 1rem 0 1.5rem; }
+
+.product-list__PDP-link {
+  line-height: 3.6rem; }
+
+.content {
+  margin-top: 30px; }
+  .content__main.content__main {
+    padding-left: 2rem; }
+
 .intro {
   padding-top: 9rem; }
   .intro__inr {
@@ -1123,49 +1164,6 @@ input[type="search"] {
         line-height: 3.0rem; }
       .intro-footer .intro__form {
         margin-bottom: 0; } }
-@media (max-width: 480px) {
-  .srch__wrpr.srch__wrpr {
-    display: none; } }
-
-.product-list__item {
-  min-height: 12rem;
-  margin-top: 2.5rem; }
-  .product-list__item + .product-list__item {
-    padding-top: 2.5rem;
-    border-top: 1px solid #f1f3f4; }
-
-.product-list__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  min-height: 100%;
-  margin: auto; }
-  .product-list__img-wrpr {
-    position: relative;
-    width: 12rem;
-    height: 12rem;
-    padding: 1rem;
-    border: 1px solid #f1f3f4; }
-
-.product-list__details {
-  margin-left: 14rem; }
-
-.product-list__rating {
-  font-size: 1.4rem; }
-
-.product-list__description {
-  margin: 1rem 0 1.5rem; }
-
-.product-list__PDP-link {
-  line-height: 3.6rem; }
-
-.content {
-  margin-top: 30px; }
-  .content__main.content__main {
-    padding-left: 2rem; }
 
 .product-overview {
   display: flex;
@@ -1618,15 +1616,17 @@ tr.pricing__column--feature td {
 .rvw__ttl {
   color: #1a73e8; }
 
-.rvw__sctn-hdng {
-  margin: 1rem 0 0.5rem;
-  font-weight: 600; }
+.profile__info dl {
+  margin: 2.4rem 0 0 1.4rem; }
 
 .review__heading.review__heading {
   margin-bottom: 0.8rem; }
 
+.review__write-button {
+  margin-top: 0.5rem; }
+
 .review__count {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   font-size: 1.4rem; }
 
 .review__user {
@@ -1643,7 +1643,13 @@ tr.pricing__column--feature td {
     .review__user-info-item {
       padding-left: 2rem;
       margin-top: 0.3rem;
-      background: url("https://placem.at/things?w=16&h=16&random=3") left center/16px no-repeat; }
+      background: left center / 16px no-repeat; }
+      .review__user-info-item--valid {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/check-grey.svg"); }
+      .review__user-info-item--verified {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg"); }
+      .review__user-info-item--source {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/info-grey.svg"); }
 
 .review__date {
   padding-left: 1rem;
@@ -1760,6 +1766,14 @@ tr.pricing__column--feature td {
   margin-top: 2rem;
   background-color: #f2f3f5;
   color: #5f6368; }
+  .footer + .footer {
+    margin-top: 0; }
+  .footer--white {
+    background-color: #fff; }
+  .footer--intro {
+    padding: 6rem 0;
+    margin-top: 7rem;
+    text-align: center; }
   .footer__logo {
     height: 2.6rem; }
   .footer__copyright {
@@ -1773,5 +1787,6 @@ tr.pricing__column--feature td {
     transition: 0.2s color; }
     .footer__india:hover .footer__heart {
       color: #c00; }
+
 
 /*# sourceMappingURL=style.css.map*/
