@@ -3,8 +3,11 @@
         &.review__heading
             margin-bottom: 0.8rem
 
+    &__write-button
+        margin-top: 0.5rem
+
     &__count
-        margin-bottom: 2.5rem
+        margin-bottom: 4rem
 
         font-size: $font-s
 
@@ -28,7 +31,16 @@
                 padding-left: 2rem
                 margin-top: 0.3rem
 
-                background: url('https://placem.at/things?w=16&h=16&random=3') left center / 16px no-repeat
+                background: left center / 16px no-repeat
+
+                &--valid
+                    background-image: url('https://assets.mspcdn.net/zariance/icon/check-grey.svg')
+
+                &--verified
+                    background-image: url('https://assets.mspcdn.net/zariance/icon/account-grey.svg')
+
+                &--source
+                    background-image: url('https://assets.mspcdn.net/zariance/icon/info-grey.svg')
 
     &__date
         padding-left: 1rem
