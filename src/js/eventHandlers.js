@@ -99,7 +99,12 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
         submit: function(s) {
             this.submit();
             return this;
+        },
+        html: function(content) {
+            this[0].innerHTML = content;
+            return this;
         }
+
     });
     return $;
 })(window, document, [], /\.(.+)/, 0, 'EventListener', 'MatchesSelector')
