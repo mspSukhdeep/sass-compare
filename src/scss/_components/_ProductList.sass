@@ -1,0 +1,33 @@
+$image-size: 12rem
+
+.product-list
+    &__item
+        min-height: $image-size
+        margin-top: 2.5rem
+
+        & + &
+            padding-top: 2.5rem
+            border-top: 1px solid $color-border
+
+    &__img
+        &-wrpr
+            position: relative
+
+            width: $image-size
+            height: $image-size
+            padding: 1rem
+            border: 1px solid $color-border
+
+        @include absolute-center
+
+    &__details
+        margin-left: $image-size + 2rem
+
+    &__rating
+        font-size: $font-s
+
+    &__description
+        margin: 1rem 0 1.5rem
+
+    &__PDP-link
+        line-height: 3.6rem

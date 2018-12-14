@@ -551,20 +551,27 @@ img {
 .semi-bold {
   font-weight: 500; }
 
+.section + .section {
+  margin-top: 2.5rem; }
+
 .section__title {
+  margin-bottom: 2rem;
   font-size: 2.4rem;
-  margin-bottom: 2.0rem;
   font-weight: 500;
-  letter-spacing: .04rem; }
+  letter-spacing: 0.04rem; }
   .section__title--sub {
+    margin-bottom: 1rem;
     font-size: 2.2rem;
-    margin-bottom: 1.0rem;
     font-weight: 500;
-    letter-spacing: .04rem; }
+    letter-spacing: 0.04rem; }
+
+h1.section__title {
+  line-height: 1.2;
+  font-size: 3.6rem;
+  font-weight: 600; }
 
 .pill {
-  color: #1a73e8;
-  font-size: 1.4rem;
+  color: #5f6368;
   font-weight: 500;
   padding: .6rem 1.8rem;
   border-radius: 2.0rem;
@@ -575,17 +582,19 @@ img {
     color: #174ea6;
     text-decoration: none; }
   .pill--active {
-    box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3); }
+    box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+    color: #1a73e8; }
   .pill-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px; }
+    margin: 1rem 0; }
 
 .breadcrumb {
   display: flex;
   padding: .5rem 0;
-  margin: 0 0 2.0rem 0; }
+  margin: 0 0 2.0rem 0;
+  font-size: 1.4rem; }
   .breadcrumb-item {
     list-style-type: none;
     margin: 0; }
@@ -607,11 +616,14 @@ img {
       height: 2.4rem;
       background: url("https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png") repeat-x left center/2.4rem; }
   .rating__num {
-    margin-left: .5rem; }
+    margin-left: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 600; }
 
 .sidebar {
-  border-right: 1px solid #f1f3f4;
-  padding-right: 20px; }
+  border-right: 1px solid #f1f3f4; }
+  .sidebar.sidebar {
+    padding-right: 2rem; }
 
 .card {
   box-sizing: border-box;
@@ -640,7 +652,7 @@ img {
     justify-content: center; }
   .card__text {
     padding: 15px;
-    color: #3c4043; }
+    color: #111; }
   .card__hover {
     display: none;
     position: absolute;
@@ -656,21 +668,18 @@ img {
   .card:hover .card__hover {
     display: flex; }
 
-.content {
-  margin-top: 30px; }
-  .content__main {
-    padding: 20px; }
-
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #fff; }
 
 .main {
   box-sizing: border-box;
   width: 114rem;
-  padding: 20px;
-  margin: 0 auto;
-  border: 1px solid #dfe1e8;
-  background-color: #fff; }
+  padding: 20px 0;
+  margin: 0 auto; }
+
+.sctn {
+  margin-top: 20px; }
 
 .section + .section {
   margin-top: 30px; }
@@ -686,9 +695,8 @@ body {
     margin: 0 auto; }
 
 .logo {
-  width: 180px;
-  height: 40px;
-  margin: 4px 0; }
+  height: 36px;
+  margin: 0.6rem 0; }
 
 .menu {
   margin-right: 50px;
@@ -859,6 +867,46 @@ input[type="search"] {
     .search-wrapper--page .search__close {
       display: block; }
 
+.product-list__item {
+  min-height: 12rem;
+  margin-top: 2.5rem; }
+  .product-list__item + .product-list__item {
+    padding-top: 2.5rem;
+    border-top: 1px solid #f1f3f4; }
+
+.product-list__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  margin: auto; }
+  .product-list__img-wrpr {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border: 1px solid #f1f3f4; }
+
+.product-list__details {
+  margin-left: 14rem; }
+
+.product-list__rating {
+  font-size: 1.4rem; }
+
+.product-list__description {
+  margin: 1rem 0 1.5rem; }
+
+.product-list__PDP-link {
+  line-height: 3.6rem; }
+
+.content {
+  margin-top: 30px; }
+  .content__main.content__main {
+    padding-left: 2rem; }
+
 .intro {
   padding-top: 9rem; }
   .intro__inr {
@@ -936,24 +984,19 @@ input[type="search"] {
         height: 120px;
         display: flex;
         justify-content: center; }
-  .intro-footer {
-    background: #f2f3f5;
-    text-align: center;
-    padding: 6rem 0;
-    margin-top: 7rem; }
-    .intro-footer__title {
-      font-size: 4.2rem;
-      font-weight: 600;
-      color: #111;
-      line-height: 5.0rem; }
-    .intro-footer__inr {
-      max-width: 75rem;
-      margin: 0 auto; }
-    .intro-footer .intro__form-input {
-      background-color: #fff; }
-    .intro-footer .intro__form-wrapper {
-      max-width: 45rem;
-      margin: 3.6rem auto 0 auto; }
+  .intro-footer__title {
+    font-size: 4.2rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 5.0rem; }
+  .intro-footer__inr {
+    max-width: 75rem;
+    margin: 0 auto; }
+  .intro-footer .intro__form-input {
+    background-color: #fff; }
+  .intro-footer .intro__form-wrapper {
+    max-width: 45rem;
+    margin: 3.6rem auto 0 auto; }
 
 @media (max-width: 48rem) {
   .container {
@@ -995,6 +1038,8 @@ input[type="search"] {
 
 .product-overview {
   display: flex; }
+  .product-overview .row {
+    align-items: center; }
   .product-overview__title {
     font-weight: 600;
     font-size: 3.6rem;
@@ -1145,28 +1190,202 @@ input[type="search"] {
 
 .widget__body {
   padding: 10px 0; }
+  .sidebar .widget__body a {
+    font-weight: 400; }
 
 .widget ul.no-list {
   margin: 0; }
 
-.profile {
-  padding-top: 30px; }
-  .profile .profile__user {
-    display: flex;
-    border-left: 1px solid #f1f3f4; }
-    .profile .profile__user-img {
-      border-radius: 50%;
-      overflow: hidden;
-      width: 128px; }
-      .profile .profile__user-img-wrpr {
-        padding: 0 15px; }
-    .profile .profile__user-name {
-      font-size: 1.8rem;
-      font-weight: 500; }
-    .profile .profile__user-designation {
-      margin-top: 15px; }
-  .profile__link {
-    white-space: nowrap; }
+.profile .profile__user {
+  padding: 2.4rem;
+  border: 1px solid #f1f3f4;
+  border-radius: 8px; }
+  .profile .profile__user-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px; }
+  .profile .profile__user-name {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 500; }
+  .profile .profile__user-designation {
+    margin-top: 1.5rem; }
+
+.profile__link {
+  white-space: nowrap; }
+
+.profile__info dl {
+  margin: 2.4rem 0 0 1.4rem; }
+
+.review__heading.review__heading {
+  margin-bottom: 0.8rem; }
+
+.review__write-button {
+  margin-top: 0.5rem; }
+
+.review__count {
+  margin-bottom: 4rem;
+  font-size: 1.4rem; }
+
+.review__user {
+  font-size: 1.4rem; }
+  .review__user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+  .review__user-name {
+    margin: 0.3rem 0 0.6rem;
+    font-weight: 600; }
+  .review__user-info {
+    color: #5f6368; }
+    .review__user-info-item {
+      padding-left: 2rem;
+      margin-top: 0.3rem;
+      background: left center / 16px no-repeat; }
+      .review__user-info-item--valid {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/check-grey.svg"); }
+      .review__user-info-item--verified {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg"); }
+      .review__user-info-item--source {
+        background-image: url("https://assets.mspcdn.net/zariance/icon/info-grey.svg"); }
+
+.review__date {
+  padding-left: 1rem;
+  border-left: 1px solid #f1f3f4;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  color: #5f6368; }
+
+.review__title {
+  margin: 1rem 0 2.5rem; }
+
+.review__question-title {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600; }
+
+.review__footer {
+  font-size: 1.4rem;
+  color: #5f6368; }
+  .review__footer label {
+    margin-left: 1.5rem;
+    font-size: inherit; }
+  .review__footer input {
+    margin-right: 0.5rem;
+    vertical-align: -1px; }
+
+.review__helpful-form {
+  display: inline-block; }
+
+.review__report-link {
+  padding-left: 1rem;
+  border-left: 1px solid #f1f3f4;
+  margin-left: 1rem; }
+
+.pricing__table {
+  border-collapse: separate;
+  border-spacing: 1.2rem 0; }
+  .pricing__table tr th {
+    border-radius: 5px 5px 0 0; }
+  .pricing__table tr:first-child th, .pricing__table tr:first-child td {
+    border-top: 0.1rem solid #f1f3f4; }
+  .pricing__table tr:last-child td {
+    border-bottom: 0.1rem solid #f1f3f4;
+    border-radius: 0 0 5px 5px; }
+  .pricing__table tr th, .pricing__table tr td {
+    border-right: 0.1rem solid #f1f3f4;
+    border-bottom: none;
+    border-left: 0.1rem solid #f1f3f4;
+    text-align: center; }
+    .pricing__table tr th:first-child, .pricing__table tr td:first-child {
+      padding-left: 1.5rem; }
+    .pricing__table tr th:last-child, .pricing__table tr td:last-child {
+      padding-right: 1.5rem; }
+
+tr.pricing__column--feature td {
+  text-align: left; }
+
+.write-review__section {
+  width: 60%; }
+
+.write-review__form textarea {
+  resize: vertical;
+  height: 9rem;
+  font-family: inherit; }
+
+.write-review__form .rating {
+  margin: 1rem 0 2rem; }
+  .write-review__form .rating__star, .write-review__form .rating__star-inr {
+    height: 3rem;
+    background-size: 3rem; }
+  .write-review__form .rating__star {
+    width: 15rem;
+    cursor: pointer; }
+    .write-review__form .rating__star-inr {
+      width: 0; }
+
+.write-review__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  margin: auto; }
+  .write-review__img-wrpr {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border: 1px solid #f1f3f4; }
+
+.write-review__title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 12rem;
+  margin: 0 0 2rem 14rem; }
+
+.write-review__field + .write-review__field {
+  margin-top: 1rem; }
+
+.write-review__limit {
+  font-weight: 400;
+  font-size: 1.4rem; }
+
+.write-review__required {
+  color: #c00; }
+
+.write-review__input {
+  margin-top: 1rem; }
+
+.footer {
+  padding: 4.3rem 0;
+  margin-top: 2rem;
+  background-color: #f2f3f5;
+  color: #5f6368; }
+  .footer + .footer {
+    margin-top: 0; }
+  .footer--white {
+    background-color: #fff; }
+  .footer--intro {
+    padding: 6rem 0;
+    margin-top: 7rem;
+    text-align: center; }
+  .footer__logo {
+    height: 2.6rem; }
+  .footer__copyright {
+    margin-top: 1.2rem;
+    font-size: 1.4rem; }
+  .footer__india {
+    margin-top: 2.4rem;
+    font-size: 1.3rem;
+    cursor: default; }
+  .footer__heart {
+    transition: 0.2s color; }
+    .footer__india:hover .footer__heart {
+      color: #c00; }
 
 
 /*# sourceMappingURL=style.css.map*/

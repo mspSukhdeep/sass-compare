@@ -1,0 +1,37 @@
+.pricing
+    &__table
+        border-collapse: separate
+        border-spacing: 1.2rem 0
+
+        tr
+            th
+                border-radius: 5px 5px 0 0
+
+            &:first-child
+                th, td
+                    border-top: 0.1rem solid $color-border
+
+            &:last-child
+                td
+                    border-bottom: 0.1rem solid $color-border
+                    border-radius: 0 0 5px 5px
+
+            th, td
+                border-right: 0.1rem solid $color-border
+                border-bottom: none
+                border-left: 0.1rem solid $color-border
+
+                text-align: center
+
+                &:first-child
+                    padding-left: 1.5rem
+
+                &:last-child
+                    padding-right: 1.5rem
+
+tr
+    &.pricing
+        &__column
+            &--feature
+                td
+                    text-align: left
