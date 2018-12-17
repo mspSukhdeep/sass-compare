@@ -1,8 +1,13 @@
 $image-size: 12rem
+$image-size--mobile: 8rem
 
 .write-review
     &__section
         width: 60%
+
+        @include mobile
+            width: 100%
+            padding: 0
 
     &__form
         textarea
@@ -28,6 +33,18 @@ $image-size: 12rem
                 &-inr
                     width: 0
 
+            .write-review
+                &__input
+                    width: 0
+                    height: 0
+                    padding: 0
+                    border: none
+                    margin: 0
+                    outline: none
+
+                &__error
+                    margin-left: 1rem
+
     &__img
         &-wrpr
             position: relative
@@ -37,6 +54,10 @@ $image-size: 12rem
             padding: 1rem
             border: 1px solid $color-border
 
+            @include mobile
+                width: $image-size--mobile
+                height: $image-size--mobile
+
         @include absolute-center
 
     &__title
@@ -45,9 +66,19 @@ $image-size: 12rem
         line-height: $image-size
         margin: 0 0 2rem $image-size + 2rem
 
+        @include mobile
+            line-height: $image-size--mobile
+            margin-left: $image-size--mobile + 2rem
+
     &__field
         & + &
-            margin-top: 1rem
+            margin-top: 2rem
+
+    &__label
+        font-weight: $font-bold
+
+        textarea
+            margin-bottom: 0
 
     &__limit
         font-weight: $font-normal
@@ -57,4 +88,32 @@ $image-size: 12rem
         color: $color-red
 
     &__input
-        margin-top: 1rem
+        margin: 1rem 0 0.5rem
+
+        .write-review__form--submitted &
+            &:invalid
+                border-color: $color-red
+
+                & + .write-review__error
+                    display: block
+
+    &__error
+        display: none
+
+        font-weight: $font-normal
+        font-size: $font-s
+
+        color: $color-red
+
+    &__submit
+        &#{&}
+            font-weight: $font-normal
+
+    &__thanks
+        display: none
+
+        font-size: $font-xl
+
+        text-align: center
+
+        color: $color-green

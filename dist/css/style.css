@@ -570,9 +570,6 @@ img {
 .section + .section {
   margin-top: 2.5rem; }
 
-.section + .section {
-  margin-top: 2.5rem; }
-
 .section__title {
   margin-bottom: 2rem;
   font-size: 2.4rem;
@@ -603,6 +600,7 @@ h1.section__title {
     text-decoration: none; }
   .pill--active {
     box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+    color: #1a73e8;
     color: #1a73e8; }
     .pill--active:hover {
       background-color: inherit;
@@ -996,46 +994,6 @@ input[type="search"] {
     .content__main.content__main {
       padding-left: 0; } }
 
-.product-list__item {
-  min-height: 12rem;
-  margin-top: 2.5rem; }
-  .product-list__item + .product-list__item {
-    padding-top: 2.5rem;
-    border-top: 1px solid #f1f3f4; }
-
-.product-list__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  min-height: 100%;
-  margin: auto; }
-  .product-list__img-wrpr {
-    position: relative;
-    width: 12rem;
-    height: 12rem;
-    padding: 1rem;
-    border: 1px solid #f1f3f4; }
-
-.product-list__details {
-  margin-left: 14rem; }
-
-.product-list__rating {
-  font-size: 1.4rem; }
-
-.product-list__description {
-  margin: 1rem 0 1.5rem; }
-
-.product-list__PDP-link {
-  line-height: 3.6rem; }
-
-.content {
-  margin-top: 30px; }
-  .content__main.content__main {
-    padding-left: 2rem; }
-
 .intro {
   padding-top: 9rem; }
   .intro__inr {
@@ -1401,6 +1359,9 @@ input[type="search"] {
 .review__write-button {
   margin-top: 0.5rem; }
 
+.review__write-button {
+  margin-top: 0.5rem; }
+
 .review__count {
   margin-bottom: 5rem;
   font-size: 1.4rem; }
@@ -1485,31 +1446,40 @@ input[type="search"] {
     margin: 0;
     padding: 0; } }
 
-.pricing__table {
-  border-collapse: separate;
-  border-spacing: 1.2rem 0; }
-  .pricing__table tr th {
-    border-radius: 5px 5px 0 0; }
-  .pricing__table tr:first-child th, .pricing__table tr:first-child td {
-    border-top: 0.1rem solid #dfe1e8; }
-  .pricing__table tr:last-child td {
-    border-bottom: 0.1rem solid #dfe1e8;
-    border-radius: 0 0 5px 5px; }
-  .pricing__table tr th, .pricing__table tr td {
-    border-right: 0.1rem solid #dfe1e8;
-    border-bottom: none;
-    border-left: 0.1rem solid #dfe1e8;
-    text-align: center; }
-    .pricing__table tr th:first-child, .pricing__table tr td:first-child {
-      padding-left: 1.5rem; }
-    .pricing__table tr th:last-child, .pricing__table tr td:last-child {
-      padding-right: 1.5rem; }
+.pricing__table tbody,
+.pricing__table tr {
+  display: flex;
+  flex-wrap: wrap; }
+
+.pricing__table tr {
+  flex: 1 1 0;
+  flex-direction: column;
+  border: 0.1rem solid #dfe1e8;
+  border-radius: 5px;
+  margin: 0 1rem 1rem 0; }
+
+.pricing__table th, .pricing__table td {
+  text-align: center; }
+  .pricing__table th:first-child, .pricing__table td:first-child {
+    padding-left: 1.5rem; }
+  .pricing__table th:last-child, .pricing__table td:last-child {
+    padding-right: 1.5rem; }
+
+.pricing__table th {
+  border-bottom: 0.1rem solid #dfe1e8; }
+
+.pricing__table td {
+  border-bottom: none; }
 
 tr.pricing__column--feature td {
   text-align: left; }
 
 .write-review__section {
   width: 60%; }
+  @media (max-width: 48rem) {
+    .write-review__section {
+      width: 100%;
+      padding: 0; } }
 
 .write-review__form textarea {
   resize: vertical;
@@ -1526,6 +1496,15 @@ tr.pricing__column--feature td {
     cursor: pointer; }
     .write-review__form .rating__star-inr {
       width: 0; }
+  .write-review__form .rating .write-review__input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none; }
+  .write-review__form .rating .write-review__error {
+    margin-left: 1rem; }
 
 .write-review__img {
   position: absolute;
@@ -1542,6 +1521,10 @@ tr.pricing__column--feature td {
     height: 12rem;
     padding: 1rem;
     border: 1px solid #dfe1e8; }
+    @media (max-width: 48rem) {
+      .write-review__img-wrpr {
+        width: 8rem;
+        height: 8rem; } }
 
 .write-review__title {
   overflow: hidden;
@@ -1549,207 +1532,18 @@ tr.pricing__column--feature td {
   text-overflow: ellipsis;
   line-height: 12rem;
   margin: 0 0 2rem 14rem; }
+  @media (max-width: 48rem) {
+    .write-review__title {
+      line-height: 8rem;
+      margin-left: 10rem; } }
 
 .write-review__field + .write-review__field {
-  margin-top: 1rem; }
+  margin-top: 2rem; }
 
-.write-review__limit {
-  font-weight: 400;
-  font-size: 1.4rem; }
-
-.write-review__required {
-  color: #c00; }
-
-.write-review__input {
-  margin-top: 1rem; }
-
-.footer {
-  padding: 4.3rem 0;
-  margin-top: 2rem;
-  background-color: #f2f3f5;
-  color: #5f6368; }
-  .footer + .footer {
-    margin-top: 0; }
-  .footer--white {
-    background-color: #fff; }
-  .footer--intro {
-    padding: 6rem 0;
-    margin-top: 7rem;
-    text-align: center; }
-  .footer__logo {
-    height: 2.6rem; }
-  .footer__copyright {
-    margin-top: 1.2rem;
-    font-size: 1.4rem; }
-  .footer__india {
-    margin-top: 2.4rem;
-    font-size: 1.3rem;
-    cursor: default; }
-  .footer__heart {
-    transition: 0.2s color; }
-    .footer__india:hover .footer__heart {
-      color: #c00; }
-
-@media (max-width: 480px) {
-  .srch__wrpr.srch__wrpr {
-    display: none; } }
-
-.rvw__user {
-  font-size: 1.4rem; }
-  .rvw__user-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; }
-  .rvw__user-name {
-    font-weight: 600; }
-  .rvw__user-info {
-    color: #555; }
-    .rvw__user-info-item {
-      padding-left: 20px;
-      margin-top: 2px;
-      background: url("https://placem.at/things?w=16&h=16&random=3") left center/16px no-repeat; }
-
-.rvw__date {
-  font-size: 1.4rem;
-  color: #555; }
-
-.rvw__ttl {
-  color: #1a73e8; }
-
-.profile__info dl {
-  margin: 2.4rem 0 0 1.4rem; }
-
-.review__heading.review__heading {
-  margin-bottom: 0.8rem; }
-
-.review__write-button {
-  margin-top: 0.5rem; }
-
-.review__count {
-  margin-bottom: 4rem;
-  font-size: 1.4rem; }
-
-.review__user {
-  font-size: 1.4rem; }
-  .review__user-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; }
-  .review__user-name {
-    margin: 0.3rem 0 0.6rem;
-    font-weight: 600; }
-  .review__user-info {
-    color: #5f6368; }
-    .review__user-info-item {
-      padding-left: 2rem;
-      margin-top: 0.3rem;
-      background: left center / 16px no-repeat; }
-      .review__user-info-item--valid {
-        background-image: url("https://assets.mspcdn.net/zariance/icon/check-grey.svg"); }
-      .review__user-info-item--verified {
-        background-image: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg"); }
-      .review__user-info-item--source {
-        background-image: url("https://assets.mspcdn.net/zariance/icon/info-grey.svg"); }
-
-.review__date {
-  padding-left: 1rem;
-  border-left: 1px solid #f1f3f4;
-  margin-left: 1rem;
-  font-size: 1.4rem;
-  color: #5f6368; }
-
-.review__title {
-  margin: 1rem 0 2.5rem; }
-
-.review__question-title {
-  margin: 1rem 0 0.5rem;
+.write-review__label {
   font-weight: 600; }
-
-.review__footer {
-  font-size: 1.4rem;
-  color: #5f6368; }
-  .review__footer label {
-    margin-left: 1.5rem;
-    font-size: inherit; }
-  .review__footer input {
-    margin-right: 0.5rem;
-    vertical-align: -1px; }
-
-.review__helpful-form {
-  display: inline-block; }
-
-.review__report-link {
-  padding-left: 1rem;
-  border-left: 1px solid #f1f3f4;
-  margin-left: 1rem; }
-
-.pricing__table {
-  border-collapse: separate;
-  border-spacing: 1.2rem 0; }
-  .pricing__table tr th {
-    border-radius: 5px 5px 0 0; }
-  .pricing__table tr:first-child th, .pricing__table tr:first-child td {
-    border-top: 0.1rem solid #f1f3f4; }
-  .pricing__table tr:last-child td {
-    border-bottom: 0.1rem solid #f1f3f4;
-    border-radius: 0 0 5px 5px; }
-  .pricing__table tr th, .pricing__table tr td {
-    border-right: 0.1rem solid #f1f3f4;
-    border-bottom: none;
-    border-left: 0.1rem solid #f1f3f4;
-    text-align: center; }
-    .pricing__table tr th:first-child, .pricing__table tr td:first-child {
-      padding-left: 1.5rem; }
-    .pricing__table tr th:last-child, .pricing__table tr td:last-child {
-      padding-right: 1.5rem; }
-
-tr.pricing__column--feature td {
-  text-align: left; }
-
-.write-review__section {
-  width: 60%; }
-
-.write-review__form textarea {
-  resize: vertical;
-  height: 9rem;
-  font-family: inherit; }
-
-.write-review__form .rating {
-  margin: 1rem 0 2rem; }
-  .write-review__form .rating__star, .write-review__form .rating__star-inr {
-    height: 3rem;
-    background-size: 3rem; }
-  .write-review__form .rating__star {
-    width: 15rem;
-    cursor: pointer; }
-    .write-review__form .rating__star-inr {
-      width: 0; }
-
-.write-review__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  min-height: 100%;
-  margin: auto; }
-  .write-review__img-wrpr {
-    position: relative;
-    width: 12rem;
-    height: 12rem;
-    padding: 1rem;
-    border: 1px solid #f1f3f4; }
-
-.write-review__title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  line-height: 12rem;
-  margin: 0 0 2rem 14rem; }
-
-.write-review__field + .write-review__field {
-  margin-top: 1rem; }
+  .write-review__label textarea {
+    margin-bottom: 0; }
 
 .write-review__limit {
   font-weight: 400;
@@ -1759,7 +1553,26 @@ tr.pricing__column--feature td {
   color: #c00; }
 
 .write-review__input {
-  margin-top: 1rem; }
+  margin: 1rem 0 0.5rem; }
+  .write-review__form--submitted .write-review__input:invalid {
+    border-color: #c00; }
+    .write-review__form--submitted .write-review__input:invalid + .write-review__error {
+      display: block; }
+
+.write-review__error {
+  display: none;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #c00; }
+
+.write-review__submit.write-review__submit {
+  font-weight: 400; }
+
+.write-review__thanks {
+  display: none;
+  font-size: 2rem;
+  text-align: center;
+  color: #099181; }
 
 .footer {
   padding: 4.3rem 0;
@@ -1774,6 +1587,9 @@ tr.pricing__column--feature td {
     padding: 6rem 0;
     margin-top: 7rem;
     text-align: center; }
+  @media (max-width: 48rem) {
+    .footer__main {
+      text-align: center; } }
   .footer__logo {
     height: 2.6rem; }
   .footer__copyright {
@@ -1782,6 +1598,7 @@ tr.pricing__column--feature td {
   .footer__india {
     margin-top: 2.4rem;
     font-size: 1.3rem;
+    text-align: right;
     cursor: default; }
   .footer__heart {
     transition: 0.2s color; }
