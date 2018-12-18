@@ -1,22 +1,28 @@
 .product-overview
 	display: flex
+	border-bottom: 1px solid $color-border
+	padding-bottom: 3rem
 
 	.row
 		align-items: center
 
 	&__title
 		font-weight: 600
-		font-size: 3.6rem
 		line-height: 1.2
 	
 	&__image
-		display: block
+		max-width: 15rem
+		max-height: 15rem
 		
 		&-wrapper
-			text-align: center
+			&#{&}
+				display: flex
+				justify-content: center
+				align-items: center
 
 	&__property
 		display: flex
+		align-items: center
 
 		&-item
 			padding-right: 1.0rem
@@ -26,3 +32,46 @@
 
 	&__description
 		margin-top: 15px
+		@include line-clamp(3)
+
+
+@media screen and (max-width: $breakpoint-mobile)
+	.product-overview
+		text-align: center
+
+		& &__image
+			&-wrapper.column
+				max-width: 100%
+		
+		&__button
+			margin-top: 3.0rem
+
+		&__link
+			white-space: nowrap
+		
+		&__description
+			text-align: left
+			
+		&__property
+			text-align: center
+			align-items: initial
+			
+			&-item
+				// max-width: 33.3%
+				flex: 0 0 33.3%
+
+				&--small
+					display: flex
+					justify-content: center
+
+				.rating
+					&__num
+						margin-left: 0
+
+					&__star
+						background-repeat: no-repeat
+						width: 2.4rem
+
+						&-inr
+							background-repeat: no-repeat
+							width: 2.4rem

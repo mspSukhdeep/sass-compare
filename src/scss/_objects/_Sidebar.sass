@@ -3,3 +3,10 @@
 
 	&.sidebar
 		padding-right: 2rem
+
+@media screen and (max-width: $breakpoint-mobile)
+	.sidebar
+		&#{&}
+			padding-right: 0
+			border: 0
+			margin-top: 3.0rem

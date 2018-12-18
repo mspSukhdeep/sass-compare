@@ -2,6 +2,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin"),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+let fs = require('fs');
+
+const header = fs.readFileSync(__dirname + '/src/ui/header.html');
+
 module.exports = {
 
     entry: './src/main.js',
@@ -12,11 +16,11 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(sa|sc|c)ss$/,
-            use: [
-            {
-                loader: MiniCssExtractPlugin.loader
-            }, 
-            'css-loader', 'sass-loader']
+            use: [{
+                    loader: MiniCssExtractPlugin.loader
+                },
+                'css-loader', 'sass-loader'
+            ]
         }]
     },
     plugins: [
@@ -44,22 +48,26 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-reviews.html',
-            filename: 'single-reviews.html'
+            filename: 'single-reviews.html',
+            header: header
         }),
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-profile.html',
-            filename: 'single-profile.html'
+            filename: 'single-profile.html',
+            header: header
         }),
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-pricing.html',
-            filename: 'single-pricing.html'
+            filename: 'single-pricing.html',
+            header: header
         }),
         new HtmlWebpackPlugin({
             title: 'All Components Page',
             template: 'src/all.html',
-            filename: 'all.html'
+            filename: 'all.html',
+            header: header
         }),
         new HtmlWebpackPlugin({
             title: 'Review Page',

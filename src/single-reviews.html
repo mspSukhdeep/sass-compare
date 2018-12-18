@@ -11,102 +11,7 @@
         </title>
     </head>
     <body>
-        <header class="hdr">
-            <div class="hdr__inr container">
-                <div class="row">
-                    <div class="logo__wrpr column column-20">
-                        <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
-                    </div>
-                    <div class="search-wrapper column">
-                        <div class="search">
-                            <input class="search__input" placeholder="Search" type="search"/>
-                            <div class="search-result row">
-                                <div class="search-result__column column column-50">
-                                    <h2 class="search-result__title">
-                                        Popular Products
-                                    </h2>
-                                    <ul class="js-search-product-list">
-                                        
-                                    </ul>
-                                </div>
-                                <div class="search-result__column search-result__product--2 column column-50">
-                                    <h2 class="search-result__title">
-                                        Explore Categories
-                                    </h2>
-                                    <ul class="js-search-category-list">
-                                        <!-- <li class="search-result__category">
-                                            <div class="search-result__category-title">
-                                                Construction CRM
-                                            </div>
-                                            <div class="search-result__category-description">
-                                                Construction CRM software encompasses Customer Relationship Management applications targeted specifically to the construction industry.
-                                            </div>
-                                        </li> -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu__wrpr column column-50">
-                        <div class="lgn__wrpr float-right">
-                            <a class="lgn__btn lgn__btn--sign-up" href="#">
-                                Sign up
-                            </a>
-                            or
-                            <button class="lgn__btn lgn__btn--log-in button button-outline">
-                                Log in
-                            </button>
-                        </div>
-                        <nav class="menu float-right">
-                            <ul class="clearfix">
-                                <li class="float-left">
-                                    <ul class="card card--pdng">
-                                        <li>
-                                            <a href="#">
-                                                <h6>
-                                                    Basic
-                                                </h6>
-                                                <p>
-                                                    Take great notes
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <h6>
-                                                    Premium
-                                                </h6>
-                                                <p>
-                                                    Unclutter your life
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <h6>
-                                                    Business
-                                                </h6>
-                                                <p>
-                                                    Bring your team together
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <a href="#">
-                                        Software Categories
-                                    </a>
-                                </li>
-                                <li class="float-left">
-                                    <a href="#">
-                                        Write a Review
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <%= htmlWebpackPlugin.options.header %>
         <main class="container">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -125,12 +30,12 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item breadcrumb-item--current">
-                    ASS Review
+                    Product Review
                 </li>
             </ul>
             <section class="row product-overview">
-                <div class="product-overview__img-wrapper column column-25">
-                    <img class="product-overview__img" src="https://dudodiprj2sv7.cloudfront.net/product-logos/Rf/i1/LVR8JXQCFPV6-180x180.PNG"/>
+                <div class="product-overview__image-wrapper column column-20">
+                    <img class="product-overview__image" src="https://dudodiprj2sv7.cloudfront.net/product-logos/Rf/i1/LVR8JXQCFPV6-180x180.PNG"/>
                 </div>
                 <div class="column">
                     <div class="row">
@@ -140,9 +45,9 @@
                             </h1>
                             <div class="product-overview__property">
                                 <div class="product-overview__property-item product-overview__offered-by">
-                                    by Salesforce LLC
+                                    by <a class="product-overview__link" href="#">Salesforce LLC</a>
                                 </div>
-                                <div class="product-overview__property-item">
+                                <div class="product-overview__property-item product-overview__property-item--small">
                                     <div class="rating">
                                         <div class="rating__star">
                                             <div class="rating__star-inr" style="width: 88%">
@@ -161,7 +66,7 @@
                             </div>
                         </div>
                         <div class="column-20 clearfix">
-                            <a class="button float-right" href="/lulz.html" target="_blank">
+                            <a class="product-overview__button button float-right" href="/lulz.html" target="_blank">
                                 Experience Demo
                             </a>
                         </div>
@@ -171,9 +76,14 @@
                     </div>
                 </div>
             </section>
-            <section class="row content">
+            <!-- <section class="row content">
                 <section class="column column-25"></section>
                 <section class="content__main column column-75">
+                    
+                </section>
+            </section> -->
+            <section class="row content">
+                <section class="content__main">
                     <nav class="nav">
                         <div class="pill-wrapper">
                             <a class="pill pill--active" href="">
@@ -185,11 +95,139 @@
                             <a class="pill" href="single-pricing.html">
                                 Pricing
                             </a>
+                            <a class="pill" href="single-pricing.html">
+                                Specifications
+                            </a>
                         </div>
                     </nav>
+                    <div>
+                        <section class="review__wrapper section">
+                            <div class="review__header section__header row">
+                                <div class="column">
+                                    <h2 class="review__heading section__title">
+                                        Salesforce Lightning Reviews
+                                    </h2>
+                                    <div class="review__count">
+                                        Showing
+                                        <strong class="review__count-value">
+                                            87
+                                        </strong>
+                                        Salesforce Lightning reviews
+                                    </div>
+                                </div>
+                                <div class="review__write column column-20">
+                                    <a class="review__write-button button button-outline float-right" href="#">
+                                        Write a Review
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="review row">
+                                <div class="review__user column column-25">
+                                    <img class="review__user-image" src="https://placem.at/people?w=80&h=80&random=2" />
+                                    <div class="review__user-info-wrapper">
+                                        <div class="review__user-name">
+                                            Allan M.
+                                        </div>
+                                        <div class="review__user-info">
+                                            <div class="review__user-info-item review__user-info-item--valid">
+                                                Validated Reviewer
+                                            </div>
+                                            <div class="review__user-info-item review__user-info-item--verified">
+                                                Verified Current User
+                                            </div>
+                                            <div class="review__user-info-item review__user-info-item--source">
+                                                Review Source
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review__main column column-75">
+                                    <div class="review__rating rating rating--small">
+                                        <div class="rating__star">
+                                            <div class="rating__star-inr" style="width: 88%">
+                                            </div>
+                                        </div>
+                                        <div class="rating__num">
+                                            4.3
+                                        </div>
+                                        <time class="review__date" datetime="2018-08-16 17:10:37 -0500">
+                                            August 16, 2018
+                                        </time>
+                                    </div>
+                                    <h3 class="review__title">
+                                        <a href="#">
+                                            "Salesforce Lighting is great user interface and looks nice with lot of added features"
+                                        </a>
+                                    </h3>
+                                    <div class="review__question">
+                                        <h6 class="review__question-title">
+                                            What do you like best?
+                                        </h6>
+                                        <div class="review__question-answer">
+                                            <p>
+                                                I really like the full ability to really manage my pipeline through my reports and dashboards. I like that you can store information about your leads and accounts and save these + check history emails of your colleagues. You can even automate the emails. The biggest value to us is that you build reports to your future colleagues and yourself so you don't need to memorize everything or use Google Drive. Also, if you work on a lead together this can be helpful.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="review__question">
+                                        <h6 class="review__question-title">
+                                            What do you dislike?
+                                        </h6>
+                                        <div class="review__question-answer">
+                                            <p>
+                                                I don't like the time that it takes to load the dashboards, it becomes a little time consuming when you are calling customers and updating things.
+                                            </p>
+                                            <p>
+                                                Sometimes it is difficult to locate duplicate leads within the platform which can lead to confusion when multiple reps are reaching out to one lead.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="review__question">
+                                        <h6 class="review__question-title">
+                                            Recommendations to others considering the product
+                                        </h6>
+                                        <div class="review__question-answer">
+                                            <p>
+                                                It really depends on company size. There are much more simple yet powerful CRMs available on the market today. That said, Salesforce integrates with EVERYTHING...so in many cases, it's going to be the best system of record.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="review__question">
+                                        <h6 class="review__question-title">
+                                            What business problems are you solving with the product? What benefits have you realized?
+                                        </h6>
+                                        <div class="review__question-answer">
+                                            <p>
+                                                We are really able to track absolutely everything that is happening with customers, We are really dependent 100% on our salesforce processes, and lightning is really making life better.
+                                            </p>
+                                            <p>
+                                                Our teams are able to make informed decisions based on the data reports we have built in Salesforce and further invest in campaigns that have performed well.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="review__footer">
+                                        <form class="review__helpful-form">
+                                            Was this review helpful?
+                                            <label class="label-inline">
+                                                <input name="review__helpful-radio" type="radio" value="yes">
+                                                    Yes
+                                                </input>
+                                            </label>
+                                            <label class="label-inline">
+                                                <input name="review__helpful-radio" type="radio" value="no">
+                                                    No
+                                                </input>
+                                            </label>
+                                        </form>
+                                        <a class="review__report-link" href="#">
+                                            Mark as spam or abuse
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </section>
-            </section>
-            <section class="row content">
                 <section class="sidebar column column-25">
                     <section class="widget">
                         <h3 class="widget__title">
@@ -251,99 +289,31 @@
                         </div>
                     </section>
                 </section>
-                <section class="content__main">
-                    <div>
-                        <section class="review__wrapper section">
-                            <div class="review__header section__header row">
-                                <div class="column">
-                                    <h2 class="review__heading section__title">Salesforce Lightning Reviews</h2>
-                                    <div class="review__count">
-                                        Showing <strong class="review__count-value">87</strong> Salesforce Lightning reviews
-                                    </div>
-                                </div>
-                                <div class="column column-20">
-                                    <a class="review__write-button button button-outline float-right" href="#">Write a Review</a>
-                                </div>
-                            </div>
-                            <div class="review row">
-                                <div class="review__user column column-25">
-                                    <img class="review__user-image" src="https://placem.at/people?w=80&h=80&random=2">
-                                    <div class="review__user-name">Allan M.</div>
-                                    <div class="review__user-info">
-                                        <div class="review__user-info-item review__user-info-item--valid">Validated Reviewer</div>
-                                        <div class="review__user-info-item review__user-info-item--verified">Verified Current User</div>
-                                        <div class="review__user-info-item review__user-info-item--source">Review Source</div>
-                                    </div>
-                                </div>
-                                <div class="review__main column column-75">
-                                    <div class="rating">
-                                        <div class="rating__star">
-                                            <div class="rating__star-inr" style="width: 88%"></div>
-                                        </div>
-                                        <div class="rating__num">4.3</div>
-                                        <time class="review__date" datetime="2018-08-16 17:10:37 -0500">August 16, 2018</time>
-                                    </div>
-                                    <h3 class="review__title">
-                                        <a href="#">"Salesforce Lighting is great user interface and looks nice with lot of added features"</a>
-                                    </h3>
-                                    <div class="review__question">
-                                        <h6 class="review__question-title">What do you like best?</h6>
-                                        <div class="review__question-answer">
-                                            <p>I really like the full ability to really manage my pipeline through my reports and dashboards. I like that you can store information about your leads and accounts and save these + check history emails of your colleagues. You can even automate the emails. The biggest value to us is that you build reports to your future colleagues and yourself so you don't need to memorize everything or use Google Drive. Also, if you work on a lead together this can be helpful.</p>
-                                        </div>
-                                    </div>
-                                    <div class="review__question">
-                                        <h6 class="review__question-title">What do you dislike?</h6>
-                                        <div class="review__question-answer">
-                                            <p>I don't like the time that it takes to load the dashboards, it becomes a little time consuming when you are calling customers and updating things.</p>
-                                            <p>Sometimes it is difficult to locate duplicate leads within the platform which can lead to confusion when multiple reps are reaching out to one lead.</p>
-                                        </div>
-                                    </div>
-                                    <div class="review__question">
-                                        <h6 class="review__question-title">Recommendations to others considering the product</h6>
-                                        <div class="review__question-answer">
-                                            <p>It really depends on company size. There are much more simple yet powerful CRMs available on the market today. That said, Salesforce integrates with EVERYTHING...so in many cases, it's going to be the best system of record.</p>
-                                        </div>
-                                    </div>
-                                    <div class="review__question">
-                                        <h6 class="review__question-title">What business problems are you solving with the product? What benefits have you realized?</h6>
-                                        <div class="review__question-answer">
-                                            <p>We are really able to track absolutely everything that is happening with customers, We are really dependent 100% on our salesforce processes, and lightning is really making life better.</p>
-                                            <p>Our teams are able to make informed decisions based on the data reports we have built in Salesforce and further invest in campaigns that have performed well.</p>
-                                        </div>
-                                    </div>
-                                    <div class="review__footer">
-                                        <form class="review__helpful-form">
-                                            Was this review helpful?
-                                            <label class="label-inline">
-                                                <input type="radio" name="review__helpful-radio" value="yes"> Yes
-                                            </label>
-                                            <label class="label-inline">
-                                                <input type="radio" name="review__helpful-radio" value="no"> No
-                                            </label>
-                                        </form>
-                                        <a class="review__report-link" href="#">Mark as spam or abuse</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </section>
             </section>
         </main>
         <footer class="footer">
             <div class="footer__main container">
                 <div class="row">
                     <div class="column column-50">
-                        <img class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg" alt="Logo">
-                        <div class="footer__copyright">© 2018 zariance.com &middot; All rights reserved.</div>
+                        <img alt="Logo" class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg">
+                            <div class="footer__copyright">
+                                © 2018 zariance.com · All rights reserved.
+                            </div>
+                        </img>
                     </div>
                     <div class="column column-50">
-                        <div class="footer__india float-right">Made with <span class="footer__heart">❤</span> in India</div>
+                        <div class="footer__india float-right">
+                            Made with
+                            <span class="footer__heart">
+                                ❤
+                            </span>
+                            in India
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <script src="https://unpkg.com/slendr/dist/slendr.min.js"></script>
+        <script src="https://unpkg.com/slendr/dist/slendr.min.js">
+        </script>
     </body>
 </html>

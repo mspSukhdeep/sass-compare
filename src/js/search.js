@@ -1,5 +1,5 @@
-debugger;
 const Fuse = require('./fuse');
+
 let MODAL = {
     state: {
         products: [],
@@ -99,7 +99,7 @@ $(".search__input").on("focus", function() {
     $(this).parents(".search-wrapper").addClass("search-wrapper--page").find(".search").addClass("container");
 
     if (MODAL.state.products.length === 0) {
-        fetch(`http://localhost/data/product.php`).then(function(response) {
+        fetch(`https://www.zariance.com/api/product.php`).then(function(response) {
             if (response.status !== 200) {
                 console.log('Looks like there was a problem. Status Code: ' + response.status);
                 return;
@@ -139,10 +139,11 @@ function categorySearch(searchTerm) {
 
 $(".js-search-input").on("input", function() {
     let searchTerm = $(this).val();
+    console.log(searchTerm);
     productSearch(searchTerm);
     categorySearch(searchTerm);
 })
 
-$(".js-close-search").on("click", function() {
+$(".js-search-close").on("click", function() {
     $(".search-wrapper").removeClass("search-wrapper--page");
 })

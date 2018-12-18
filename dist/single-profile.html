@@ -12,33 +12,32 @@
     <link href="css/style.css" rel="stylesheet"></head>
     <body>
         <header class="hdr">
-            <div class="hdr__inr container">
-                <div class="row">
-                    <div class="logo__wrpr column column-20">
-                        <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
+    <div class="hdr__inr container">
+        <div class="row">
+            <div class="logo__wrpr column column-20">
+                <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
                     </div>
-                    <div class="search-wrapper column">
-                        <div class="search">
-                            <input class="search__input js-search-input" placeholder="Search" type="search"/>
-                            <div class="search-result row">
-                                <div class="search-result__column column column-50">
-                                    <h2 class="search-result__title">
+                <div class="search-wrapper column">
+                    <div class="search">
+                        <input class="search__input js-search-input" placeholder="Search" type="search" />
+                        <div class="search-result row">
+                            <div class="search-result__column column column-50">
+                                <h2 class="search-result__title">
                                         Popular Products
                                     </h2>
-                                    <ul class="js-search-product-list">
-                                        
-                                    </ul>
-                                </div>
-                                <div class="search-result__column search-result__product--2 column column-50">
-                                    <h2 class="search-result__title">
+                                <ul class="js-search-product-list">
+                                </ul>
+                            </div>
+                            <div class="search-result__column search-result__product--2 column column-50">
+                                <h2 class="search-result__title">
                                         Explore Categories
                                     </h2>
-                                    <ul class="js-search-category-list">
-                                    </ul>
-                                </div>
+                                <ul class="js-search-category-list">
+                                </ul>
                             </div>
                         </div>
-                        <img src="https://assets.mspcdn.net/zariance/icon/close.svg" class="search__close js-close-search" />
+                    </div>
+                    <img class="search__close js-search-close" src="https://assets.mspcdn.net/zariance/icon/close.svg" />
                     </div>
                     <div class="menu__wrpr column column-50">
                         <div class="lgn__wrpr float-right">
@@ -99,7 +98,8 @@
                     </div>
                 </div>
             </div>
-        </header>
+</header>
+        
         <main class="container">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -118,12 +118,12 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item breadcrumb-item--current">
-                    ASS Review
+                    Product Review
                 </li>
             </ul>
             <section class="row product-overview">
-                <div class="product-overview__img-wrapper column column-25">
-                    <img class="product-overview__img" src="https://dudodiprj2sv7.cloudfront.net/product-logos/Rf/i1/LVR8JXQCFPV6-180x180.PNG"/>
+                <div class="product-overview__image-wrapper column column-20">
+                    <img class="product-overview__image" src="https://dudodiprj2sv7.cloudfront.net/product-logos/Rf/i1/LVR8JXQCFPV6-180x180.PNG"/>
                 </div>
                 <div class="column">
                     <div class="row">
@@ -133,9 +133,9 @@
                             </h1>
                             <div class="product-overview__property">
                                 <div class="product-overview__property-item product-overview__offered-by">
-                                    by Salesforce LLC
+                                    by <a class="product-overview__link" href="#">Salesforce LLC</a>
                                 </div>
-                                <div class="product-overview__property-item">
+                                <div class="product-overview__property-item product-overview__property-item--small">
                                     <div class="rating">
                                         <div class="rating__star">
                                             <div class="rating__star-inr" style="width: 88%">
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                         <div class="column-20 clearfix">
-                            <a class="button float-right" href="/lulz.html" target="_blank">
+                            <a class="product-overview__button button float-right" href="/lulz.html" target="_blank">
                                 Experience Demo
                             </a>
                         </div>
@@ -164,9 +164,9 @@
                     </div>
                 </div>
             </section>
+            
             <section class="row content">
-                <section class="column column-25"></section>
-                <section class="content__main column column-75">
+                <section class="content__main">
                     <nav class="nav">
                         <div class="pill-wrapper">
                             <a class="pill" href="single-reviews.html">
@@ -180,9 +180,220 @@
                             </a>
                         </div>
                     </nav>
+                    <div>
+                        <section class="section profile">
+                            <section class="section__body row">
+                                <div class="column column-40 profile__user">
+                                    <div class="profile__user-img-wrpr">
+                                        <img class="profile__user-img" src="https://media.licdn.com/dms/image/C5603AQHomcntrrMu7A/profile-displayphoto-shrink_100_100/0?e=1549497600&v=beta&t=lh1T7FCvg-q3ZeiDcY9XICjQBwTTR4UIoojhindm72A"/>
+                                    </div>
+                                    <div class="profile__user-name">
+                                        Salesforce CRM Details<br>
+                                        Provided by: <a class="profile__link" target="_blank">Tracy Foster</a>
+                                    </div>
+                                    <div class="profile__user-designation">
+                                        Director, Small Business Integrated Demand Generation at Salesforce
+                                    </div>
+                                </div>
+                                <div class="column column-60 profile__info">
+                                    <dl>
+                                        <dt>
+                                            Website
+                                        </dt>
+                                        <dd>
+                                            <a href="/vendors/salesforce" target="_blank">
+                                                www.salesforce.com
+                                            </a>
+                                        </dd>
+                                        <dt>
+                                            Related Links
+                                        </dt>
+                                        <dd>
+                                            <a href="/vendors/salesforce" target="_blank">
+                                                FAQ
+                                            </a>
+                                            <a href="/vendors/salesforce" target="_blank">
+                                                Mobile Apps
+                                            </a>
+                                        </dd>
+                                        <dt>
+                                            Languages Supported
+                                        </dt>
+                                        <dd>
+                                            Chinese, Danish, Dutch, English, Finnish, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Russian, Spanish, Swedish, Thai
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                        </section>
+                        <section class="section">
+                            <div class="section__header clearfix">
+                                <h2 class="section__title">
+                                    Salesforce CRM Downloads
+                                </h2>
+                            </div>
+                            <div class="section__body">
+                                <div class="card-wrapper">
+                                    <a class="card card--download" href="/lulz.html" target="_blank">
+                                        <div class="card__image-wrapper">
+                                            <img class="card__image" src="https://www.zariance.com/ui-demo/img/file.svg">
+                                            </img>
+                                        </div>
+                                        <div class="card__text">
+                                            Edit Comparison Chart
+                                        </div>
+                                        <div class="card__hover">
+                                            <div class="button button--secondary">
+                                                DOWNLOAD
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card card--download" target="_blank">
+                                        <div class="card__image-wrapper">
+                                            <img class="card__image" src="https://www.zariance.com/ui-demo/img/file.svg">
+                                            </img>
+                                        </div>
+                                        <div class="card__text">
+                                            The Entrepreneur’s Guide to Finding the Right CRM
+                                        </div>
+                                        <div class="card__hover">
+                                            <div class="button button--secondary">
+                                                DOWNLOAD
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card card--download" target="_blank">
+                                        <div class="card__image-wrapper">
+                                            <img class="card__image" src="https://www.zariance.com/ui-demo/img/file.svg">
+                                            </img>
+                                        </div>
+                                        <div class="card__text">
+                                            Your Complete CRM Handbook
+                                        </div>
+                                        <div class="card__hover">
+                                            <div class="button button--secondary">
+                                                DOWNLOAD
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card card--download" target="_blank">
+                                        <div class="card__image-wrapper">
+                                            <img class="card__image" src="https://www.zariance.com/ui-demo/img/file.svg">
+                                            </img>
+                                        </div>
+                                        <div class="card__text">
+                                            Small Business Growth Kit
+                                        </div>
+                                        <div class="card__hover">
+                                            <div class="button button--secondary">
+                                                DOWNLOAD
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="section__header clearfix">
+                                <h2 class="section__title">
+                                    Salesforce CRM Screenshots
+                                </h2>
+                            </div>
+                            <div class="section__body">
+                                <div class="slider">
+                                    <div class="slendr-wrapper">
+                                        <div class="slendr">
+                                            <nav class="slendr-direction">
+                                                <a class="slendr-prev" href="#">
+                                                    <i class="fa fa-angle-left">
+                                                    </i>
+                                                </a>
+                                                <a class="slendr-next" href="#">
+                                                    <i class="fa fa-angle-right">
+                                                    </i>
+                                                </a>
+                                            </nav>
+                                            <nav class="slendr-control">
+                                            </nav>
+                                            <div class="slendr-slides">
+                                                <section class="slendr-slide" data-slide-src="https://www.zariance.com/ui-demo/img/product_1.png">
+                                                </section>
+                                                <section class="slendr-slide" data-slide-src="https://www.zariance.com/ui-demo/img/product_2.png">
+                                                </section>
+                                                <section class="slendr-slide" data-slide-src="https://www.zariance.com/ui-demo/img/product_4.png">
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-thumnail-wrapper">
+                                        <div class="slider-thumnail">
+                                            <img class="slider-thumnail__img" data-index="0" src="https://www.zariance.com/ui-demo/img/product_1.png"/>
+                                        </div>
+                                        <div class="slider-thumnail">
+                                            <img class="slider-thumnail__img" data-index="1" src="https://www.zariance.com/ui-demo/img/product_2.png"/>
+                                        </div>
+                                        <div class="slider-thumnail">
+                                            <img class="slider-thumnail__img" data-index="2" src="https://www.zariance.com/ui-demo/img/product_4.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="section__header clearfix">
+                                <h2 class="section__title">
+                                    About Salesforce CRM
+                                </h2>
+                            </div>
+                            <div class="section__body">
+                                <p>
+                                    Salesforce helps businesses of all sizes accelerate sales, automate tasks and make smarter decisions so you can grow your business faster. Salesforce CRM offers:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Lead &amp; Contact Management
+                                    </li>
+                                    <li>
+                                        Sales Opportunity Management
+                                    </li>
+                                    <li>
+                                        Workflow Rules &amp; Automation
+                                    </li>
+                                    <li>
+                                        Customizable Reports &amp; Dashboards
+                                    </li>
+                                    <li>
+                                        Mobile Application
+                                    </li>
+                                </ul>
+                                <dl>
+                                    <dt>
+                                        Vendor
+                                    </dt>
+                                    <dd>
+                                        <a href="/vendors/salesforce" target="_blank">
+                                            Salesforce
+                                        </a>
+                                    </dd>
+                                    <dt>
+                                        How do you position yourself against your competitors?
+                                    </dt>
+                                    <dd>
+                                        Salesforce has one platform, seven clouds, and everything is connected. It's easy to customize and make changes. Our metadata-driven software architecture means customers get three seamless upgrades a year. Nothing breaks, no matter how big you grow.
+                                    </dd>
+                                    <dt>
+                                        Company Website
+                                    </dt>
+                                    <dd>
+                                        <a href="/sales" target="_blank">
+                                            www.salesforce.com
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </section>
+                    </div>
                 </section>
-            </section>
-            <section class="row content">
                 <section class="sidebar column column-25">
                     <section class="widget">
                         <h3 class="widget__title">
@@ -243,221 +454,6 @@
                             </ul>
                         </div>
                     </section>
-                </section>
-                <section class="content__main">
-                    <div>
-                        <section class="section profile">
-                            <section class="section__body row">
-                                <div class="column column-40 profile__user">
-                                    <div class="profile__user-img-wrpr">
-                                        <img class="profile__user-img" src="https://media.licdn.com/dms/image/C5603AQHomcntrrMu7A/profile-displayphoto-shrink_100_100/0?e=1549497600&v=beta&t=lh1T7FCvg-q3ZeiDcY9XICjQBwTTR4UIoojhindm72A"/>
-                                    </div>
-                                    <div class="profile__user-name">
-                                        Salesforce CRM Details<br>
-                                        Provided by: <a class="profile__link" target="_blank">Tracy Foster</a>
-                                    </div>
-                                    <div class="profile__user-designation">
-                                        Director, Small Business Integrated Demand Generation at Salesforce
-                                    </div>
-                                </div>
-                                <div class="column column-60 profile__info">
-                                    <dl>
-                                        <dt>
-                                            Website
-                                        </dt>
-                                        <dd>
-                                            <a href="/vendors/salesforce" target="_blank">
-                                                www.salesforce.com
-                                            </a>
-                                        </dd>
-                                        <dt>
-                                            Related Links
-                                        </dt>
-                                        <dd>
-                                            <a href="/vendors/salesforce" target="_blank">
-                                                FAQ
-                                            </a>
-                                            <a href="/vendors/salesforce" target="_blank">
-                                                Mobile Apps
-                                            </a>
-                                        </dd>
-                                        <dt>
-                                            Languages Supported
-                                        </dt>
-                                        <dd>
-                                            Chinese, Danish, Dutch, English, Finnish, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Russian, Spanish, Swedish, Thai
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </section>
-                        </section>
-                        <section class="section">
-                            <div class="section__header clearfix">
-                                <h2 class="section__title">
-                                    Salesforce CRM Downloads
-                                </h2>
-                            </div>
-                            <div class="section__body">
-                                <div class="card-wrapper">
-                                    <a class="card card--download" href="/lulz.html" target="_blank">
-                                        <div class="card__image-wrapper">
-                                            <img class="card__image" src="http://localhost/img/file.svg">
-                                            </img>
-                                        </div>
-                                        <div class="card__text">
-                                            Edit Comparison Chart
-                                        </div>
-                                        <div class="card__hover">
-                                            <div class="button button--secondary">
-                                                DOWNLOAD
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="card card--download" target="_blank">
-                                        <div class="card__image-wrapper">
-                                            <img class="card__image" src="http://localhost/img/file.svg">
-                                            </img>
-                                        </div>
-                                        <div class="card__text">
-                                            The Entrepreneur’s Guide to Finding the Right CRM
-                                        </div>
-                                        <div class="card__hover">
-                                            <div class="button button--secondary">
-                                                DOWNLOAD
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="card card--download" target="_blank">
-                                        <div class="card__image-wrapper">
-                                            <img class="card__image" src="http://localhost/img/file.svg">
-                                            </img>
-                                        </div>
-                                        <div class="card__text">
-                                            Your Complete CRM Handbook
-                                        </div>
-                                        <div class="card__hover">
-                                            <div class="button button--secondary">
-                                                DOWNLOAD
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="card card--download" target="_blank">
-                                        <div class="card__image-wrapper">
-                                            <img class="card__image" src="http://localhost/img/file.svg">
-                                            </img>
-                                        </div>
-                                        <div class="card__text">
-                                            Small Business Growth Kit
-                                        </div>
-                                        <div class="card__hover">
-                                            <div class="button button--secondary">
-                                                DOWNLOAD
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="section">
-                            <div class="section__header clearfix">
-                                <h2 class="section__title">
-                                    Salesforce CRM Screenshots
-                                </h2>
-                            </div>
-                            <div class="section__body">
-                                <div class="slider">
-                                    <div class="slendr-wrapper">
-                                        <div class="slendr">
-                                            <nav class="slendr-direction">
-                                                <a class="slendr-prev" href="#">
-                                                    <i class="fa fa-angle-left">
-                                                    </i>
-                                                </a>
-                                                <a class="slendr-next" href="#">
-                                                    <i class="fa fa-angle-right">
-                                                    </i>
-                                                </a>
-                                            </nav>
-                                            <nav class="slendr-control">
-                                            </nav>
-                                            <div class="slendr-slides">
-                                                <section class="slendr-slide" data-slide-src="http://localhost/img/product_1.png">
-                                                </section>
-                                                <section class="slendr-slide" data-slide-src="http://localhost/img/product_2.png">
-                                                </section>
-                                                <section class="slendr-slide" data-slide-src="http://localhost/img/product_4.png">
-                                                </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-thumnail-wrapper">
-                                        <div class="slider-thumnail">
-                                            <img class="slider-thumnail__img" data-index="0" src="http://localhost/img/product_1.png"/>
-                                        </div>
-                                        <div class="slider-thumnail">
-                                            <img class="slider-thumnail__img" data-index="1" src="http://localhost/img/product_2.png"/>
-                                        </div>
-                                        <div class="slider-thumnail">
-                                            <img class="slider-thumnail__img" data-index="2" src="http://localhost/img/product_4.png"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="section">
-                            <div class="section__header clearfix">
-                                <h2 class="section__title">
-                                    About Salesforce CRM
-                                </h2>
-                            </div>
-                            <div class="section__body">
-                                <p>
-                                    Salesforce helps businesses of all sizes accelerate sales, automate tasks and make smarter decisions so you can grow your business faster. Salesforce CRM offers:
-                                </p>
-                                <ul>
-                                    <li>
-                                        Lead &amp; Contact Management
-                                    </li>
-                                    <li>
-                                        Sales Opportunity Management
-                                    </li>
-                                    <li>
-                                        Workflow Rules &amp; Automation
-                                    </li>
-                                    <li>
-                                        Customizable Reports &amp; Dashboards
-                                    </li>
-                                    <li>
-                                        Mobile Application
-                                    </li>
-                                </ul>
-                                <dl>
-                                    <dt>
-                                        Vendor
-                                    </dt>
-                                    <dd>
-                                        <a href="/vendors/salesforce" target="_blank">
-                                            Salesforce
-                                        </a>
-                                    </dd>
-                                    <dt>
-                                        How do you position yourself against your competitors?
-                                    </dt>
-                                    <dd>
-                                        Salesforce has one platform, seven clouds, and everything is connected. It's easy to customize and make changes. Our metadata-driven software architecture means customers get three seamless upgrades a year. Nothing breaks, no matter how big you grow.
-                                    </dd>
-                                    <dt>
-                                        Company Website
-                                    </dt>
-                                    <dd>
-                                        <a href="/sales" target="_blank">
-                                            www.salesforce.com
-                                        </a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </section>
-                    </div>
                 </section>
             </section>
         </main>

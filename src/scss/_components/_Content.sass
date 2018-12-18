@@ -1,5 +1,13 @@
 .content
 	margin-top: 30px
+	flex-flow: row-reverse
 
 	&__main.content__main
-		padding-left: 2rem
+		padding-left: 4rem
+
+@media screen and (max-width: $breakpoint-mobile)
+	.content
+		flex-flow: column
+
+		&__main.content__main
+			padding-left: 0

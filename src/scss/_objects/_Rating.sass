@@ -1,7 +1,6 @@
 .rating
 	display: flex
 	align-items: center
-	margin-right: 1.0rem
 
 	&__star
 		width: 12rem
@@ -13,7 +12,43 @@
 			background: url('https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png') repeat-x left center / 2.4rem
 	
 	&__num
-		margin-left: 0.8rem
+		margin-left: 1rem
 
 		font-size: $font-l
 		font-weight: $font-bold
+	
+	&--small
+		.rating
+			&__star
+				width: 10rem
+				background-size: 2.0rem
+
+				&-inr
+					background-size: 2.0rem
+			
+			&__num
+				font-size: $font-m
+
+	&__reviewer
+		background: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg") no-repeat left center / 2rem
+		padding-left: 2.5rem
+
+
+
+@media screen and (max-width: $breakpoint-mobile)
+	.rating
+		&__star
+			width: 10rem
+			background-size: 2.0rem
+
+			&-inr
+				background-size: 2.0rem
+			
+		&__num
+			font-size: $font-m
+
+		&__reviewer
+			background-position: top center
+			white-space: nowrap
+			padding-top: 2.1rem
+			padding-left: 0

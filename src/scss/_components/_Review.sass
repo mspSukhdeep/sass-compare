@@ -1,13 +1,16 @@
 .review
+    &__wrapper
+        margin-top: 4rem
+
     &__heading
         &.review__heading
-            margin-bottom: 0.8rem
+            margin-bottom: 0.5rem
 
     &__write-button
         margin-top: 0.5rem
 
     &__count
-        margin-bottom: 4rem
+        margin-bottom: 5rem
 
         font-size: $font-s
 
@@ -84,3 +87,44 @@
             padding-left: 1rem
             border-left: 1px solid $color-border
             margin-left: 1rem
+
+
+@media screen and (max-width: $breakpoint-mobile)
+    .review
+        &__wrapper
+            margin-top: 3.5rem
+            
+        &__title
+            margin-top: 2.0rem
+
+        &__rating
+            margin-top: 2.0rem
+
+        &__user
+            &#{&}
+                display: flex
+            &-info
+                &-wrapper
+                    margin-left: 2.0rem
+
+        &__count
+            margin-bottom: 2rem
+        
+        &__header
+            text-align: center
+            margin-bottom: 5rem
+        
+        &__write
+            
+            &-button
+                float: none
+
+        &__helpful-form
+                margin: 0
+                
+        &__report
+            &-link
+                border-left: 0
+                white-space: nowrap
+                margin: 0
+                padding: 0

@@ -97,6 +97,7 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             return this;
         },
         submit: function(s) {
+            //Haven't test submit function yet
             this.submit();
             return this;
         },
