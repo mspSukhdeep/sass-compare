@@ -1,9 +1,13 @@
 $image-size: 12rem
+$image-size--mobile: 9rem
 
 .product-list
     &__item
         min-height: $image-size
         margin-top: 2.5rem
+
+        @include mobile
+            min-height: $image-size--mobile
 
         & + &
             padding-top: 2.5rem
@@ -18,10 +22,29 @@ $image-size: 12rem
             padding: 1rem
             border: 1px solid $color-border
 
+            @include mobile
+                width: $image-size--mobile
+                height: $image-size--mobile
+
         @include absolute-center
 
     &__details
         margin-left: $image-size + 2rem
+
+        @include mobile
+            margin-left: $image-size--mobile + 1rem
+
+    &__title
+        @include ellipsis
+
+        @include mobile
+            position: relative
+            top: -4px
+
+            white-space: normal
+            @include line-clamp(3)
+
+            max-height: 9.6rem
 
     &__rating
         font-size: $font-s
@@ -30,4 +53,9 @@ $image-size: 12rem
         margin: 1rem 0 1.5rem
 
     &__PDP-link
-        line-height: 3.6rem
+        line-height: 3.8rem
+
+        @include mobile
+            display: inline-block
+
+            margin-bottom: 1.5rem

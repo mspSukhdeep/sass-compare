@@ -52,9 +52,7 @@ $(".write-review__form").on("submit", function (e) {
         })
     }).then(function (response) {
         if (response.ok) {
-            // TODO: Animate =>
-            $(".write-review__section").hide();
-            $(".write-review__thanks").show();
+            $(".write-review__section").addClass("write-review__section--collapsed");
         }
     });
 });

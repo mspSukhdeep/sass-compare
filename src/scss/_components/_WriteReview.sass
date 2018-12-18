@@ -1,21 +1,27 @@
 $image-size: 12rem
-$image-size--mobile: 8rem
+$image-size--mobile: 9rem
 
 .write-review
     &__section
+        overflow: hidden
+
         width: 60%
+        max-height: 100rem
+
+        transition: max-height 0.3s
 
         @include mobile
             width: 100%
             padding: 0
+
+        &--collapsed
+            max-height: 0
 
     &__form
         textarea
             resize: vertical
 
             height: 9rem
-
-            font-family: inherit
 
         .rating
             margin: 1rem 0 2rem
@@ -67,8 +73,19 @@ $image-size--mobile: 8rem
         margin: 0 0 2rem $image-size + 2rem
 
         @include mobile
-            line-height: $image-size--mobile
-            margin-left: $image-size--mobile + 2rem
+            white-space: normal
+            box-sizing: content-box
+
+            height: $image-size--mobile * 0.6
+            line-height: $image-size--mobile * 0.3
+            padding: $image-size--mobile * 0.2 0
+            margin-left: $image-size--mobile + 1rem
+
+            font-size: $font-xl + 0.1rem
+
+            a
+                @include line-clamp
+                word-break: break-all
 
     &__field
         & + &
@@ -90,6 +107,8 @@ $image-size--mobile: 8rem
     &__input
         margin: 1rem 0 0.5rem
 
+        font-family: inherit
+
         .write-review__form--submitted &
             &:invalid
                 border-color: $color-red
@@ -110,10 +129,17 @@ $image-size--mobile: 8rem
             font-weight: $font-normal
 
     &__thanks
-        display: none
+        overflow: hidden
+
+        max-height: 0
 
         font-size: $font-xl
 
         text-align: center
 
         color: $color-green
+
+        transition: max-height 0.3s 0.3s
+
+        .write-review__section--collapsed + &
+            max-height: 7rem
