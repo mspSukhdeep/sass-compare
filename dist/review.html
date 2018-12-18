@@ -82,7 +82,7 @@
     </header>
     <main class="container">
         <section class="row content">
-            <section class="write-review__section container">
+            <section class="write-review__section container" data-pid="Salesforce Lightning">
                 <section class="section">
                     <div class="section__header">
                         <h1 class="section__title">Review Salesforce Lightning</h1>
@@ -102,37 +102,45 @@
                                         <div class="rating__star">
                                             <div class="rating__star-inr"></div>
                                         </div>
+                                        <input type="text" class="write-review__input" required>
+                                        <div class="write-review__error">This field is required</div>
                                     </div>
+                                    <div class="write-review__error">This field is required</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--title">
                                 <label class="write-review__label">
                                     Review Title <span class="write-review__required">*</span>
                                     <input type="text" class="write-review__input" maxlength="100" placeholder="Describe your experience in a short sentence." required>
+                                    <div class="write-review__error">This field is required</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--review">
                                 <label class="write-review__label">
                                     Your Review <span class="write-review__required">*</span> <span class="write-review__limit">(20 words minimum)</span>
-                                    <textarea class="write-review__input" maxlength="300" placeholder="What business problems are you solving? What benefits have you realized?" required></textarea>
+                                    <textarea class="write-review__input" maxlength="4000" placeholder="What business problems are you solving? What benefits have you realized?" required></textarea>
+                                    <div class="write-review__error">This field is required (20 words minimum)</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--name">
                                 <label class="write-review__label">
                                     Your Name <span class="write-review__required">*</span>
                                     <input type="text" class="write-review__input" maxlength="50" required>
+                                    <div class="write-review__error">This field is required</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--job">
                                 <label class="write-review__label">
                                     Job Title <span class="write-review__required">*</span>
                                     <input type="text" class="write-review__input" maxlength="50" required>
+                                    <div class="write-review__error">This field is required</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--company">
                                 <label class="write-review__label">
                                     Company <span class="write-review__required">*</span>
                                     <input type="text" class="write-review__input" maxlength="50" required>
+                                    <div class="write-review__error">This field is required</div>
                                 </label>
                             </div>
                             <div class="write-review__field write-review__field--submit">
@@ -142,17 +150,18 @@
                     </div>
                 </section>
             </section>
+            <div class="write-review__thanks container">Thank you for submitting your review.</div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer__main container">
             <div class="row">
-                <div class="column column-50">
+                <div class="column">
                     <img class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg" alt="Logo">
                     <div class="footer__copyright">© 2018 zariance.com &middot; All rights reserved.</div>
                 </div>
-                <div class="column column-50">
-                    <div class="footer__india float-right">Made with <span class="footer__heart">❤</span> in India</div>
+                <div class="column">
+                    <div class="footer__india">Made with <span class="footer__heart">❤</span> in India</div>
                 </div>
             </div>
         </div>

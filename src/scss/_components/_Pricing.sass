@@ -1,33 +1,32 @@
 .pricing
     &__table
-        border-collapse: separate
-        border-spacing: 1.2rem 0
+        tbody,
+        tr
+            display: flex
+            flex-wrap: wrap
 
         tr
-            th
-                border-radius: 5px 5px 0 0
+            flex: 1 1 0
+            flex-direction: column
+
+            border: 0.1rem solid $color-border
+            border-radius: $border-radius-s
+            margin: 0 1rem 1rem 0
+
+        th, td
+            text-align: center
 
             &:first-child
-                th, td
-                    border-top: 0.1rem solid $color-border
+                padding-left: 1.5rem
 
             &:last-child
-                td
-                    border-bottom: 0.1rem solid $color-border
-                    border-radius: 0 0 5px 5px
+                padding-right: 1.5rem
 
-            th, td
-                border-right: 0.1rem solid $color-border
-                border-bottom: none
-                border-left: 0.1rem solid $color-border
+        th
+            border-bottom: 0.1rem solid $color-border
 
-                text-align: center
-
-                &:first-child
-                    padding-left: 1.5rem
-
-                &:last-child
-                    padding-right: 1.5rem
+        td
+            border-bottom: none
 
 tr
     &.pricing

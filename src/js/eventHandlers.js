@@ -77,12 +77,14 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             });
             return collection;
         },
-        val: function(s) {
-            let value = '';
-            this.forEach(function(node) {
-                value += node.value;
-            });
-            return value;
+        val: function (newVal) {
+            if (newVal) {
+                this.forEach(function (node) {
+                    node.value = newVal;
+                });
+                return this;
+            }
+            return this[0].value;
         },
         addClass: function(className) {
             this.forEach(function(node) {
@@ -104,8 +106,50 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
         html: function(content) {
             this[0].innerHTML = content;
             return this;
+        },
+        hide: function () {
+            this.forEach(function (node) {
+                node.style.display = "none";
+            });
+            return this;
+        },
+        show: function () {
+            this.forEach(function (node) {
+                node.style.display = "initial";
+            });
+            return this;
+        },
+        attr: function (name, value) {
+            if (name) {
+                if (value) {
+                    this[0].setAttribute(name, value);
+                }
+                else {
+                    return this[0].getAttribute(name);
+                }
+            }
+            return this;
+        },
+        data: function (name, value) {
+            if (name) {
+                return this.attr("data-" + name, value);
+            }
+            return this;
+        },
+        width: function (newWidth) {
+            if (newWidth) {
+                this[0].style.width = newWidth;
+                return this;
+            }
+            return this[0].clientWidth;
+        },
+        height: function (newHeight) {
+            if (newHeight) {
+                this[0].style.height = newHeight;
+                return this;
+            }
+            return this[0].clientHeight;
         }
-
     });
     return $;
 })(window, document, [], /\.(.+)/, 0, 'EventListener', 'MatchesSelector')
