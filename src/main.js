@@ -5,4 +5,5 @@ import './js/script.js';
 
 import './js/fuse.js';
 import './js/search.js';
+import './js/header.js';
 import './js/review.js';

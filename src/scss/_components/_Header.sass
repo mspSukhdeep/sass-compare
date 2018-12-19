@@ -13,17 +13,51 @@
 .logo
     height: 36px
     margin: 0.6rem 0
+    display: block
 
 .menu
+
+    &__list
+        &-item
+            &--dropdown
+                &:after
+                    content: ''
+
+                    display: inline-block
+
+                    border-top: 4px solid $color-black
+                    border-left: 3px solid transparent
+                    border-right: 3px solid transparent
+                    margin-left: 4px
+
+                    vertical-align: 2px
+
+
+    &__row
+        display: flex
+
+    &__icon
+        width: 2.4rem
+        cursor: pointer
+
+        &-wrapper
+            &#{&}
+                flex-direction: column-reverse
+                justify-content: center
+                align-items: flex-end
+                display: none
+
     &__wrpr
-        line-height: 48px
+        &#{&}
+            line-height: 48px
+            display: flex
+            flex-direction: row-reverse
 
     margin-right: 50px
 
     font-size: $font-s
     font-weight: $font-bold
 
-    text-transform: uppercase
     
     a
         text-decoration: none
@@ -65,19 +99,6 @@
 
                 transition: 0.1s max-height,  0.1s padding-top,  0.1s padding-bottom
 
-                & + a
-                    &:after
-                            content: '';
-
-                            display: inline-block;
-
-                            border-top: 4px solid $color-black;
-                            border-left: 3px solid transparent;
-                            border-right: 3px solid transparent;
-                            margin-left: 4px;
-
-                            vertical-align: 2px;
-
                 li
                     a
                         display: block
@@ -117,8 +138,101 @@
 
         &--log-in
             margin-left: 5px
+            margin-bottom: 0
 
 
 @media screen and (max-width: $breakpoint-mobile)
     .hdr
-        display: none
+        padding: 2rem 0
+        height: 9rem
+        .search
+            &-wrapper
+                margin-left: 2.0rem
+                display: flex
+                align-items: center
+            &__input
+                height: 3.6rem
+    .lgn
+        &__wrpr
+
+    .menu
+        &__icon
+            &-wrapper
+                &#{&}
+                    display: flex
+        &__wrpr
+            display: none
+
+            &--show
+                &#{&}#{&}
+                    overflow: hidden
+                    display: flex
+                    flex-direction: column
+                    position: fixed
+                    background-color: $color-blue
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    max-width: 100%
+                    z-index: 1
+                    color: $color-white
+                    padding: 5rem 2rem 2rem 2rem
+
+                    
+                    .lgn
+                        &__btn
+                            @include mobile-list
+                        &__or
+                            display: none
+
+                    .menu
+                        &__sub
+                            position: relative
+                            padding: 0
+                            width: auto
+                            border-radius: 0
+                            top: 0
+                            background: none
+                            box-shadow: none
+                            color: $color-white
+                            left: 2.0rem
+                            box-shadow: none
+                            background: none
+                            
+                            &--show
+                                &.menu__sub--show
+                                    max-height: 40.0rem !important
+
+
+                        &__list-item
+                            @include mobile-list
+
+                            &--dropdown
+                                &:after
+                                    transform: rotate(270deg)
+                                    border-top-color: $color-white
+                            &--large
+                                height: auto
+                                background: none
+
+                                p
+                                    opacity: .7
+                        &__row
+                            flex-direction: column
+                            overflow: hidden
+
+                            &-list
+                                &:hover
+
+                                    & ul
+                                        max-height: 0
+                                        padding-top: 0
+                                        padding-bottom: 0
+                                        box-shadow: none
+                                
+                                &--expand
+                                    .menu__list-item--dropdown:after
+                                        transform: rotate(0deg) !important
+                            li + li
+                                margin-left: 0

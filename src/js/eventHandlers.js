@@ -98,6 +98,12 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             });
             return this;
         },
+        toggleClass: function(className){
+            this.forEach(function(node) {
+                node.classList.toggle(className);
+            })
+            return this;
+        },
         submit: function(s) {
             //Haven't test submit function yet
             this.submit();
@@ -137,11 +143,17 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             return this;
         },
         width: function (newWidth) {
+            let response = null;
+
             if (newWidth) {
                 this[0].style.width = newWidth;
-                return this;
+                response = this;
             }
-            return this[0].clientWidth;
+            else if(this.length>0){
+                response = this[0].clientWidth
+            }
+
+            return response;
         },
         height: function (newHeight) {
             if (newHeight) {

@@ -20,6 +20,26 @@
     white-space: nowrap
     text-overflow: ellipsis
 
+@mixin mobile-list
+    color: $color-white
+    width: 100%
+    border: 0
+    border-radius: 0
+    text-align: left
+    margin: 0
+    padding: 1em .5rem
+    line-height: 2.0rem
+    height: 3.0em
+    font-size: $font-m
+    border-bottom: 1px solid $color-white
+    font-weight: 500
+    letter-spacing: .025rem
+    display: block
+
+    &:hover
+        text-decoration: none
+
+
 @mixin line-clamp($lines: 2)
     display: -webkit-box
     overflow: hidden

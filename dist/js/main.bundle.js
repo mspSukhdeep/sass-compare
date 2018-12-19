@@ -1,2 +1,2025 @@
-!function(t){var e={};function i(s){if(e[s])return e[s].exports;var n=e[s]={i:s,l:!1,exports:{}};return t[s].call(n.exports,n,n.exports,i),n.l=!0,n.exports}i.m=t,i.c=e,i.d=function(t,e,s){i.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:s})},i.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var s=Object.create(null);if(i.r(s),Object.defineProperty(s,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)i.d(s,n,function(e){return t[e]}.bind(null,n));return s},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="",i(i.s=8)}([function(t,e,i){var s;s=function(){return function(t){var e={};function i(s){if(e[s])return e[s].exports;var n=e[s]={i:s,l:!1,exports:{}};return t[s].call(n.exports,n,n.exports,i),n.l=!0,n.exports}return i.m=t,i.c=e,i.i=function(t){return t},i.d=function(t,e,s){i.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:s})},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="",i(i.s=8)}([function(t,e,i){"use strict";t.exports=function(t){return Array.isArray?Array.isArray(t):"[object Array]"===Object.prototype.toString.call(t)}},function(t,e,i){"use strict";var s=function(){function t(t,e){for(var i=0;i<e.length;i++){var s=e[i];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(t,s.key,s)}}return function(e,i,s){return i&&t(e.prototype,i),s&&t(e,s),e}}();var n=i(5),r=i(7),o=i(4),a=function(){function t(e,i){var s=i.location,n=void 0===s?0:s,r=i.distance,a=void 0===r?100:r,c=i.threshold,l=void 0===c?.6:c,h=i.maxPatternLength,u=void 0===h?32:h,d=i.isCaseSensitive,f=void 0!==d&&d,p=i.tokenSeparator,v=void 0===p?/ +/g:p,g=i.findAllMatches,m=void 0!==g&&g,y=i.minMatchCharLength,w=void 0===y?1:y;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.options={location:n,distance:a,threshold:l,maxPatternLength:u,isCaseSensitive:f,tokenSeparator:v,findAllMatches:m,minMatchCharLength:w},this.pattern=this.options.isCaseSensitive?e:e.toLowerCase(),this.pattern.length<=u&&(this.patternAlphabet=o(this.pattern))}return s(t,[{key:"search",value:function(t){if(this.options.isCaseSensitive||(t=t.toLowerCase()),this.pattern===t)return{isMatch:!0,score:0,matchedIndices:[[0,t.length-1]]};var e=this.options,i=e.maxPatternLength,s=e.tokenSeparator;if(this.pattern.length>i)return n(t,this.pattern,s);var o=this.options,a=o.location,c=o.distance,l=o.threshold,h=o.findAllMatches,u=o.minMatchCharLength;return r(t,this.pattern,this.patternAlphabet,{location:a,distance:c,threshold:l,findAllMatches:h,minMatchCharLength:u})}}]),t}();t.exports=a},function(t,e,i){"use strict";var s=i(0);t.exports=function(t,e){return function t(e,i,n){if(i){var r=i.indexOf("."),o=i,a=null;-1!==r&&(o=i.slice(0,r),a=i.slice(r+1));var c=e[o];if(null!=c)if(a||"string"!=typeof c&&"number"!=typeof c)if(s(c))for(var l=0,h=c.length;l<h;l+=1)t(c[l],a,n);else a&&t(c,a,n);else n.push(c.toString())}else n.push(e);return n}(t,e,[])}},function(t,e,i){"use strict";t.exports=function(){for(var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:1,i=[],s=-1,n=-1,r=0,o=t.length;r<o;r+=1){var a=t[r];a&&-1===s?s=r:a||-1===s||((n=r-1)-s+1>=e&&i.push([s,n]),s=-1)}return t[r-1]&&r-s>=e&&i.push([s,r-1]),i}},function(t,e,i){"use strict";t.exports=function(t){for(var e={},i=t.length,s=0;s<i;s+=1)e[t.charAt(s)]=0;for(var n=0;n<i;n+=1)e[t.charAt(n)]|=1<<i-n-1;return e}},function(t,e,i){"use strict";var s=/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g;t.exports=function(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:/ +/g,n=new RegExp(e.replace(s,"\\$&").replace(i,"|")),r=t.match(n),o=!!r,a=[];if(o)for(var c=0,l=r.length;c<l;c+=1){var h=r[c];a.push([t.indexOf(h),h.length-1])}return{score:o?.5:1,isMatch:o,matchedIndices:a}}},function(t,e,i){"use strict";t.exports=function(t,e){var i=e.errors,s=void 0===i?0:i,n=e.currentLocation,r=void 0===n?0:n,o=e.expectedLocation,a=void 0===o?0:o,c=e.distance,l=void 0===c?100:c,h=s/t.length,u=Math.abs(a-r);return l?h+u/l:u?1:h}},function(t,e,i){"use strict";var s=i(6),n=i(3);t.exports=function(t,e,i,r){for(var o=r.location,a=void 0===o?0:o,c=r.distance,l=void 0===c?100:c,h=r.threshold,u=void 0===h?.6:h,d=r.findAllMatches,f=void 0!==d&&d,p=r.minMatchCharLength,v=void 0===p?1:p,g=a,m=t.length,y=u,w=t.indexOf(e,g),_=e.length,b=[],k=0;k<m;k+=1)b[k]=0;if(-1!==w){var S=s(e,{errors:0,currentLocation:w,expectedLocation:g,distance:l});if(y=Math.min(S,y),-1!==(w=t.lastIndexOf(e,g+_))){var C=s(e,{errors:0,currentLocation:w,expectedLocation:g,distance:l});y=Math.min(C,y)}}w=-1;for(var L=[],x=1,A=_+m,M=1<<_-1,$=0;$<_;$+=1){for(var N=0,O=A;N<O;){s(e,{errors:$,currentLocation:g+O,expectedLocation:g,distance:l})<=y?N=O:A=O,O=Math.floor((A-N)/2+N)}A=O;var j=Math.max(1,g-O+1),E=f?m:Math.min(g+O,m)+_,P=Array(E+2);P[E+1]=(1<<$)-1;for(var T=E;T>=j;T-=1){var I=T-1,z=i[t.charAt(I)];if(z&&(b[I]=1),P[T]=(P[T+1]<<1|1)&z,0!==$&&(P[T]|=(L[T+1]|L[T])<<1|1|L[T+1]),P[T]&M&&(x=s(e,{errors:$,currentLocation:I,expectedLocation:g,distance:l}))<=y){if(y=x,(w=I)<=g)break;j=Math.max(1,2*g-w)}}if(s(e,{errors:$+1,currentLocation:g,expectedLocation:g,distance:l})>y)break;L=P}return{isMatch:w>=0,score:0===x?.001:x,matchedIndices:n(b,v)}}},function(t,e,i){"use strict";var s=function(){function t(t,e){for(var i=0;i<e.length;i++){var s=e[i];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(t,s.key,s)}}return function(e,i,s){return i&&t(e.prototype,i),s&&t(e,s),e}}();var n=i(1),r=i(2),o=i(0),a=function(){function t(e,i){var s=i.location,n=void 0===s?0:s,o=i.distance,a=void 0===o?100:o,c=i.threshold,l=void 0===c?.6:c,h=i.maxPatternLength,u=void 0===h?32:h,d=i.caseSensitive,f=void 0!==d&&d,p=i.tokenSeparator,v=void 0===p?/ +/g:p,g=i.findAllMatches,m=void 0!==g&&g,y=i.minMatchCharLength,w=void 0===y?1:y,_=i.id,b=void 0===_?null:_,k=i.keys,S=void 0===k?[]:k,C=i.shouldSort,L=void 0===C||C,x=i.getFn,A=void 0===x?r:x,M=i.sortFn,$=void 0===M?function(t,e){return t.score-e.score}:M,N=i.tokenize,O=void 0!==N&&N,j=i.matchAllTokens,E=void 0!==j&&j,P=i.includeMatches,T=void 0!==P&&P,I=i.includeScore,z=void 0!==I&&I,F=i.verbose,V=void 0!==F&&F;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.options={location:n,distance:a,threshold:l,maxPatternLength:u,isCaseSensitive:f,tokenSeparator:v,findAllMatches:m,minMatchCharLength:w,id:b,keys:S,includeMatches:T,includeScore:z,shouldSort:L,getFn:A,sortFn:$,verbose:V,tokenize:O,matchAllTokens:E},this.setCollection(e)}return s(t,[{key:"setCollection",value:function(t){return this.list=t,t}},{key:"search",value:function(t){this._log('---------\nSearch pattern: "'+t+'"');var e=this._prepareSearchers(t),i=e.tokenSearchers,s=e.fullSearcher,n=this._search(i,s),r=n.weights,o=n.results;return this._computeScore(r,o),this.options.shouldSort&&this._sort(o),this._format(o)}},{key:"_prepareSearchers",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",e=[];if(this.options.tokenize)for(var i=t.split(this.options.tokenSeparator),s=0,r=i.length;s<r;s+=1)e.push(new n(i[s],this.options));return{tokenSearchers:e,fullSearcher:new n(t,this.options)}}},{key:"_search",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],e=arguments[1],i=this.list,s={},n=[];if("string"==typeof i[0]){for(var r=0,o=i.length;r<o;r+=1)this._analyze({key:"",value:i[r],record:r,index:r},{resultMap:s,results:n,tokenSearchers:t,fullSearcher:e});return{weights:null,results:n}}for(var a={},c=0,l=i.length;c<l;c+=1)for(var h=i[c],u=0,d=this.options.keys.length;u<d;u+=1){var f=this.options.keys[u];if("string"!=typeof f){if(a[f.name]={weight:1-f.weight||1},f.weight<=0||f.weight>1)throw new Error("Key weight has to be > 0 and <= 1");f=f.name}else a[f]={weight:1};this._analyze({key:f,value:this.options.getFn(h,f),record:h,index:c},{resultMap:s,results:n,tokenSearchers:t,fullSearcher:e})}return{weights:a,results:n}}},{key:"_analyze",value:function(t,e){var i=t.key,s=t.arrayIndex,n=void 0===s?-1:s,r=t.value,a=t.record,c=t.index,l=e.tokenSearchers,h=void 0===l?[]:l,u=e.fullSearcher,d=void 0===u?[]:u,f=e.resultMap,p=void 0===f?{}:f,v=e.results,g=void 0===v?[]:v;if(null!=r){var m=!1,y=-1,w=0;if("string"==typeof r){this._log("\nKey: "+(""===i?"-":i));var _=d.search(r);if(this._log('Full text: "'+r+'", score: '+_.score),this.options.tokenize){for(var b=r.split(this.options.tokenSeparator),k=[],S=0;S<h.length;S+=1){var C=h[S];this._log('\nPattern: "'+C.pattern+'"');for(var L=!1,x=0;x<b.length;x+=1){var A=b[x],M=C.search(A),$={};M.isMatch?($[A]=M.score,m=!0,L=!0,k.push(M.score)):($[A]=1,this.options.matchAllTokens||k.push(1)),this._log('Token: "'+A+'", score: '+$[A])}L&&(w+=1)}y=k[0];for(var N=k.length,O=1;O<N;O+=1)y+=k[O];y/=N,this._log("Token score average:",y)}var j=_.score;y>-1&&(j=(j+y)/2),this._log("Score average:",j);var E=!this.options.tokenize||!this.options.matchAllTokens||w>=h.length;if(this._log("\nCheck Matches: "+E),(m||_.isMatch)&&E){var P=p[c];P?P.output.push({key:i,arrayIndex:n,value:r,score:j,matchedIndices:_.matchedIndices}):(p[c]={item:a,output:[{key:i,arrayIndex:n,value:r,score:j,matchedIndices:_.matchedIndices}]},g.push(p[c]))}}else if(o(r))for(var T=0,I=r.length;T<I;T+=1)this._analyze({key:i,arrayIndex:T,value:r[T],record:a,index:c},{resultMap:p,results:g,tokenSearchers:h,fullSearcher:d})}}},{key:"_computeScore",value:function(t,e){this._log("\n\nComputing score:\n");for(var i=0,s=e.length;i<s;i+=1){for(var n=e[i].output,r=n.length,o=1,a=1,c=0;c<r;c+=1){var l=t?t[n[c].key].weight:1,h=(1===l?n[c].score:n[c].score||.001)*l;1!==l?a=Math.min(a,h):(n[c].nScore=h,o*=h)}e[i].score=1===a?o:a,this._log(e[i])}}},{key:"_sort",value:function(t){this._log("\n\nSorting...."),t.sort(this.options.sortFn)}},{key:"_format",value:function(t){var e=[];this.options.verbose&&this._log("\n\nOutput:\n\n",JSON.stringify(t));var i=[];this.options.includeMatches&&i.push(function(t,e){var i=t.output;e.matches=[];for(var s=0,n=i.length;s<n;s+=1){var r=i[s];if(0!==r.matchedIndices.length){var o={indices:r.matchedIndices,value:r.value};r.key&&(o.key=r.key),r.hasOwnProperty("arrayIndex")&&r.arrayIndex>-1&&(o.arrayIndex=r.arrayIndex),e.matches.push(o)}}}),this.options.includeScore&&i.push(function(t,e){e.score=t.score});for(var s=0,n=t.length;s<n;s+=1){var r=t[s];if(this.options.id&&(r.item=this.options.getFn(r.item,this.options.id)[0]),i.length){for(var o={item:r.item},a=0,c=i.length;a<c;a+=1)i[a](r,o);e.push(o)}else e.push(r.item)}return e}},{key:"_log",value:function(){var t;this.options.verbose&&(t=console).log.apply(t,arguments)}}]),t}();t.exports=a}])},t.exports=s()},function(t,e,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var s=i(4),n=i(5);function r(t,e){return t&&e?t.querySelector(e):null}function o(t,e){t&&e&&t.addEventListener("click",t=>{t.preventDefault(),e(t)},!1)}function a(t,e){t&&(t.style.setProperty("-webkit-transform",e),t.style.setProperty("-moz-transform",e),t.style.setProperty("transform",e))}function c(t,e="0px"){t&&a(t,`translateX(${e})`)}function l(t){return t.replace(/^\./g,"")}const h={container:".slendr",selector:".slendr-slides > .slendr-slide",animationClass:".slendr-animate",directionNavs:!0,directionNavPrev:".slendr-prev",directionNavNext:".slendr-next",controlNavs:!0,controlNavClass:".slendr-control",controlNavClassActive:".slendr-control-active",slideVisibleClass:".slendr-visible",slideActiveClass:".slendr-active",slideshow:!0,slideshowSpeed:4e3,keyboard:!1};e.Slendr=class{constructor(t){if(this.options=t,this.slidesLength=0,this.current=0,this.timeout=0,this.paused=!0,this.animating=!1,this.containerWidth=0,this.translationDir=0,this.slide=null,this.controlNavActive=null,this.opts=Object.assign({},h,this.options),"string"==typeof this.opts.container){const t=r(document.body,this.opts.container);if(!t)throw new Error("No container found");this.container=t}else this.container=this.opts.container;const e=this.opts.selector.substr(0,this.opts.selector.search(" ")),i=r(this.container,e);if(!i)throw new Error("No slides container found");var n,o;this.slidesContainer=i,this.slides=(n=this.opts.selector,o=i,Array.prototype.slice.call((o||document.body).querySelectorAll(n))),this.slidesLength=this.slides.length,this.containerWidth=this.container.offsetWidth,this.opts.animationClass=l(this.opts.animationClass),this.opts.slideActiveClass=l(this.opts.slideActiveClass),this.opts.slideVisibleClass=l(this.opts.slideVisibleClass),this.opts.controlNavClass=l(this.opts.controlNavClass),this.opts.controlNavClassActive=l(this.opts.controlNavClassActive),this.emitter=s.emitus(),this.initialize()}prev(){this.animating||this.goTo(0)}next(){this.animating||this.goTo(1)}play(){this.paused&&(this.opts.slideshow=!0,this.slideshow(),this.emitter.emit("play",[this.current]))}pause(){this.opts.slideshow&&(clearTimeout(this.timeout),this.paused=!0,this.animating=!1,this.opts.slideshow=!1,this.emitter.emit("pause",[this.current]))}move(t){this.goToBy(t)}on(t,e){this.emitter.on(t,e)}off(t,e){this.emitter.off(t,e)}initialize(){this.slidesLength<2?1===this.slidesLength&&(this.slides[0].setAttribute("data-slide-index","0"),this.showSlideBy(0)):(this.container.setAttribute("data-slides-length",this.slidesLength.toString()),this.showSlideBy(0),this.addEvents(),this.opts.controlNavs&&(this.controlNavActive=this.controlNavs(),this.controlNavActive&&this.controlNavActive(0)),this.opts.directionNavs?this.directionNavs():this.opts.directionNavs=!1,this.opts.keyboard&&this.keyboard(),this.loadImages(),this.slideshow())}goToBy(t){!this.animating&&this.current!==t&&t>=0&&t<this.slidesLength&&this.goTo(this.current-t<0?1:0,t)}goTo(t,e=-1){this.animating=!0,window.clearTimeout(this.timeout),this.showSlide(this.slides[this.current]),-1!==e?this.current=e:(this.current=1===t?this.current+1:this.current-1,this.current>this.slidesLength-1&&(this.current=0),this.current<0&&(this.current=this.slidesLength-1)),this.slide=this.slides[this.current],this.showSlide(this.slide),this.slidesContainer.classList.add(this.opts.animationClass),c(this.slidesContainer,(1===t?"-":"")+this.containerWidth+"px"),c(this.slide,(1===t?"":"-")+this.containerWidth+"px"),this.controlNavActive&&this.controlNavActive(this.current),this.translationDir=t}slideshow(){this.opts.slideshow&&(this.paused=!1,window.clearTimeout(this.timeout),this.timeout=window.setTimeout(()=>this.next(),this.opts.slideshowSpeed))}showSlideBy(t){for(let e=0;e<this.slidesLength;e++)this.showSlide(this.slides[e],t===e,t===e)}showSlide(t,e=!0,i=!1){e?t.classList.add(this.opts.slideVisibleClass):t.classList.remove(this.opts.slideVisibleClass),i?t.classList.add(this.opts.slideActiveClass):t.classList.remove(this.opts.slideActiveClass)}background(t){const e=t.getAttribute("data-slide-src");e&&(t.style.setProperty("background-image",`url('${e}')`),t.removeAttribute("data-slide-src"))}loadImages(){const t=this.slides,e=[];for(let i=0;i<this.slidesLength;i++){t[i].setAttribute("data-slide-index",i.toString());const s=t[i].getAttribute("data-slide-src")||null;s&&e.push(s)}e.length&&n.Loader(e,(e,i)=>{e&&(this.emitter.emit("image:load",[e,i,this.slides[i]]),this.background(t[i]))},t=>this.emitter.emit("image:completed",[t]))}keyboard(){document.addEventListener("keyup",({which:t})=>{37===t&&this.prev(),39===t&&this.next()},!1)}onTransitionEnd(){this.animating=!1,this.slidesContainer.classList.remove(this.opts.animationClass),a(this.slidesContainer,"none"),a(this.slides[this.current],"none"),this.showSlideBy(this.current),this.emitter.emit("move",[this.translationDir,this.current,this.slide]),this.emitter.emit(this.translationDir?"next":"prev",[this.current,this.slide]),this.slideshow()}addEvents(){window.addEventListener("resize",()=>this.containerWidth=this.container.offsetWidth,!1),this.slidesContainer.addEventListener("transitionend",()=>this.onTransitionEnd(),!1)}directionNavs(){const t=r(this.container,this.opts.directionNavPrev),e=r(this.container,this.opts.directionNavNext);t&&o(t,()=>this.prev()),e&&o(e,()=>this.next())}controlNavs(){const t=r(this.container,`.${this.opts.controlNavClass}`);if(!t)return null;for(;t.firstChild;)t.removeChild(t.firstChild);const e=[],i=document.createElement("ul");let s=0;for(;s<this.slidesLength;){const t=this.createBullet(i,s++);t&&e.push(t)}return t.appendChild(i),t=>{if(this.slidesLength>1){let i=0;for(;i<e.length;)e[i++].classList.remove(this.opts.controlNavClassActive);e[t||0].classList.add(this.opts.controlNavClassActive)}}}createBullet(t,e){const i=document.createElement("a");return o(i,()=>this.goToBy(e)),t.appendChild(i),i}}},function(t,e,i){},function(t,e){window.$=function(t,e,i,s,n,r,o,a,c,l,h,u){return(u=function(t,e){return new u.i(t,e)}).i=function(s,n){i.push.apply(this,s?s.nodeType||s==t?[s]:""+s===s?/</.test(s)?((a=e.createElement(n||"q")).innerHTML=s,a.children):(n&&u(n)[0]||e).querySelectorAll(s):/f/.test(typeof s)?/c/.test(e.readyState)?s():u(e).on("DOMContentLoaded",s):s:i)},u.i[h="prototype"]=(u.extend=function(t){for(l=arguments,a=1;a<l.length;a++)if(h=l[a])for(c in h)t[c]=h[c];return t})(u.fn=u[h]=i,{on:function(t,e){return t=t.split(s),this.map(function(i){(s[a=t[0]+(i.b$=i.b$||++n)]=s[a]||[]).push([e,t[1]]),i.addEventListener(t[0],e)}),this},off:function(t,e){return t=t.split(s),h="removeEventListener",this.map(function(i){if(l=s[t[0]+i.b$],a=l&&l.length)for(;c=l[--a];)e&&e!=c[0]||t[1]&&t[1]!=c[1]||(i[h](t[0],c[0]),l.splice(a,1));else!t[1]&&i[h](t[0],e)}),this},is:function(t){return((a=this[0]).matches||a.webkitMatchesSelector||a.mozMatchesSelector||a.msMatchesSelector||a.oMatchesSelector).call(a,t)},parents:function(t){var i=u();return this.forEach(function(s){for(var n;(s=s.parentNode)&&s!==e;)t?u(s).is(t)&&(n=s):n=s,n&&!~i.indexOf(n)&&i.push(n)}),i},find:function(t){var e=u();return this.forEach(function(i){Array.prototype.map.call(i.children,i=>{(t&&u(i).is(t)||!t)&&e.push(i)})}),e},val:function(t){return t?(this.forEach(function(e){e.value=t}),this):this[0].value},addClass:function(t){return this.forEach(function(e){e.classList.add(t)}),this},removeClass:function(t){return this.forEach(function(e){e.classList.remove(t)}),this},submit:function(t){return this.submit(),this},html:function(t){return this[0].innerHTML=t,this},hide:function(){return this.forEach(function(t){t.style.display="none"}),this},show:function(){return this.forEach(function(t){t.style.display="initial"}),this},attr:function(t,e){if(t){if(!e)return this[0].getAttribute(t);this[0].setAttribute(t,e)}return this},data:function(t,e){return t?this.attr("data-"+t,e):this},width:function(t){return t?(this[0].style.width=t,this):this[0].clientWidth},height:function(t){return t?(this[0].style.height=t,this):this[0].clientHeight}}),u}(window,document,[],/\.(.+)/,0)},function(t,e,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.emitus=function(){var t=[];return{on:function(e,i){e&&i&&t.push([e,i])},off:function(e,i){for(var s=0;s<t.length;s++)e===t[s][0]&&i===t[s][1]&&t.splice(s,1)},emit:function(e,i){for(var s=0;s<t.length;s++)e&&e===t[s][0]&&t[s][1](e,i||null)}}}},function(t,e,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var s=function(t,e,i){if(t.length){var s=function(n){n<t.length?function(t,e,i){var s=new Image;s.onload=function(t){return i(t.target,e,t)},s.onerror=function(t){return i(null,e,t)},s.src=t}(t[n],n,function(t,i,r){e(t,i,r),s(n+1)}):i&&i(n)};s(0)}};e.Loader=function(t,e,i){s(Array.isArray(t)?t:[t],e,i)}},function(t,e,i){const s=i(0);let n={state:{products:[],categories:[]},searchOptions:{product:{shouldSort:!0,threshold:.5,location:0,distance:100,maxPatternLength:32,minMatchCharLength:1,keys:["label"],slice:5},category:{shouldSort:!0,threshold:.2,location:0,distance:100,maxPatternLength:32,minMatchCharLength:1,keys:["title"],slice:4}}},r={create:{productList:function(t){let e="";return t.length?t.map(t=>{e+=`\n\t\t            <li class="search-result__product">\n\t\t            \t<a class="no-link-style search-result__link" href="${t.link}">\n\t\t\t                <img class="search-result__product-image" src="${t.image}" /  >\n\t\t\t                <div class="search-result__product-info">\n\t\t\t                    <div class="search-result__product-title">\n\t\t\t                        ${t.label}\n\t\t\t                    </div>\n\t\t\t                    <div class="search-result__product-category">\n\t\t\t                        in \n\t\t\t                        <span class="semi-bold">\n\t\t\t                            ${t.category}\n\t\t\t                        </span>\n\t\t\t                    </div>\n\t\t\t                </div>\n\t\t                </a>\n\t\t            </li>`}):e+='\n\t\t            <li class="search-result__empty">\n\t\t                    No result found\n\t\t            </li>',e},categoryList:function(t){let e="";return t.length?t.map(t=>{e+=`\n\t\t\t        \t<li class="search-result__category">\n\t\t\t        \t\t<a class="no-link-style search-result__link" href="${t.link}">\n\t\t\t\t\t            <div class="search-result__category-title">\n\t\t\t\t\t                ${t.title}\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class="search-result__category-description">\n\t\t\t\t\t                ${t.description}\n\t\t\t\t\t            </div>\n\t\t\t\t            </a>\n\t\t\t\t        </li>`}):e+='\n\t\t            <li class="search-result__empty">\n\t\t                    No result found\n\t\t            </li>',e}}};$(".search__input").on("focus",function(){$(this).parents(".search-wrapper").addClass("search-wrapper--page").find(".search").addClass("container"),0===n.state.products.length&&fetch("https://www.zariance.com/api/product.php").then(function(t){200===t.status?t.json().then(function(t){!function(t){n.state.products=t.products.data,n.state.categories=t.categories.data,$(".js-search-product-list").html(r.create.productList(t.products.data.slice(0,n.searchOptions.product.slice))),$(".js-search-category-list").html(r.create.categoryList(t.categories.data.slice(0,n.searchOptions.category.slice)))}(t)}):console.log("Looks like there was a problem. Status Code: "+t.status)}).catch(function(t){console.log("Fetch Error :-S",t)})}).on("blur",function(){}),$(".js-search-input").on("input",function(){let t=$(this).val();console.log(t),function(t){let e=[];e=t?new s(n.state.products,n.searchOptions.product).search(t):n.state.products;$(".js-search-product-list").html(r.create.productList(e.slice(0,5)))}(t),function(t){let e=[];e=t?new s(n.state.categories,n.searchOptions.category).search(t):n.state.categories;$(".js-search-category-list").html(r.create.categoryList(e.slice(0,4)))}(t)}),$(".js-search-close").on("click",function(){$(".search-wrapper").removeClass("search-wrapper--page")})},function(t,e){!function(){let t=$(".write-review__form .rating__star"),e=t.find(".rating__star-inr"),i=t.width();t.on("click",function(t){let s=Math.ceil(t.offsetX/i*5)||1;e.width(20*s+"%"),$(".write-review__field--rating .write-review__input").val(s)[0].setCustomValidity("")})}(),$(".write-review__submit").on("click",function(){$(".write-review__form").addClass("write-review__form--submitted");var t=$(".write-review__field--rating .write-review__input");if(!t.val())return t[0].setCustomValidity("You must select a rating."),!1;t[0].setCustomValidity("");var e=$(".write-review__field--review .write-review__input"),i=e.val().match(/\s*\S+\s*/g);if(!i||i.length<20)return e[0].setCustomValidity("Your review must be at least 20 words long."),!1;e[0].setCustomValidity("")}),$(".write-review__form").on("submit",function(t){t.preventDefault(),fetch("",{method:"POST",body:JSON.stringify({product:$(".write-review__section").data("pid"),email:decodeURIComponent(window.location.search),rating:$(".write-review__field--rating .write-review__input").val(),title:$(".write-review__field--title .write-review__input").val(),review:$(".write-review__field--review .write-review__input").val(),name:$(".write-review__field--name .write-review__input").val(),job:$(".write-review__field--job .write-review__input").val(),company:$(".write-review__field--company .write-review__input").val()})}).then(function(t){t.ok&&($(".write-review__section").hide(),$(".write-review__thanks").show())})})},function(t,e,i){"use strict";i.r(e);i(2),i(3);var s=i(1);if(document.querySelectorAll(".slider").length>0){const t=new s.Slendr({slideshow:!0});document.addEventListener("click",e=>{e.target.matches(".slider-thumnail__img")&&t.move(parseInt(e.target.dataset.index))})}$(".js-form").on("submit",function(t){t.preventDefault();let e=$(this).find(".intro__form-input").val(),i=$(".intro__form");fetch(`/api/save.php?email=${e}`).then(function(t){200===t.status?t.json().then(function(t){i.addClass("hide").parents(".js-form-wrapper").find(".intro__form-success").removeClass("hide")}):console.log("Looks like there was a problem. Status Code: "+t.status)}).catch(function(t){console.log("Fetch Error :-S",t)})});i(0),i(6),i(7)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/emitus/index.js":
+/*!**************************************!*\
+  !*** ./node_modules/emitus/index.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function emitus() {
+    var events = [];
+    return {
+        on: function (eventName, listener) {
+            if (eventName && listener)
+                events.push([eventName, listener]);
+        },
+        off: function (eventName, listener) {
+            for (var i = 0; i < events.length; i++) {
+                if (eventName === events[i][0] && listener === events[i][1])
+                    events.splice(i, 1);
+            }
+        },
+        emit: function (eventName, arg) {
+            for (var i = 0; i < events.length; i++) {
+                if (eventName && eventName === events[i][0])
+                    events[i][1](eventName, arg || null);
+            }
+        }
+    };
+}
+exports.emitus = emitus;
+
+
+/***/ }),
+
+/***/ "./node_modules/imgz/dist/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/imgz/dist/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var loadImage = function (source, index, done) {
+    var img = new Image();
+    img.onload = function (event) { return done(event.target, index, event); };
+    img.onerror = function (event) { return done(null, index, event); };
+    img.src = source;
+};
+var loadImages = function (sources, done, completed) {
+    if (!sources.length)
+        return;
+    var load = function (i) {
+        if (i < sources.length) {
+            loadImage(sources[i], i, function (image, index, event) {
+                done(image, index, event);
+                load(i + 1);
+            });
+        }
+        else if (completed)
+            completed(i);
+    };
+    load(0);
+};
+function Loader(source, sourceLoaded, sourcesCompleted) {
+    loadImages(Array.isArray(source) ? source : [source], sourceLoaded, sourcesCompleted);
+}
+
+exports.Loader = Loader;
+
+
+/***/ }),
+
+/***/ "./node_modules/slendr/dist/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/slendr/dist/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var emitus = __webpack_require__(/*! emitus */ "./node_modules/emitus/index.js");
+var imgz = __webpack_require__(/*! imgz */ "./node_modules/imgz/dist/index.js");
+
+function child(element, selector) {
+    if (!element || !selector)
+        return null;
+    return element.querySelector(selector);
+}
+function children(selector, parent) {
+    return Array.prototype.slice.call((parent || document.body).querySelectorAll(selector));
+}
+function onClick(element, func) {
+    if (!element || !func)
+        return;
+    element.addEventListener('click', (e) => {
+        e.preventDefault();
+        func(e);
+    }, false);
+}
+function transform(element, value) {
+    if (!element)
+        return;
+    element.style.setProperty('-webkit-transform', value);
+    element.style.setProperty('-moz-transform', value);
+    element.style.setProperty('transform', value);
+}
+function translateX(element, x = '0px') {
+    if (element)
+        transform(element, `translateX(${x})`);
+}
+function cleanClass(className) {
+    return className.replace(/^\./g, '');
+}
+
+const defaults = {
+    // Selectors
+    container: '.slendr',
+    selector: '.slendr-slides > .slendr-slide',
+    // Animation
+    animationClass: '.slendr-animate',
+    // Direction navs
+    directionNavs: true,
+    directionNavPrev: '.slendr-prev',
+    directionNavNext: '.slendr-next',
+    // Control navs
+    controlNavs: true,
+    controlNavClass: '.slendr-control',
+    controlNavClassActive: '.slendr-control-active',
+    // Slide
+    slideVisibleClass: '.slendr-visible',
+    slideActiveClass: '.slendr-active',
+    // Slideshow
+    slideshow: true,
+    slideshowSpeed: 4000,
+    // Keyboard
+    keyboard: false
+};
+/**
+ * Slendr is a responsive & lightweight slider for modern browsers.
+ */
+class Slendr {
+    constructor(options) {
+        this.options = options;
+        this.slidesLength = 0;
+        this.current = 0;
+        this.timeout = 0;
+        this.paused = true;
+        this.animating = false;
+        this.containerWidth = 0;
+        this.translationDir = 0;
+        this.slide = null;
+        this.controlNavActive = null;
+        this.opts = Object.assign({}, defaults, this.options);
+        if (typeof this.opts.container === 'string') {
+            const childContainer = child(document.body, this.opts.container);
+            if (!childContainer)
+                throw new Error('No container found');
+            this.container = childContainer;
+        }
+        else
+            this.container = this.opts.container;
+        const selectorContainer = this.opts.selector.substr(0, this.opts.selector.search(' '));
+        const slidesContainer = child(this.container, selectorContainer);
+        if (!slidesContainer)
+            throw new Error('No slides container found');
+        this.slidesContainer = slidesContainer;
+        this.slides = children(this.opts.selector, slidesContainer);
+        this.slidesLength = this.slides.length;
+        this.containerWidth = this.container.offsetWidth;
+        this.opts.animationClass = cleanClass(this.opts.animationClass);
+        this.opts.slideActiveClass = cleanClass(this.opts.slideActiveClass);
+        this.opts.slideVisibleClass = cleanClass(this.opts.slideVisibleClass);
+        this.opts.controlNavClass = cleanClass(this.opts.controlNavClass);
+        this.opts.controlNavClassActive = cleanClass(this.opts.controlNavClassActive);
+        this.emitter = emitus.emitus();
+        this.initialize();
+    }
+    /**
+     * Moves the current slider to the previous slide
+     */
+    prev() {
+        if (!this.animating)
+            this.goTo(0);
+    }
+    /**
+     * Moves the current slider to the next slide
+     */
+    next() {
+        if (!this.animating)
+            this.goTo(1);
+    }
+    /**
+     * Starts slideshow timer mode for the current slider
+     */
+    play() {
+        if (!this.paused)
+            return;
+        this.opts.slideshow = true;
+        this.slideshow();
+        this.emitter.emit('play', [this.current]);
+    }
+    /**
+     * Pauses slideshow timer for the current slider
+     */
+    pause() {
+        if (!this.opts.slideshow)
+            return;
+        clearTimeout(this.timeout);
+        this.paused = true;
+        this.animating = false;
+        this.opts.slideshow = false;
+        this.emitter.emit('pause', [this.current]);
+    }
+    /**
+     * Moves the current slider by slide index
+     *
+     * @param index Slide index to move
+     */
+    move(index) {
+        this.goToBy(index);
+    }
+    /**
+     * Adds an event listener to the current slider
+     *
+     * @param eventName SlendrEvent ('move', 'next', 'prev', 'play' or 'pause')
+     * @param listener EmitusListener
+     */
+    on(eventName, listener) {
+        this.emitter.on(eventName, listener);
+    }
+    /**
+     * Removes a registered event listener
+     *
+     * @param eventName SlendrEvent ('move', 'next', 'prev', 'play' or 'pause')
+     * @param listener EmitusListener
+     */
+    off(eventName, listener) {
+        this.emitter.off(eventName, listener);
+    }
+    initialize() {
+        if (this.slidesLength < 2) {
+            if (this.slidesLength === 1) {
+                this.slides[0].setAttribute('data-slide-index', '0');
+                this.showSlideBy(0);
+            }
+            return;
+        }
+        this.container.setAttribute('data-slides-length', this.slidesLength.toString());
+        this.showSlideBy(0);
+        this.addEvents();
+        if (this.opts.controlNavs) {
+            this.controlNavActive = this.controlNavs();
+            if (this.controlNavActive)
+                this.controlNavActive(0);
+        }
+        if (this.opts.directionNavs)
+            this.directionNavs();
+        else
+            this.opts.directionNavs = false;
+        if (this.opts.keyboard)
+            this.keyboard();
+        this.loadImages();
+        this.slideshow();
+    }
+    goToBy(index) {
+        if (!this.animating && this.current !== index && (index >= 0 && index < this.slidesLength)) {
+            this.goTo(this.current - index < 0 ? 1 : 0, index);
+        }
+    }
+    goTo(direction, index = -1) {
+        this.animating = true;
+        window.clearTimeout(this.timeout);
+        this.showSlide(this.slides[this.current]);
+        if (index !== -1) {
+            this.current = index;
+        }
+        else {
+            this.current = direction === 1 ? this.current + 1 : this.current - 1;
+            if (this.current > this.slidesLength - 1)
+                this.current = 0;
+            if (this.current < 0)
+                this.current = this.slidesLength - 1;
+        }
+        this.slide = this.slides[this.current];
+        this.showSlide(this.slide);
+        this.slidesContainer.classList.add(this.opts.animationClass);
+        translateX(this.slidesContainer, (direction === 1 ? '-' : '') + this.containerWidth + 'px');
+        translateX(this.slide, (direction === 1 ? '' : '-') + this.containerWidth + 'px');
+        if (this.controlNavActive)
+            this.controlNavActive(this.current);
+        this.translationDir = direction;
+    }
+    slideshow() {
+        if (this.opts.slideshow) {
+            this.paused = false;
+            window.clearTimeout(this.timeout);
+            this.timeout = window.setTimeout(() => this.next(), this.opts.slideshowSpeed);
+        }
+    }
+    showSlideBy(index) {
+        for (let i = 0; i < this.slidesLength; i++)
+            this.showSlide(this.slides[i], index === i, index === i);
+    }
+    showSlide(slide, yes = true, cls = false) {
+        if (yes)
+            slide.classList.add(this.opts.slideVisibleClass);
+        else
+            slide.classList.remove(this.opts.slideVisibleClass);
+        if (cls)
+            slide.classList.add(this.opts.slideActiveClass);
+        else
+            slide.classList.remove(this.opts.slideActiveClass);
+    }
+    background(slide) {
+        const src = slide.getAttribute('data-slide-src');
+        if (src) {
+            slide.style.setProperty('background-image', `url('${src}')`);
+            slide.removeAttribute('data-slide-src');
+        }
+    }
+    loadImages() {
+        const slides = this.slides;
+        const sources = [];
+        for (let i = 0; i < this.slidesLength; i++) {
+            slides[i].setAttribute('data-slide-index', i.toString());
+            const src = slides[i].getAttribute('data-slide-src') || null;
+            if (src)
+                sources.push(src);
+        }
+        if (sources.length) {
+            imgz.Loader(sources, (image, i) => {
+                if (image) {
+                    this.emitter.emit('image:load', [image, i, this.slides[i]]);
+                    this.background(slides[i]);
+                }
+            }, (len) => this.emitter.emit('image:completed', [len]));
+        }
+    }
+    keyboard() {
+        document.addEventListener('keyup', ({ which }) => {
+            if (which === 37)
+                this.prev();
+            if (which === 39)
+                this.next();
+        }, false);
+    }
+    onTransitionEnd() {
+        this.animating = false;
+        this.slidesContainer.classList.remove(this.opts.animationClass);
+        transform(this.slidesContainer, 'none');
+        transform(this.slides[this.current], 'none');
+        this.showSlideBy(this.current);
+        this.emitter.emit('move', [this.translationDir, this.current, this.slide]);
+        this.emitter.emit(this.translationDir ? 'next' : 'prev', [this.current, this.slide]);
+        this.slideshow();
+    }
+    addEvents() {
+        window.addEventListener('resize', () => this.containerWidth = this.container.offsetWidth, false);
+        this.slidesContainer.addEventListener('transitionend', () => this.onTransitionEnd(), false);
+    }
+    directionNavs() {
+        const prevNav = child(this.container, this.opts.directionNavPrev);
+        const nextNav = child(this.container, this.opts.directionNavNext);
+        if (prevNav)
+            onClick(prevNav, () => this.prev());
+        if (nextNav)
+            onClick(nextNav, () => this.next());
+    }
+    controlNavs() {
+        const control = child(this.container, `.${this.opts.controlNavClass}`);
+        if (!control)
+            return null;
+        while (control.firstChild)
+            control.removeChild(control.firstChild);
+        const controlNavList = [];
+        const ul = document.createElement('ul');
+        let i = 0;
+        while (i < this.slidesLength) {
+            const el = this.createBullet(ul, i++);
+            if (el)
+                controlNavList.push(el);
+        }
+        control.appendChild(ul);
+        const controlNavActive = (index) => {
+            if (this.slidesLength > 1) {
+                let n = 0;
+                while (n < controlNavList.length) {
+                    controlNavList[n++].classList.remove(this.opts.controlNavClassActive);
+                }
+                controlNavList[index || 0].classList.add(this.opts.controlNavClassActive);
+            }
+        };
+        return controlNavActive;
+    }
+    createBullet(ul, i) {
+        const a = document.createElement('a');
+        onClick(a, () => this.goToBy(i));
+        ul.appendChild(a);
+        return a;
+    }
+}
+
+exports.Slendr = Slendr;
+
+
+/***/ }),
+
+/***/ "./src/js/eventHandlers.js":
+/*!*********************************!*\
+  !*** ./src/js/eventHandlers.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, s_MatchesSelector, i, j, k, l, $) {
+    $ = function(s, context) {
+        return new $.i(s, context);
+    };
+    $.i = function(s, context) {
+        fn.push.apply(this, !s ? fn : s.nodeType || s == window ? [s] : "" + s === s ? /</.test(s) ? ((i = document.createElement(context || 'q')).innerHTML = s, i.children) : (context && $(context)[0] || document).querySelectorAll(s) : /f/.test(typeof s) ? /c/.test(document.readyState) ? s() : $(document).on('DOMContentLoaded', s) : s);
+    };
+    $.i[l = 'prototype'] = ($.extend = function(obj) {
+        k = arguments;
+        for (i = 1; i < k.length; i++) {
+            if (l = k[i]) {
+                for (j in l) {
+                    obj[j] = l[j];
+                }
+            }
+        }
+        return obj;
+    })($.fn = $[l] = fn, {
+        on: function(n, f) {
+            n = n.split(nsRegAndEvents);
+            this.map(function(item) {
+                (nsRegAndEvents[i = n[0] + (item.b$ = item.b$ || ++id)] = nsRegAndEvents[i] || []).push([f, n[1]]);
+                item['add' + s_EventListener](n[0], f);
+            });
+            return this;
+        },
+        off: function(n, f) {
+            n = n.split(nsRegAndEvents);
+            l = 'remove' + s_EventListener;
+            this.map(function(item) {
+                k = nsRegAndEvents[n[0] + item.b$];
+                if (i = k && k.length) {
+                    while (j = k[--i]) {
+                        if ((!f || f == j[0]) && (!n[1] || n[1] == j[1])) {
+                            item[l](n[0], j[0]);
+                            k.splice(i, 1);
+                        }
+                    }
+                } else {
+                    !n[1] && item[l](n[0], f);
+                }
+            });
+            return this;
+        },
+        is: function(s) {
+            i = this[0];
+            return (i.matches || i['webkit' + s_MatchesSelector] || i['moz' + s_MatchesSelector] || i['ms' + s_MatchesSelector] || i['o' + s_MatchesSelector]).call(i, s);
+        },
+        parents: function(selector) {
+            var collection = $();
+            this.forEach(function(node) {
+                var parent;
+                while ((node = node.parentNode) && (node !== document)) {
+                    if (selector) {
+                        if ($(node).is(selector)) {
+                            parent = node;
+                        }
+                    } else {
+                        parent = node;
+                    }
+                    if (parent && !~collection.indexOf(parent)) {
+                        collection.push(parent);
+                    }
+                }
+            });
+            return collection;
+        },
+        find: function(selector) {
+            var collection = $();
+            this.forEach(function(node) {
+                var child;
+                Array.prototype.map.call(node.children, (child) => {
+                    if ((selector && $(child).is(selector)) || !selector) {
+                        collection.push(child);
+                    }
+                })
+            });
+            return collection;
+        },
+        val: function (newVal) {
+            if (newVal) {
+                this.forEach(function (node) {
+                    node.value = newVal;
+                });
+                return this;
+            }
+            return this[0].value;
+        },
+        addClass: function(className) {
+            this.forEach(function(node) {
+                node.classList.add(className);
+            });
+            return this;
+        },
+        removeClass: function(className) {
+            this.forEach(function(node) {
+                node.classList.remove(className);
+            });
+            return this;
+        },
+        toggleClass: function(className){
+            this.forEach(function(node) {
+                node.classList.toggle(className);
+            })
+            return this;
+        },
+        submit: function(s) {
+            //Haven't test submit function yet
+            this.submit();
+            return this;
+        },
+        html: function(content) {
+            this[0].innerHTML = content;
+            return this;
+        },
+        hide: function () {
+            this.forEach(function (node) {
+                node.style.display = "none";
+            });
+            return this;
+        },
+        show: function () {
+            this.forEach(function (node) {
+                node.style.display = "initial";
+            });
+            return this;
+        },
+        attr: function (name, value) {
+            if (name) {
+                if (value) {
+                    this[0].setAttribute(name, value);
+                }
+                else {
+                    return this[0].getAttribute(name);
+                }
+            }
+            return this;
+        },
+        data: function (name, value) {
+            if (name) {
+                return this.attr("data-" + name, value);
+            }
+            return this;
+        },
+        width: function (newWidth) {
+            let response = null;
+
+            if (newWidth) {
+                this[0].style.width = newWidth;
+                response = this;
+            }
+            else if(this.length>0){
+                response = this[0].clientWidth
+            }
+
+            return response;
+        },
+        height: function (newHeight) {
+            if (newHeight) {
+                this[0].style.height = newHeight;
+                return this;
+            }
+            return this[0].clientHeight;
+        }
+    });
+    return $;
+})(window, document, [], /\.(.+)/, 0, 'EventListener', 'MatchesSelector')
+
+
+/***/ }),
+
+/***/ "./src/js/fuse.js":
+/*!************************!*\
+  !*** ./src/js/fuse.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (obj) {
+  return !Array.isArray ? Object.prototype.toString.call(obj) === '[object Array]' : Array.isArray(obj);
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var bitapRegexSearch = __webpack_require__(5);
+var bitapSearch = __webpack_require__(7);
+var patternAlphabet = __webpack_require__(4);
+
+var Bitap = function () {
+  function Bitap(pattern, _ref) {
+    var _ref$location = _ref.location,
+        location = _ref$location === undefined ? 0 : _ref$location,
+        _ref$distance = _ref.distance,
+        distance = _ref$distance === undefined ? 100 : _ref$distance,
+        _ref$threshold = _ref.threshold,
+        threshold = _ref$threshold === undefined ? 0.6 : _ref$threshold,
+        _ref$maxPatternLength = _ref.maxPatternLength,
+        maxPatternLength = _ref$maxPatternLength === undefined ? 32 : _ref$maxPatternLength,
+        _ref$isCaseSensitive = _ref.isCaseSensitive,
+        isCaseSensitive = _ref$isCaseSensitive === undefined ? false : _ref$isCaseSensitive,
+        _ref$tokenSeparator = _ref.tokenSeparator,
+        tokenSeparator = _ref$tokenSeparator === undefined ? / +/g : _ref$tokenSeparator,
+        _ref$findAllMatches = _ref.findAllMatches,
+        findAllMatches = _ref$findAllMatches === undefined ? false : _ref$findAllMatches,
+        _ref$minMatchCharLeng = _ref.minMatchCharLength,
+        minMatchCharLength = _ref$minMatchCharLeng === undefined ? 1 : _ref$minMatchCharLeng;
+
+    _classCallCheck(this, Bitap);
+
+    this.options = {
+      location: location,
+      distance: distance,
+      threshold: threshold,
+      maxPatternLength: maxPatternLength,
+      isCaseSensitive: isCaseSensitive,
+      tokenSeparator: tokenSeparator,
+      findAllMatches: findAllMatches,
+      minMatchCharLength: minMatchCharLength
+    };
+
+    this.pattern = this.options.isCaseSensitive ? pattern : pattern.toLowerCase();
+
+    if (this.pattern.length <= maxPatternLength) {
+      this.patternAlphabet = patternAlphabet(this.pattern);
+    }
+  }
+
+  _createClass(Bitap, [{
+    key: 'search',
+    value: function search(text) {
+      if (!this.options.isCaseSensitive) {
+        text = text.toLowerCase();
+      }
+
+      // Exact match
+      if (this.pattern === text) {
+        return {
+          isMatch: true,
+          score: 0,
+          matchedIndices: [[0, text.length - 1]]
+        };
+      }
+
+      // When pattern length is greater than the machine word length, just do a a regex comparison
+      var _options = this.options,
+          maxPatternLength = _options.maxPatternLength,
+          tokenSeparator = _options.tokenSeparator;
+
+      if (this.pattern.length > maxPatternLength) {
+        return bitapRegexSearch(text, this.pattern, tokenSeparator);
+      }
+
+      // Otherwise, use Bitap algorithm
+      var _options2 = this.options,
+          location = _options2.location,
+          distance = _options2.distance,
+          threshold = _options2.threshold,
+          findAllMatches = _options2.findAllMatches,
+          minMatchCharLength = _options2.minMatchCharLength;
+
+      return bitapSearch(text, this.pattern, this.patternAlphabet, {
+        location: location,
+        distance: distance,
+        threshold: threshold,
+        findAllMatches: findAllMatches,
+        minMatchCharLength: minMatchCharLength
+      });
+    }
+  }]);
+
+  return Bitap;
+}();
+
+// let x = new Bitap("od mn war", {})
+// let result = x.search("Old Man's War")
+// console.log(result)
+
+module.exports = Bitap;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isArray = __webpack_require__(0);
+
+var deepValue = function deepValue(obj, path, list) {
+  if (!path) {
+    // If there's no path left, we've gotten to the object we care about.
+    list.push(obj);
+  } else {
+    var dotIndex = path.indexOf('.');
+    var firstSegment = path;
+    var remaining = null;
+
+    if (dotIndex !== -1) {
+      firstSegment = path.slice(0, dotIndex);
+      remaining = path.slice(dotIndex + 1);
+    }
+
+    var value = obj[firstSegment];
+
+    if (value !== null && value !== undefined) {
+      if (!remaining && (typeof value === 'string' || typeof value === 'number')) {
+        list.push(value.toString());
+      } else if (isArray(value)) {
+        // Search each item in the array.
+        for (var i = 0, len = value.length; i < len; i += 1) {
+          deepValue(value[i], remaining, list);
+        }
+      } else if (remaining) {
+        // An object. Recurse further.
+        deepValue(value, remaining, list);
+      }
+    }
+  }
+
+  return list;
+};
+
+module.exports = function (obj, path) {
+  return deepValue(obj, path, []);
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function () {
+  var matchmask = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var minMatchCharLength = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+  var matchedIndices = [];
+  var start = -1;
+  var end = -1;
+  var i = 0;
+
+  for (var len = matchmask.length; i < len; i += 1) {
+    var match = matchmask[i];
+    if (match && start === -1) {
+      start = i;
+    } else if (!match && start !== -1) {
+      end = i - 1;
+      if (end - start + 1 >= minMatchCharLength) {
+        matchedIndices.push([start, end]);
+      }
+      start = -1;
+    }
+  }
+
+  // (i-1 - start) + 1 => i - start
+  if (matchmask[i - 1] && i - start >= minMatchCharLength) {
+    matchedIndices.push([start, i - 1]);
+  }
+
+  return matchedIndices;
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (pattern) {
+  var mask = {};
+  var len = pattern.length;
+
+  for (var i = 0; i < len; i += 1) {
+    mask[pattern.charAt(i)] = 0;
+  }
+
+  for (var _i = 0; _i < len; _i += 1) {
+    mask[pattern.charAt(_i)] |= 1 << len - _i - 1;
+  }
+
+  return mask;
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var SPECIAL_CHARS_REGEX = /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g;
+
+module.exports = function (text, pattern) {
+  var tokenSeparator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : / +/g;
+
+  var regex = new RegExp(pattern.replace(SPECIAL_CHARS_REGEX, '\\$&').replace(tokenSeparator, '|'));
+  var matches = text.match(regex);
+  var isMatch = !!matches;
+  var matchedIndices = [];
+
+  if (isMatch) {
+    for (var i = 0, matchesLen = matches.length; i < matchesLen; i += 1) {
+      var match = matches[i];
+      matchedIndices.push([text.indexOf(match), match.length - 1]);
+    }
+  }
+
+  return {
+    // TODO: revisit this score
+    score: isMatch ? 0.5 : 1,
+    isMatch: isMatch,
+    matchedIndices: matchedIndices
+  };
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (pattern, _ref) {
+  var _ref$errors = _ref.errors,
+      errors = _ref$errors === undefined ? 0 : _ref$errors,
+      _ref$currentLocation = _ref.currentLocation,
+      currentLocation = _ref$currentLocation === undefined ? 0 : _ref$currentLocation,
+      _ref$expectedLocation = _ref.expectedLocation,
+      expectedLocation = _ref$expectedLocation === undefined ? 0 : _ref$expectedLocation,
+      _ref$distance = _ref.distance,
+      distance = _ref$distance === undefined ? 100 : _ref$distance;
+
+  var accuracy = errors / pattern.length;
+  var proximity = Math.abs(expectedLocation - currentLocation);
+
+  if (!distance) {
+    // Dodge divide by zero error.
+    return proximity ? 1.0 : accuracy;
+  }
+
+  return accuracy + proximity / distance;
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var bitapScore = __webpack_require__(6);
+var matchedIndices = __webpack_require__(3);
+
+module.exports = function (text, pattern, patternAlphabet, _ref) {
+  var _ref$location = _ref.location,
+      location = _ref$location === undefined ? 0 : _ref$location,
+      _ref$distance = _ref.distance,
+      distance = _ref$distance === undefined ? 100 : _ref$distance,
+      _ref$threshold = _ref.threshold,
+      threshold = _ref$threshold === undefined ? 0.6 : _ref$threshold,
+      _ref$findAllMatches = _ref.findAllMatches,
+      findAllMatches = _ref$findAllMatches === undefined ? false : _ref$findAllMatches,
+      _ref$minMatchCharLeng = _ref.minMatchCharLength,
+      minMatchCharLength = _ref$minMatchCharLeng === undefined ? 1 : _ref$minMatchCharLeng;
+
+  var expectedLocation = location;
+  // Set starting location at beginning text and initialize the alphabet.
+  var textLen = text.length;
+  // Highest score beyond which we give up.
+  var currentThreshold = threshold;
+  // Is there a nearby exact match? (speedup)
+  var bestLocation = text.indexOf(pattern, expectedLocation);
+
+  var patternLen = pattern.length;
+
+  // a mask of the matches
+  var matchMask = [];
+  for (var i = 0; i < textLen; i += 1) {
+    matchMask[i] = 0;
+  }
+
+  if (bestLocation !== -1) {
+    var score = bitapScore(pattern, {
+      errors: 0,
+      currentLocation: bestLocation,
+      expectedLocation: expectedLocation,
+      distance: distance
+    });
+    currentThreshold = Math.min(score, currentThreshold);
+
+    // What about in the other direction? (speed up)
+    bestLocation = text.lastIndexOf(pattern, expectedLocation + patternLen);
+
+    if (bestLocation !== -1) {
+      var _score = bitapScore(pattern, {
+        errors: 0,
+        currentLocation: bestLocation,
+        expectedLocation: expectedLocation,
+        distance: distance
+      });
+      currentThreshold = Math.min(_score, currentThreshold);
+    }
+  }
+
+  // Reset the best location
+  bestLocation = -1;
+
+  var lastBitArr = [];
+  var finalScore = 1;
+  var binMax = patternLen + textLen;
+
+  var mask = 1 << patternLen - 1;
+
+  for (var _i = 0; _i < patternLen; _i += 1) {
+    // Scan for the best match; each iteration allows for one more error.
+    // Run a binary search to determine how far from the match location we can stray
+    // at this error level.
+    var binMin = 0;
+    var binMid = binMax;
+
+    while (binMin < binMid) {
+      var _score3 = bitapScore(pattern, {
+        errors: _i,
+        currentLocation: expectedLocation + binMid,
+        expectedLocation: expectedLocation,
+        distance: distance
+      });
+
+      if (_score3 <= currentThreshold) {
+        binMin = binMid;
+      } else {
+        binMax = binMid;
+      }
+
+      binMid = Math.floor((binMax - binMin) / 2 + binMin);
+    }
+
+    // Use the result from this iteration as the maximum for the next.
+    binMax = binMid;
+
+    var start = Math.max(1, expectedLocation - binMid + 1);
+    var finish = findAllMatches ? textLen : Math.min(expectedLocation + binMid, textLen) + patternLen;
+
+    // Initialize the bit array
+    var bitArr = Array(finish + 2);
+
+    bitArr[finish + 1] = (1 << _i) - 1;
+
+    for (var j = finish; j >= start; j -= 1) {
+      var currentLocation = j - 1;
+      var charMatch = patternAlphabet[text.charAt(currentLocation)];
+
+      if (charMatch) {
+        matchMask[currentLocation] = 1;
+      }
+
+      // First pass: exact match
+      bitArr[j] = (bitArr[j + 1] << 1 | 1) & charMatch;
+
+      // Subsequent passes: fuzzy match
+      if (_i !== 0) {
+        bitArr[j] |= (lastBitArr[j + 1] | lastBitArr[j]) << 1 | 1 | lastBitArr[j + 1];
+      }
+
+      if (bitArr[j] & mask) {
+        finalScore = bitapScore(pattern, {
+          errors: _i,
+          currentLocation: currentLocation,
+          expectedLocation: expectedLocation,
+          distance: distance
+        });
+
+        // This match will almost certainly be better than any existing match.
+        // But check anyway.
+        if (finalScore <= currentThreshold) {
+          // Indeed it is
+          currentThreshold = finalScore;
+          bestLocation = currentLocation;
+
+          // Already passed `loc`, downhill from here on in.
+          if (bestLocation <= expectedLocation) {
+            break;
+          }
+
+          // When passing `bestLocation`, don't exceed our current distance from `expectedLocation`.
+          start = Math.max(1, 2 * expectedLocation - bestLocation);
+        }
+      }
+    }
+
+    // No hope for a (better) match at greater error levels.
+    var _score2 = bitapScore(pattern, {
+      errors: _i + 1,
+      currentLocation: expectedLocation,
+      expectedLocation: expectedLocation,
+      distance: distance
+    });
+
+    // console.log('score', score, finalScore)
+
+    if (_score2 > currentThreshold) {
+      break;
+    }
+
+    lastBitArr = bitArr;
+  }
+
+  // console.log('FINAL SCORE', finalScore)
+
+  // Count exact matches (those with a score of 0) to be "almost" exact
+  return {
+    isMatch: bestLocation >= 0,
+    score: finalScore === 0 ? 0.001 : finalScore,
+    matchedIndices: matchedIndices(matchMask, minMatchCharLength)
+  };
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Bitap = __webpack_require__(1);
+var deepValue = __webpack_require__(2);
+var isArray = __webpack_require__(0);
+
+var Fuse = function () {
+  function Fuse(list, _ref) {
+    var _ref$location = _ref.location,
+        location = _ref$location === undefined ? 0 : _ref$location,
+        _ref$distance = _ref.distance,
+        distance = _ref$distance === undefined ? 100 : _ref$distance,
+        _ref$threshold = _ref.threshold,
+        threshold = _ref$threshold === undefined ? 0.6 : _ref$threshold,
+        _ref$maxPatternLength = _ref.maxPatternLength,
+        maxPatternLength = _ref$maxPatternLength === undefined ? 32 : _ref$maxPatternLength,
+        _ref$caseSensitive = _ref.caseSensitive,
+        caseSensitive = _ref$caseSensitive === undefined ? false : _ref$caseSensitive,
+        _ref$tokenSeparator = _ref.tokenSeparator,
+        tokenSeparator = _ref$tokenSeparator === undefined ? / +/g : _ref$tokenSeparator,
+        _ref$findAllMatches = _ref.findAllMatches,
+        findAllMatches = _ref$findAllMatches === undefined ? false : _ref$findAllMatches,
+        _ref$minMatchCharLeng = _ref.minMatchCharLength,
+        minMatchCharLength = _ref$minMatchCharLeng === undefined ? 1 : _ref$minMatchCharLeng,
+        _ref$id = _ref.id,
+        id = _ref$id === undefined ? null : _ref$id,
+        _ref$keys = _ref.keys,
+        keys = _ref$keys === undefined ? [] : _ref$keys,
+        _ref$shouldSort = _ref.shouldSort,
+        shouldSort = _ref$shouldSort === undefined ? true : _ref$shouldSort,
+        _ref$getFn = _ref.getFn,
+        getFn = _ref$getFn === undefined ? deepValue : _ref$getFn,
+        _ref$sortFn = _ref.sortFn,
+        sortFn = _ref$sortFn === undefined ? function (a, b) {
+      return a.score - b.score;
+    } : _ref$sortFn,
+        _ref$tokenize = _ref.tokenize,
+        tokenize = _ref$tokenize === undefined ? false : _ref$tokenize,
+        _ref$matchAllTokens = _ref.matchAllTokens,
+        matchAllTokens = _ref$matchAllTokens === undefined ? false : _ref$matchAllTokens,
+        _ref$includeMatches = _ref.includeMatches,
+        includeMatches = _ref$includeMatches === undefined ? false : _ref$includeMatches,
+        _ref$includeScore = _ref.includeScore,
+        includeScore = _ref$includeScore === undefined ? false : _ref$includeScore,
+        _ref$verbose = _ref.verbose,
+        verbose = _ref$verbose === undefined ? false : _ref$verbose;
+
+    _classCallCheck(this, Fuse);
+
+    this.options = {
+      location: location,
+      distance: distance,
+      threshold: threshold,
+      maxPatternLength: maxPatternLength,
+      isCaseSensitive: caseSensitive,
+      tokenSeparator: tokenSeparator,
+      findAllMatches: findAllMatches,
+      minMatchCharLength: minMatchCharLength,
+      id: id,
+      keys: keys,
+      includeMatches: includeMatches,
+      includeScore: includeScore,
+      shouldSort: shouldSort,
+      getFn: getFn,
+      sortFn: sortFn,
+      verbose: verbose,
+      tokenize: tokenize,
+      matchAllTokens: matchAllTokens
+    };
+
+    this.setCollection(list);
+  }
+
+  _createClass(Fuse, [{
+    key: 'setCollection',
+    value: function setCollection(list) {
+      this.list = list;
+      return list;
+    }
+  }, {
+    key: 'search',
+    value: function search(pattern) {
+      this._log('---------\nSearch pattern: "' + pattern + '"');
+
+      var _prepareSearchers2 = this._prepareSearchers(pattern),
+          tokenSearchers = _prepareSearchers2.tokenSearchers,
+          fullSearcher = _prepareSearchers2.fullSearcher;
+
+      var _search2 = this._search(tokenSearchers, fullSearcher),
+          weights = _search2.weights,
+          results = _search2.results;
+
+      this._computeScore(weights, results);
+
+      if (this.options.shouldSort) {
+        this._sort(results);
+      }
+
+      return this._format(results);
+    }
+  }, {
+    key: '_prepareSearchers',
+    value: function _prepareSearchers() {
+      var pattern = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+      var tokenSearchers = [];
+
+      if (this.options.tokenize) {
+        // Tokenize on the separator
+        var tokens = pattern.split(this.options.tokenSeparator);
+        for (var i = 0, len = tokens.length; i < len; i += 1) {
+          tokenSearchers.push(new Bitap(tokens[i], this.options));
+        }
+      }
+
+      var fullSearcher = new Bitap(pattern, this.options);
+
+      return { tokenSearchers: tokenSearchers, fullSearcher: fullSearcher };
+    }
+  }, {
+    key: '_search',
+    value: function _search() {
+      var tokenSearchers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var fullSearcher = arguments[1];
+
+      var list = this.list;
+      var resultMap = {};
+      var results = [];
+
+      // Check the first item in the list, if it's a string, then we assume
+      // that every item in the list is also a string, and thus it's a flattened array.
+      if (typeof list[0] === 'string') {
+        // Iterate over every item
+        for (var i = 0, len = list.length; i < len; i += 1) {
+          this._analyze({
+            key: '',
+            value: list[i],
+            record: i,
+            index: i
+          }, {
+            resultMap: resultMap,
+            results: results,
+            tokenSearchers: tokenSearchers,
+            fullSearcher: fullSearcher
+          });
+        }
+
+        return { weights: null, results: results };
+      }
+
+      // Otherwise, the first item is an Object (hopefully), and thus the searching
+      // is done on the values of the keys of each item.
+      var weights = {};
+      for (var _i = 0, _len = list.length; _i < _len; _i += 1) {
+        var item = list[_i];
+        // Iterate over every key
+        for (var j = 0, keysLen = this.options.keys.length; j < keysLen; j += 1) {
+          var key = this.options.keys[j];
+          if (typeof key !== 'string') {
+            weights[key.name] = {
+              weight: 1 - key.weight || 1
+            };
+            if (key.weight <= 0 || key.weight > 1) {
+              throw new Error('Key weight has to be > 0 and <= 1');
+            }
+            key = key.name;
+          } else {
+            weights[key] = {
+              weight: 1
+            };
+          }
+
+          this._analyze({
+            key: key,
+            value: this.options.getFn(item, key),
+            record: item,
+            index: _i
+          }, {
+            resultMap: resultMap,
+            results: results,
+            tokenSearchers: tokenSearchers,
+            fullSearcher: fullSearcher
+          });
+        }
+      }
+
+      return { weights: weights, results: results };
+    }
+  }, {
+    key: '_analyze',
+    value: function _analyze(_ref2, _ref3) {
+      var key = _ref2.key,
+          _ref2$arrayIndex = _ref2.arrayIndex,
+          arrayIndex = _ref2$arrayIndex === undefined ? -1 : _ref2$arrayIndex,
+          value = _ref2.value,
+          record = _ref2.record,
+          index = _ref2.index;
+      var _ref3$tokenSearchers = _ref3.tokenSearchers,
+          tokenSearchers = _ref3$tokenSearchers === undefined ? [] : _ref3$tokenSearchers,
+          _ref3$fullSearcher = _ref3.fullSearcher,
+          fullSearcher = _ref3$fullSearcher === undefined ? [] : _ref3$fullSearcher,
+          _ref3$resultMap = _ref3.resultMap,
+          resultMap = _ref3$resultMap === undefined ? {} : _ref3$resultMap,
+          _ref3$results = _ref3.results,
+          results = _ref3$results === undefined ? [] : _ref3$results;
+
+      // Check if the texvaluet can be searched
+      if (value === undefined || value === null) {
+        return;
+      }
+
+      var exists = false;
+      var averageScore = -1;
+      var numTextMatches = 0;
+
+      if (typeof value === 'string') {
+        this._log('\nKey: ' + (key === '' ? '-' : key));
+
+        var mainSearchResult = fullSearcher.search(value);
+        this._log('Full text: "' + value + '", score: ' + mainSearchResult.score);
+
+        if (this.options.tokenize) {
+          var words = value.split(this.options.tokenSeparator);
+          var scores = [];
+
+          for (var i = 0; i < tokenSearchers.length; i += 1) {
+            var tokenSearcher = tokenSearchers[i];
+
+            this._log('\nPattern: "' + tokenSearcher.pattern + '"');
+
+            // let tokenScores = []
+            var hasMatchInText = false;
+
+            for (var j = 0; j < words.length; j += 1) {
+              var word = words[j];
+              var tokenSearchResult = tokenSearcher.search(word);
+              var obj = {};
+              if (tokenSearchResult.isMatch) {
+                obj[word] = tokenSearchResult.score;
+                exists = true;
+                hasMatchInText = true;
+                scores.push(tokenSearchResult.score);
+              } else {
+                obj[word] = 1;
+                if (!this.options.matchAllTokens) {
+                  scores.push(1);
+                }
+              }
+              this._log('Token: "' + word + '", score: ' + obj[word]);
+              // tokenScores.push(obj)
+            }
+
+            if (hasMatchInText) {
+              numTextMatches += 1;
+            }
+          }
+
+          averageScore = scores[0];
+          var scoresLen = scores.length;
+          for (var _i2 = 1; _i2 < scoresLen; _i2 += 1) {
+            averageScore += scores[_i2];
+          }
+          averageScore = averageScore / scoresLen;
+
+          this._log('Token score average:', averageScore);
+        }
+
+        var finalScore = mainSearchResult.score;
+        if (averageScore > -1) {
+          finalScore = (finalScore + averageScore) / 2;
+        }
+
+        this._log('Score average:', finalScore);
+
+        var checkTextMatches = this.options.tokenize && this.options.matchAllTokens ? numTextMatches >= tokenSearchers.length : true;
+
+        this._log('\nCheck Matches: ' + checkTextMatches);
+
+        // If a match is found, add the item to <rawResults>, including its score
+        if ((exists || mainSearchResult.isMatch) && checkTextMatches) {
+          // Check if the item already exists in our results
+          var existingResult = resultMap[index];
+          if (existingResult) {
+            // Use the lowest score
+            // existingResult.score, bitapResult.score
+            existingResult.output.push({
+              key: key,
+              arrayIndex: arrayIndex,
+              value: value,
+              score: finalScore,
+              matchedIndices: mainSearchResult.matchedIndices
+            });
+          } else {
+            // Add it to the raw result list
+            resultMap[index] = {
+              item: record,
+              output: [{
+                key: key,
+                arrayIndex: arrayIndex,
+                value: value,
+                score: finalScore,
+                matchedIndices: mainSearchResult.matchedIndices
+              }]
+            };
+
+            results.push(resultMap[index]);
+          }
+        }
+      } else if (isArray(value)) {
+        for (var _i3 = 0, len = value.length; _i3 < len; _i3 += 1) {
+          this._analyze({
+            key: key,
+            arrayIndex: _i3,
+            value: value[_i3],
+            record: record,
+            index: index
+          }, {
+            resultMap: resultMap,
+            results: results,
+            tokenSearchers: tokenSearchers,
+            fullSearcher: fullSearcher
+          });
+        }
+      }
+    }
+  }, {
+    key: '_computeScore',
+    value: function _computeScore(weights, results) {
+      this._log('\n\nComputing score:\n');
+
+      for (var i = 0, len = results.length; i < len; i += 1) {
+        var output = results[i].output;
+        var scoreLen = output.length;
+
+        var currScore = 1;
+        var bestScore = 1;
+
+        for (var j = 0; j < scoreLen; j += 1) {
+          var weight = weights ? weights[output[j].key].weight : 1;
+          var score = weight === 1 ? output[j].score : output[j].score || 0.001;
+          var nScore = score * weight;
+
+          if (weight !== 1) {
+            bestScore = Math.min(bestScore, nScore);
+          } else {
+            output[j].nScore = nScore;
+            currScore *= nScore;
+          }
+        }
+
+        results[i].score = bestScore === 1 ? currScore : bestScore;
+
+        this._log(results[i]);
+      }
+    }
+  }, {
+    key: '_sort',
+    value: function _sort(results) {
+      this._log('\n\nSorting....');
+      results.sort(this.options.sortFn);
+    }
+  }, {
+    key: '_format',
+    value: function _format(results) {
+      var finalOutput = [];
+
+      if (this.options.verbose) {
+        this._log('\n\nOutput:\n\n', JSON.stringify(results));
+      }
+
+      var transformers = [];
+
+      if (this.options.includeMatches) {
+        transformers.push(function (result, data) {
+          var output = result.output;
+          data.matches = [];
+
+          for (var i = 0, len = output.length; i < len; i += 1) {
+            var item = output[i];
+
+            if (item.matchedIndices.length === 0) {
+              continue;
+            }
+
+            var obj = {
+              indices: item.matchedIndices,
+              value: item.value
+            };
+            if (item.key) {
+              obj.key = item.key;
+            }
+            if (item.hasOwnProperty('arrayIndex') && item.arrayIndex > -1) {
+              obj.arrayIndex = item.arrayIndex;
+            }
+            data.matches.push(obj);
+          }
+        });
+      }
+
+      if (this.options.includeScore) {
+        transformers.push(function (result, data) {
+          data.score = result.score;
+        });
+      }
+
+      for (var i = 0, len = results.length; i < len; i += 1) {
+        var result = results[i];
+
+        if (this.options.id) {
+          result.item = this.options.getFn(result.item, this.options.id)[0];
+        }
+
+        if (!transformers.length) {
+          finalOutput.push(result.item);
+          continue;
+        }
+
+        var data = {
+          item: result.item
+        };
+
+        for (var j = 0, _len2 = transformers.length; j < _len2; j += 1) {
+          transformers[j](result, data);
+        }
+
+        finalOutput.push(data);
+      }
+
+      return finalOutput;
+    }
+  }, {
+    key: '_log',
+    value: function _log() {
+      if (this.options.verbose) {
+        var _console;
+
+        (_console = console).log.apply(_console, arguments);
+      }
+    }
+  }]);
+
+  return Fuse;
+}();
+
+module.exports = Fuse;
+
+/***/ })
+/******/ ]);
+});
+//# sourceMappingURL=fuse.js.map
+
+/***/ }),
+
+/***/ "./src/js/header.js":
+/*!**************************!*\
+  !*** ./src/js/header.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(".js-mob-nav").on("click", function(){
+
+});
+
+
+$(".js-menu-dropdown").on("click", function(){
+	$(this).parents(".menu__row-list").toggleClass("menu__row-list--expand").find(".menu__sub").toggleClass("menu__sub--show");
+});
+
+/***/ }),
+
+/***/ "./src/js/review.js":
+/*!**************************!*\
+  !*** ./src/js/review.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function handleStarClick() {
+    let $ratingStar = $(".write-review__form .rating__star"),
+        $ratingInr = $ratingStar.find(".rating__star-inr"),
+        ratingWidth = $ratingStar.width();
+
+    $ratingStar.on("click", function (e) {
+        let rating = Math.ceil((e.offsetX / ratingWidth) * 5) || 1;
+        $ratingInr.width((rating * 20) + "%");
+        $(".write-review__field--rating .write-review__input").val(rating)[0].setCustomValidity("");
+    });
+}());
+
+$(".write-review__submit").on("click", function () {
+    $(".write-review__form").addClass("write-review__form--submitted");
+
+    var $ratingField = $(".write-review__field--rating .write-review__input"),
+        ratingVal = $ratingField.val();
+    if (!ratingVal) {
+        $ratingField[0].setCustomValidity("You must select a rating.");
+        return false;
+    }
+    else {
+        $ratingField[0].setCustomValidity("");
+    }
+
+    var $reviewField = $(".write-review__field--review .write-review__input"),
+        reviewVal = $reviewField.val(),
+        reviewWords = reviewVal.match(/\s*\S+\s*/g);
+    if (!reviewWords || reviewWords.length < 20) {
+        $reviewField[0].setCustomValidity("Your review must be at least 20 words long.");
+        return false;
+    }
+    else {
+        $reviewField[0].setCustomValidity("");
+    }
+});
+
+$(".write-review__form").on("submit", function (e) {
+    e.preventDefault();
+
+    fetch("", {
+        "method": "POST",
+        "body": JSON.stringify({
+            "product": $(".write-review__section").data("pid"),
+            "email": decodeURIComponent(window.location.search),
+            "rating": $(".write-review__field--rating .write-review__input").val(),
+            "title": $(".write-review__field--title .write-review__input").val(),
+            "review": $(".write-review__field--review .write-review__input").val(),
+            "name": $(".write-review__field--name .write-review__input").val(),
+            "job": $(".write-review__field--job .write-review__input").val(),
+            "company": $(".write-review__field--company .write-review__input").val()
+        })
+    }).then(function (response) {
+        if (response.ok) {
+            // TODO: Animate =>
+            $(".write-review__section").hide();
+            $(".write-review__thanks").show();
+        }
+    });
+});
+
+
+/***/ }),
+
+/***/ "./src/js/script.js":
+/*!**************************!*\
+  !*** ./src/js/script.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var slendr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slendr */ "./node_modules/slendr/dist/index.js");
+/* harmony import */ var slendr__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slendr__WEBPACK_IMPORTED_MODULE_0__);
+
+if (document.querySelectorAll(".slider").length > 0) {
+    const myslider = new slendr__WEBPACK_IMPORTED_MODULE_0__["Slendr"]({
+        slideshow: true
+    })
+    // myslider.on('move', (direction, index, element) => console.log(direction))
+    document.addEventListener('click', (event) => {
+        if (event.target.matches('.slider-thumnail__img')) {
+            myslider.move(parseInt(event.target.dataset.index));
+        }
+    })
+}
+
+$(".js-form").on("submit", function(event) {
+
+    event.preventDefault();
+
+    let $inputForm = $(this),
+        email = $inputForm.find(".intro__form-input").val(),
+        $allInputForms = $(".intro__form");
+
+    fetch(`/api/save.php?email=${email}`).then(function(response) {
+        if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' + response.status);
+            return;
+        }
+        response.json().then(function(data) {
+            $allInputForms.addClass("hide").parents(".js-form-wrapper").find(".intro__form-success").removeClass("hide");
+        });
+    }).catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
+});
+
+/***/ }),
+
+/***/ "./src/js/search.js":
+/*!**************************!*\
+  !*** ./src/js/search.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Fuse = __webpack_require__(/*! ./fuse */ "./src/js/fuse.js");
+
+let MODAL = {
+    state: {
+        products: [],
+        categories: []
+    },
+    searchOptions: {
+        product: {
+            shouldSort: true,
+            threshold: 0.5,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+            keys: ["label"],
+            slice: 5
+        },
+        category: {
+            shouldSort: true,
+            threshold: 0.2,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+            keys: ["title"],
+            slice: 4
+        }
+    }
+};
+
+let DOMElements = {
+    create: {
+        productList: function(data) {
+            let $_html = ``;
+            if (data.length) {
+                data.map((item) => {
+                    $_html += `
+		            <li class="search-result__product">
+		            	<a class="no-link-style search-result__link" href="${item.link}">
+			                <img class="search-result__product-image" src="${item.image}" /  >
+			                <div class="search-result__product-info">
+			                    <div class="search-result__product-title">
+			                        ${item.label}
+			                    </div>
+			                    <div class="search-result__product-category">
+			                        in 
+			                        <span class="semi-bold">
+			                            ${item.category}
+			                        </span>
+			                    </div>
+			                </div>
+		                </a>
+		            </li>`;
+                });
+            } else {
+                $_html += `
+		            <li class="search-result__empty">
+		                    No result found
+		            </li>`;
+            }
+            return $_html;
+        },
+        categoryList: function(data) {
+            let $_html = ``;
+            if (data.length) {
+                data.map((item) => {
+                    $_html += `
+			        	<li class="search-result__category">
+			        		<a class="no-link-style search-result__link" href="${item.link}">
+					            <div class="search-result__category-title">
+					                ${item.title}
+					            </div>
+					            <div class="search-result__category-description">
+					                ${item.description}
+					            </div>
+				            </a>
+				        </li>`;
+                });
+            } else {
+                $_html += `
+		            <li class="search-result__empty">
+		                    No result found
+		            </li>`;
+            }
+            return $_html;
+        }
+    }
+}
+
+function initSearch(response) {
+    MODAL.state.products = response.products.data;
+    MODAL.state.categories = response.categories.data;
+    $(".js-search-product-list").html(DOMElements.create.productList(response.products.data.slice(0,MODAL.searchOptions.product.slice)));
+    $(".js-search-category-list").html(DOMElements.create.categoryList(response.categories.data.slice(0,MODAL.searchOptions.category.slice)));
+}
+
+$(".search__input").on("focus", function() {
+    $(this).parents(".search-wrapper").addClass("search-wrapper--page").find(".search").addClass("container");
+
+    if (MODAL.state.products.length === 0) {
+        fetch(`https://www.zariance.com/api/product.php`).then(function(response) {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
+            response.json().then(function(response) {
+                initSearch(response);
+            });
+        }).catch(function(err) {
+            console.log('Fetch Error :-S', err);
+        });
+    }
+}).on("blur", function() {
+    // $(this).parents(".search-wrapper").removeClass("search-wrapper--page").find(".search").removeClass("container");
+});
+
+function productSearch(searchTerm) {
+    let productItems = [];
+    if (searchTerm) {
+        let fuse = new Fuse(MODAL.state.products, MODAL.searchOptions.product);
+        productItems = fuse.search(searchTerm);
+    } else {
+        productItems = MODAL.state.products;
+    }
+    $(".js-search-product-list").html(DOMElements.create.productList(productItems.slice(0,5)));
+}
+
+function categorySearch(searchTerm) {
+    let categoryItems = [];
+    if (searchTerm) {
+        let fuse = new Fuse(MODAL.state.categories, MODAL.searchOptions.category);
+        categoryItems = fuse.search(searchTerm);
+    } else {
+        categoryItems = MODAL.state.categories;
+    }
+    $(".js-search-category-list").html(DOMElements.create.categoryList(categoryItems.slice(0,4)));
+}
+
+$(".js-search-input").on("input", function() {
+    let searchTerm = $(this).val();
+    console.log(searchTerm);
+    productSearch(searchTerm);
+    categorySearch(searchTerm);
+})
+
+$(".js-search-close").on("click", function() {
+    $(".search-wrapper").removeClass("search-wrapper--page");
+})
+
+/***/ }),
+
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_style_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.sass */ "./src/scss/style.sass");
+/* harmony import */ var _scss_style_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_style_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_eventHandlers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/eventHandlers.js */ "./src/js/eventHandlers.js");
+/* harmony import */ var _js_eventHandlers_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_eventHandlers_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/script.js */ "./src/js/script.js");
+/* harmony import */ var _js_fuse_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/fuse.js */ "./src/js/fuse.js");
+/* harmony import */ var _js_fuse_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_fuse_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _js_search_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/search.js */ "./src/js/search.js");
+/* harmony import */ var _js_search_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_search_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _js_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/header.js */ "./src/js/header.js");
+/* harmony import */ var _js_header_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_header_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_review_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/review.js */ "./src/js/review.js");
+/* harmony import */ var _js_review_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_review_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/scss/style.sass":
+/*!*****************************!*\
+  !*** ./src/scss/style.sass ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=main.bundle.js.map
