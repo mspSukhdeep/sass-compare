@@ -6,12 +6,19 @@
             flex-wrap: wrap
 
         tr
-            flex: 1 1 0
+            flex: auto
             flex-direction: column
 
             border: 0.1rem solid $color-border
             border-radius: $border-radius-s
             margin: 0 1rem 1rem 0
+
+            @include mobile
+                max-width: 48%
+                margin: 0 2% 2% 0
+
+                &:last-child
+                    max-width: none
 
         th, td
             text-align: center

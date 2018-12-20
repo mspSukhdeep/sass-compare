@@ -30,7 +30,7 @@
         font-size: $font-s
 
     &__india
-        margin-top: 2.4rem
+        margin-top: 2.5rem
 
         font-size: $font-xs
 
@@ -38,8 +38,15 @@
 
         cursor: default
 
+        @include mobile
+            text-align: inherit
+
     &__heart
-        transition: 0.2s color
+        display: inline-block
+
+        transition: color 0.2s, transform 0.2s
 
         .footer__india:hover &
                 color: $color-red
+
+                transform: scale(1.2)

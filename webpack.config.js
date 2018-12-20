@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin"),
 let fs = require('fs');
 
 const header = fs.readFileSync(__dirname + '/src/ui/header.html');
+const footer = fs.readFileSync(__dirname + '/src/ui/footer.html');
 
 module.exports = {
 
@@ -38,41 +39,51 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Home Page',
             template: 'src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'List Page',
             template: 'src/list.html',
-            filename: 'list.html'
+            filename: 'list.html',
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-reviews.html',
             filename: 'single-reviews.html',
-            header: header
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-profile.html',
             filename: 'single-profile.html',
-            header: header
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'Single Page',
             template: 'src/single-pricing.html',
             filename: 'single-pricing.html',
-            header: header
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'All Components Page',
             template: 'src/all.html',
             filename: 'all.html',
-            header: header
+            header: header,
+            footer: footer
         }),
         new HtmlWebpackPlugin({
             title: 'Review Page',
             template: 'src/review.html',
-            filename: 'review.html'
+            filename: 'review.html',
+            header: header,
+            footer: footer
         })
     ],
     watch: true,
