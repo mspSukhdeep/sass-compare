@@ -1688,13 +1688,18 @@ module.exports = Fuse;
 /***/ (function(module, exports) {
 
 $(".js-mob-nav").on("click", function(){
-
+	$(".hdr__nav").addClass("hdr__nav--show");
 });
 
 
-$(".js-menu-dropdown").on("click", function(){
-	$(this).parents(".menu__row-list").toggleClass("menu__row-list--expand").find(".menu__sub").toggleClass("menu__sub--show");
+$(".js-expand-list").on("click", function(){
+	$(this).toggleClass("menu__li-1--expanded");
 });
+
+$(".js-close-menu").on("click", function(){
+	$(".hdr__nav").removeClass("hdr__nav--show");
+});
+
 
 /***/ }),
 
