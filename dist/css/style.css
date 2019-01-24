@@ -1174,6 +1174,8 @@ input[type="search"] {
   flex-flow: row-reverse; }
   .content__main.content__main {
     padding-left: 4rem; }
+    .content__main.content__main .product-list {
+      padding-top: 1.5rem; }
 
 @media screen and (max-width: 480px) {
   .content {
@@ -1633,36 +1635,34 @@ input[type="search"] {
     margin: 0;
     padding: 0; } }
 
-.pricing__table tbody,
-.pricing__table tr {
-  display: flex;
-  flex-wrap: wrap; }
-
-.pricing__table tr {
-  flex: auto;
-  flex-direction: column;
-  border: 0.1rem solid #dfe1e8;
-  border-radius: 5px;
-  margin: 0 1rem 1rem 0; }
-  @media (max-width: 48rem) {
-    .pricing__table tr {
-      max-width: 48%;
-      margin: 0 2% 2% 0; }
-      .pricing__table tr:last-child {
-        max-width: none; } }
-
-.pricing__table th, .pricing__table td {
-  text-align: center; }
-  .pricing__table th:first-child, .pricing__table td:first-child {
-    padding-left: 1.5rem; }
-  .pricing__table th:last-child, .pricing__table td:last-child {
-    padding-right: 1.5rem; }
-
-.pricing__table th {
-  border-bottom: 0.1rem solid #dfe1e8; }
-
-.pricing__table td {
-  border-bottom: none; }
+.pricing {
+  margin-top: 4.0rem; }
+  .pricing__table tbody,
+  .pricing__table tr {
+    display: flex;
+    flex-wrap: wrap; }
+  .pricing__table tr {
+    flex: auto;
+    flex-direction: column;
+    border: 0.1rem solid #dfe1e8;
+    border-radius: 5px;
+    margin: 0 1rem 1rem 0; }
+    @media (max-width: 48rem) {
+      .pricing__table tr {
+        max-width: 48%;
+        margin: 0 2% 2% 0; }
+        .pricing__table tr:last-child {
+          max-width: none; } }
+  .pricing__table th, .pricing__table td {
+    text-align: center; }
+    .pricing__table th:first-child, .pricing__table td:first-child {
+      padding-left: 1.5rem; }
+    .pricing__table th:last-child, .pricing__table td:last-child {
+      padding-right: 1.5rem; }
+  .pricing__table th {
+    border-bottom: 0.1rem solid #dfe1e8; }
+  .pricing__table td {
+    border-bottom: none; }
 
 tr.pricing__column--feature td {
   text-align: left; }
@@ -1825,4 +1825,4 @@ tr.pricing__column--feature td {
       transform: scale(1.2); }
 
 
-/*# sourceMappingURL=style.css.map*/
+/*# sourceMappingURL=style.css.map?v=194728a4931e29841653*/

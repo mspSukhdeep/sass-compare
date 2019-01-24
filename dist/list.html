@@ -8,118 +8,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>SASS Compare | A copy of G2Crowd</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:700" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet"></head>
+<link href="css/style.css?v=194728a4931e29841653" rel="stylesheet"></head>
 <body>
     <header class="hdr">
-        <div class="hdr__inr container">
-            <div class="row">
-                <div class="logo__wrpr column column-20">
-                    <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
-                </div>
-                <div class="search-wrapper column">
-                    <div class="search">
-                        <input class="search__input" placeholder="Search" type="search"/>
-                        <div class="search-result row">
-                            <div class="search-result__column column column-50">
-                                <h2 class="search-result__title">
-                                    Popular Products
-                                </h2>
-                                <ul class="js-search-product-list">
-                                    
-                                </ul>
-                            </div>
-                            <div class="search-result__column search-result__product--2 column column-50">
-                                <h2 class="search-result__title">
-                                    Explore Categories
-                                </h2>
-                                <ul class="js-search-category-list">
-                                    <!-- <li class="search-result__category">
-                                        <div class="search-result__category-title">
-                                            Construction CRM
-                                        </div>
-                                        <div class="search-result__category-description">
-                                            Construction CRM software encompasses Customer Relationship Management applications targeted specifically to the construction industry.
-                                        </div>
-                                    </li> -->
-                                </ul>
-                            </div>
+    <div class="hdr__inr container">
+        <div class="row hdr__row">
+            <div class="logo__wrpr column column-20">
+                <img alt="Zariance" class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg">
+                </img>
+            </div>
+            <div class="search-wrapper column">
+                <div class="search">
+                    <input class="search__input js-search-input" placeholder="Search" type="search"/>
+                    <div class="search-result row">
+                        <div class="search-result__column column column-50">
+                            <h2 class="search-result__title">
+                                Popular Products
+                            </h2>
+                            <ul class="js-search-product-list">
+                            </ul>
+                        </div>
+                        <div class="search-result__column search-result__product--2 column column-50">
+                            <h2 class="search-result__title">
+                                Explore Categories
+                            </h2>
+                            <ul class="js-search-category-list">
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="menu__wrpr column column-50">
-                    <div class="lgn__wrpr float-right">
-                        <a class="lgn__btn lgn__btn--sign-up" href="#">
-                            Sign up
-                        </a>
-                        or
-                        <button class="lgn__btn lgn__btn--log-in button button-outline">
-                            Log in
-                        </button>
-                    </div>
-                    <nav class="menu float-right">
-                        <ul class="clearfix">
-                            <li class="float-left">
-                                <ul class="card card--pdng">
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Basic
-                                            </h6>
-                                            <p>
-                                                Take great notes
-                                            </p>
-                                        </a>
+                <img class="search__close js-search-close" src="https://assets.mspcdn.net/zariance/icon/close.svg"/>
+            </div>
+            <div class="hdr__nav column column-50">
+                <div class="menu-wrapper">
+                    <nav class="menu">
+                        <ul class="menu__ul-1">
+                            <li class="menu__li-1 menu__li-1--expandable js-expand-list">
+                                Software Categories
+                                <ul class="card card--pdng menu__ul-2">
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Basic
+                                        </h6>
+                                        <p>
+                                            Take great notes
+                                        </p>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Premium
-                                            </h6>
-                                            <p>
-                                                Unclutter your life
-                                            </p>
-                                        </a>
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Premium
+                                        </h6>
+                                        <p>
+                                            Unclutter your life
+                                        </p>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Business
-                                            </h6>
-                                            <p>
-                                                Bring your team together
-                                            </p>
-                                        </a>
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Business
+                                        </h6>
+                                        <p>
+                                            Bring your team together
+                                        </p>
                                     </li>
                                 </ul>
-                                <a href="#">
-                                    Software Categories
-                                </a>
                             </li>
-                            <li class="float-left">
-                                <a href="#">
-                                    Write a Review
-                                </a>
+                            <li class="menu__li-1">
+                                Write a Review
                             </li>
                         </ul>
                     </nav>
+                    <div class="menu__login">
+                        <div class="menu__login-item menu__login-item--signup">
+                            Sign up
+                        </div>
+                        <span class="menu__login-item menu--nomob">
+                            or
+                        </span>
+                        <div class="button button-outline menu__login-item">
+                            Login
+                        </div>
+                    </div>
+                    <img class="menu__close js-close-menu" src="https://assets.mspcdn.net/zariance/icon/close_white.svg" />
                 </div>
             </div>
+            <div class="menu__icon-wrapper column column-10">
+                <img class="menu__icon js-mob-nav" src="https://assets.mspcdn.net/zariance/icon/menu.svg"/>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
     <main class="container">
         <ul class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="/lol.html" target="_blank">
+                <a href="/index.html" target="_blank">
                     Home
                 </a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/lol.html" target="_blank">
+                <a href="/index.html" target="_blank">
                     CRM Applications
                 </a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/lol.html" target="_blank">
+                <a href="/index.html" target="_blank">
                     CRM Software
                 </a>
             </li>

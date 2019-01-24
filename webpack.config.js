@@ -26,7 +26,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/style.css",
+            filename: "css/style.css?v=[chunkhash]",
         }),
         new BrowserSyncPlugin({
             host: 'localhost',
@@ -61,6 +61,13 @@ module.exports = {
             title: 'Single Page',
             template: 'src/single-profile.html',
             filename: 'single-profile.html',
+            header: header,
+            footer: footer
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Page | Alternatives',
+            template: 'src/single-alternatives.html',
+            filename: 'single-alternatives.html',
             header: header,
             footer: footer
         }),
