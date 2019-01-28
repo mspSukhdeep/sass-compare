@@ -1,0 +1,26 @@
+.alternatives
+    &-sidebar
+        &__row
+            flex-direction: row
+
+            padding: 2rem 0
+
+            & + &
+                border-top: 1px solid $color-border
+
+            &:hover
+                text-decoration: none
+
+        &__img
+            width: 7.2rem
+            height: 7.2rem
+
+        &__name
+            @include line-clamp
+
+            max-height: 4.6rem
+
+        &__rating
+            margin-top: 1rem
+
+            color: $color-black
