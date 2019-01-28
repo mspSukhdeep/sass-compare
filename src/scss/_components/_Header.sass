@@ -7,8 +7,8 @@
     height: 110px
     padding: 31px 0
     margin-bottom: 2rem
-
-    background-color: $color-white
+    position: relative
+    z-index: 1
 
     &__inr
         max-width: $site-width
@@ -31,7 +31,9 @@
     &-wrapper
         display: flex
         font-size: $font-s
-        justify-content: flex-end
+
+        &--right
+            flex-direction: row-reverse
     
     &__ul
         &-1

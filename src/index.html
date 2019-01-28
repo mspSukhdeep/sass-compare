@@ -13,9 +13,77 @@
     <body>
         <header class="hdr">
             <div class="hdr__inr container">
-                <div class="row">
-                    <div class="logo__wrpr column">
-                        <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
+                <div class="row hdr__row">
+                    <div class="logo__wrpr column column-20">
+                        <img alt="Zariance" class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg">
+                        </img>
+                    </div>
+                    <div class="search-wrapper column">
+                        <div class="search">
+                            <input class="search__input js-search-input" placeholder="Search" type="search">
+                                <div class="search-result row">
+                                    <div class="search-result__column column column-50">
+                                        <h2 class="search-result__title">
+                                            Popular Products
+                                        </h2>
+                                        <ul class="js-search-product-list">
+                                        </ul>
+                                    </div>
+                                    <div class="search-result__column search-result__product--2 column column-50">
+                                        <h2 class="search-result__title">
+                                            Explore Categories
+                                        </h2>
+                                        <ul class="js-search-category-list">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </input>
+                        </div>
+                        <img class="search__close js-search-close" src="https://assets.mspcdn.net/zariance/icon/close.svg">
+                        </img>
+                    </div>
+                    <div class="hdr__nav column column-50">
+                        <div class="menu-wrapper">
+                            <nav class="menu">
+                                <ul class="menu__ul-1">
+                                    <li class="menu__li-1 menu__li-1--expandable js-expand-list">
+                                        Software Categories
+                                        <ul class="card card--pdng menu__ul-2">
+                                            <li class="menu__li-2">
+                                                <h6>
+                                                    Basic
+                                                </h6>
+                                                <p>
+                                                    Take great notes
+                                                </p>
+                                            </li>
+                                            <li class="menu__li-2">
+                                                <h6>
+                                                    Premium
+                                                </h6>
+                                                <p>
+                                                    Unclutter your life
+                                                </p>
+                                            </li>
+                                            <li class="menu__li-2">
+                                                <h6>
+                                                    Business
+                                                </h6>
+                                                <p>
+                                                    Bring your team together
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <img class="menu__close js-close-menu" src="https://assets.mspcdn.net/zariance/icon/close_white.svg">
+                            </img>
+                        </div>
+                    </div>
+                    <div class="menu__icon-wrapper column column-10">
+                        <img class="menu__icon js-mob-nav" src="https://assets.mspcdn.net/zariance/icon/menu.svg">
+                        </img>
                     </div>
                 </div>
             </div>
@@ -28,30 +96,40 @@
         </div>
         <main class="container">
             <section class="intro row">
-                <div class="column column-40 column--nopad intro__inr">
+                <div class="column column-50 column--nopad intro__inr">
                     <h1 class="intro__title">
                         Use the power of community to find the right software and services for your business.
                     </h1>
                     <h2 class="intro__title-sub">
-                        Pay it forward. Join the community now and share.
+                        Go ahead and search for what you need.
                     </h2>
                     <div class="js-form-wrapper intro__form-wrapper">
-                        <form class="intro__form js-form" name="email">
-                            <input class="intro__form-input" name="email" placeholder="Enter your email address" type="email" required />
-                            <button type="submit" class="button intro__form-button js-submit-form">
-                                Join Waitlist
-                            </button>
-                        </form>
-                        <div class="intro__form-success hide">
-                            Thank you for showing interest. We will get back to you soon enough with an awesome product.
+                        <div class="search-wrapper">
+                            <div class="search">
+                                <input class="search__input js-search-input" placeholder="Search" type="search"/>
+                                <div class="search-result row">
+                                    <div class="search-result__column column column-50">
+                                        <h2 class="search-result__title">
+                                            Popular Products
+                                        </h2>
+                                        <ul class="js-search-product-list">
+                                        </ul>
+                                    </div>
+                                    <div class="search-result__column search-result__product--2 column column-50">
+                                        <h2 class="search-result__title">
+                                            Explore Categories
+                                        </h2>
+                                        <ul class="js-search-category-list">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="search__close js-search-close" src="https://assets.mspcdn.net/zariance/icon/close.svg"/>
                         </div>
                     </div>
-                    <!-- <div class="intro__form-sub">
-                            Free for 14 days, no credit card required.
-                    </div> -->
                 </div>
             </section>
-            <section class="intro-section">
+            <section class="intro-section intro-section--center">
                 <h2 class="intro-section__title">
                     Harness the power of community!
                 </h2>
@@ -60,41 +138,78 @@
                 </p>
             </section>
             <section class="intro-section">
-                <div class="intro-section__body row">
-                    <div class="column intro-section__body-item">
+                <div class="intro-section__body">
+                    <div class="card intro-section__body-item intro-section__body-item--small">
                         <div class="intro-section__img-wrpr">
                             <img class="intro-section__img" src="https://assets.mspcdn.net/zariance/icon/problem.svg"/>
                         </div>
                         <h3 class="intro-section__title-sub">
-                            The Problem
+                            This is the Problem!
                         </h3>
-                        <div class="intro-section__body">
-                            <p class="intro-section__body-para">
+                        <div class="intro-section__para-wrpr">
+                            <p class="intro-section__para">
                                 Way too many softwares for every requirement, all promising similar features.
                             </p>
-                            <p class="intro-section__body-para">
+                            <p class="intro-section__para">
                                 Only way to decide is to read analyst reports or read reviews on web.
                             </p>
-                            <p class="intro-section__body-para">
+                            <p class="intro-section__para">
                                 No way to find the right solution partner for custom requirements of any.
                             </p>
                         </div>
                     </div>
-                    <div class="column intro-section__body-item">
+                    <div class="card intro-section__body-item">
                         <div class="intro-section__img-wrpr">
                             <img class="intro-section__img" src="https://assets.mspcdn.net/zariance/icon/solution.svg"/>
                         </div>
                         <h3 class="intro-section__title-sub">
-                            Our Solution
+                            Here's the solution
                         </h3>
-                        <div class="intro-section__body">
-                            <p class="intro-section__body-para">
+                        <div class="intro-section__para-wrpr">
+                            <p class="intro-section__para">
                                 Read experiences/reviews from similar sized companies in your industry.
                             </p>
-                            <p class="intro-section__body-para">
+                            <p class="intro-section__para">
                                 Connect with other users and ask them your questions before you make a purchase.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="intro-section">
+                <h2 class="intro-section__title text--center">
+                    Popular Software Categories
+                </h2>
+                <div class="intro-section__body row row-wrap">
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
+                    </div>
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
+                    </div>
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
+                    </div>
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
+                    </div>
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
+                    </div>
+                    <div class="intro-section__cat column column-50" href="/">
+                        <a class="intro-section__cat-link" href="/">
+                            Email Marketing Software
+                        </a>
                     </div>
                 </div>
             </section>
@@ -109,8 +224,8 @@
                     </div>
                     <div class="js-form-wrapper intro__form-wrapper">
                         <form class="intro__form js-form">
-                            <input class="intro__form-input" name="email" placeholder="Enter your email address" type="email" required />
-                            <button type="submit" class="button intro__form-button js-submit-form">
+                            <input class="intro__form-input" name="email" placeholder="Enter your email address" required="" type="email"/>
+                            <button class="button intro__form-button js-submit-form" type="submit">
                                 Join Waitlist
                             </button>
                         </form>
@@ -125,11 +240,20 @@
             <div class="footer__main container">
                 <div class="row">
                     <div class="column column-50">
-                        <img class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg" alt="Logo">
-                        <div class="footer__copyright">© 2018 zariance.com &middot; All rights reserved.</div>
+                        <img alt="Logo" class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg">
+                            <div class="footer__copyright">
+                                © 2018 zariance.com · All rights reserved.
+                            </div>
+                        </img>
                     </div>
                     <div class="column column-50">
-                        <div class="footer__india float-right">Made with <span class="footer__heart">❤</span> in India</div>
+                        <div class="footer__india float-right">
+                            Made with
+                            <span class="footer__heart">
+                                ❤
+                            </span>
+                            in India
+                        </div>
                     </div>
                 </div>
             </div>
