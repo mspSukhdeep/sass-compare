@@ -2,6 +2,10 @@
     &__wrapper
         margin-top: 4rem
 
+    padding-top: 3.2rem
+    border-top: 1px solid $color-border
+    margin-top: 3.2rem
+
     &__heading
         &.review__heading
             margin-bottom: 0.5rem
@@ -9,13 +13,86 @@
     &__write-button
         margin-top: 0.5rem
 
-    &__write-button
-        margin-top: 0.5rem
-
     &__count
-        margin-bottom: 5rem
+        font-size: $font-s
+
+    &__table
+        margin-top: 2.4rem
 
         font-size: $font-s
+
+    &__graph
+        line-height: 2.3rem
+
+        &-label
+            float: left
+
+            color: $color-dark-grey
+
+            user-select: none
+            cursor: default
+
+        &-bar
+            display: inline-block
+
+            width: 20rem
+            height: 0.8rem
+            border-radius: 0.4rem
+            margin-left: 1rem
+
+            vertical-align: 0.1rem
+
+            background-color: $color-grey
+
+            &-inr
+                height: 100%
+                border-radius: 0.4rem
+
+                background-color: $color-gold
+
+    &__overall
+        &-rating
+            text-align: center
+
+            .rating
+                display: inline-block
+
+                margin-top: 1rem
+
+                &__value
+                    line-height: 5rem
+
+                    font-size: 4.8rem
+                    font-weight: $font-semibold
+
+                &__count
+                    line-height: 1.6rem
+                    margin-top: 0.8rem
+
+    &__facet
+        &-rating
+            &-container
+                flex-flow: row wrap
+
+            &#{&}
+                padding-top: 0.8rem
+                padding-bottom: 0.8rem
+
+            .rating
+                float: left
+
+                &__value
+                    display: inline-block;
+
+                    line-height: 1.6rem;
+                    margin-left: 1rem;
+
+                    vertical-align: text-top;
+
+                &__name
+                    @include ellipsis
+
+                    font-weight: $font-semibold
 
     &__user
         font-size: $font-s
@@ -91,43 +168,65 @@
             border-left: 1px solid $color-border
             margin-left: 1rem
 
-
-@media screen and (max-width: $breakpoint-mobile)
+@include mobile
     .review
         &__wrapper
             margin-top: 3.5rem
-            
-        &__title
-            margin-top: 2.0rem
 
+            .review
+                &__table
+                    flex-flow: row wrap
+
+                    .review
+                        &__graph
+                            flex-basis: 70%
+
+                        &__overall
+                            &-rating
+                                flex-basis: 30%
+
+                        &__facet
+                            &-rating
+                                &-wrapper
+                                    flex-basis: 100%
+
+                                    margin-top: 1.2rem
+
+                                flex-basis: 48%
+                                overflow: hidden
+
+                                &:nth-child(even)
+                                    margin-left: 4%
+
+        &__title,
         &__rating
-            margin-top: 2.0rem
+            margin-top: 2rem
 
         &__user
             &#{&}
                 display: flex
+
             &-info
                 &-wrapper
-                    margin-left: 2.0rem
+                    margin-left: 2rem
 
         &__count
             margin-bottom: 2rem
-        
+
         &__header
             text-align: center
-            margin-bottom: 5rem
-        
+
         &__write
-            
             &-button
                 float: none
 
         &__helpful-form
-                margin: 0
-                
+            margin: 0
+
         &__report
             &-link
-                border-left: 0
                 white-space: nowrap
-                margin: 0
+
                 padding: 0
+                border-left: 0
+                margin: 0
