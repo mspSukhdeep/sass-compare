@@ -3,52 +3,54 @@
 	align-items: center
 
 	&__star
-		width: 12rem
-		height: 2.4rem
-		background: url('https://assets.mspcdn.net/f_auto/zariance/icon/star_grey_round.png') repeat-x left center / 2.4rem
-		
+		width: 10rem
+		height: 2rem
+
+		background: url('https://assets.mspcdn.net/zariance/icon/star_grey.svg') left center / 2rem repeat-x
+
 		&-inr
-			height: 2.4rem
-			background: url('https://assets.mspcdn.net/f_auto/zariance/icon/star_orange_round.png') repeat-x left center / 2.4rem
-	
+			height: 2rem
+
+			background: url('https://assets.mspcdn.net/zariance/icon/star_gold.svg') left center / 2rem repeat-x
+
 	&__num
+		line-height: 2rem
 		margin-left: 1rem
 
 		font-size: $font-l
 		font-weight: $font-bold
-	
+
 	&--small
 		.rating
 			&__star
-				width: 10rem
-				background-size: 2.0rem
+				width: 8rem
+				height: 1.6rem
+
+				background-size: 1.6rem
 
 				&-inr
-					background-size: 2.0rem
-			
+					height: 1.6rem
+
+					background-size: 1.6rem
+
 			&__num
-				font-size: $font-m
+				line-height: 1.5rem
+
+				font-size: $font-s
 
 	&__reviewer
-		background: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg") no-repeat left center / 2rem
 		padding-left: 2.5rem
 
+		background: url("https://assets.mspcdn.net/zariance/icon/account-grey.svg") left center / 2rem no-repeat
 
-
-@media screen and (max-width: $breakpoint-mobile)
+@include mobile
 	.rating
-		&__star
-			width: 10rem
-			background-size: 2.0rem
-
-			&-inr
-				background-size: 2.0rem
-			
 		&__num
 			font-size: $font-m
 
 		&__reviewer
-			background-position: top center
 			white-space: nowrap
-			padding-top: 2.1rem
-			padding-left: 0
+
+			padding: 2.1rem 0 0 0
+
+			background-position: top center
