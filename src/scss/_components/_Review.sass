@@ -29,7 +29,6 @@
 
             color: $color-dark-grey
 
-            user-select: none
             cursor: default
 
         &-bar
@@ -79,15 +78,15 @@
                 padding-bottom: 0.8rem
 
             .rating
-                float: left
+                display: inline-block
 
                 &__value
-                    display: inline-block;
+                    display: inline-block
 
-                    line-height: 1.6rem;
-                    margin-left: 1rem;
+                    line-height: 1.6rem
+                    margin-left: 0.6rem
 
-                    vertical-align: text-top;
+                    vertical-align: text-top
 
                 &__name
                     @include ellipsis
@@ -190,13 +189,17 @@
                                 &-wrapper
                                     flex-basis: 100%
 
-                                    margin-top: 1.2rem
+                                    margin-top: 0.8rem
 
                                 flex-basis: 48%
                                 overflow: hidden
 
+                                margin-top: 0.8rem
+
                                 &:nth-child(even)
                                     margin-left: 4%
+
+                                    text-align: right
 
         &__title,
         &__rating

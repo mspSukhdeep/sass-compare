@@ -4,8 +4,7 @@
 
 // Clear a float with .clearfix
 .clearfix
-
-	&:after
+	&::after
 		clear: both
 		content: ' ' // The space content is one way to avoid an Opera bug.
 		display: table
@@ -19,6 +18,21 @@
 
 .hide
 	display: none !important
+
+// <a> styles for non-<a> elements
+.text-link
+	color: $color-primary
+
+	cursor: pointer
+
+	&:hover,
+	&:focus
+		text-decoration: underline
+
+		color: $color-secondary
+
+	&:active
+		text-decoration: none
 
 .bold
 	font-weight: 600

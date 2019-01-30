@@ -51,16 +51,23 @@ module.exports = {
             footer: footer
         }),
         new HtmlWebpackPlugin({
-            title: 'Single Page',
+            title: 'Single Page | Reviews',
             template: 'src/single-reviews.html',
             filename: 'single-reviews.html',
             header: header,
             footer: footer
         }),
         new HtmlWebpackPlugin({
-            title: 'Single Page',
+            title: 'Single Page | Profile',
             template: 'src/single-profile.html',
             filename: 'single-profile.html',
+            header: header,
+            footer: footer
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Page | Features',
+            template: 'src/single-features.html',
+            filename: 'single-features.html',
             header: header,
             footer: footer
         }),
@@ -72,7 +79,7 @@ module.exports = {
             footer: footer
         }),
         new HtmlWebpackPlugin({
-            title: 'Single Page',
+            title: 'Single Page | Pricing',
             template: 'src/single-pricing.html',
             filename: 'single-pricing.html',
             header: header,
