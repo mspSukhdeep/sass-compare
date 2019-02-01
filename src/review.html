@@ -10,80 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:700" rel="stylesheet" />
 </head>
 <body>
-    <header class="hdr">
-        <div class="hdr__inr container">
-            <div class="row">
-                <div class="logo__wrpr column column-20">
-                    <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
-                </div>
-                <div class="srch__wrpr column">
-                    <input class="srch__inpt" placeholder="Search" type="search">
-                    </input>
-                </div>
-                <div class="menu__wrpr column column-50">
-                    <div class="lgn__wrpr float-right">
-                        <a class="lgn__btn lgn__btn--sign-up" href="#">
-                            Sign up
-                        </a>
-                        or
-                        <button class="lgn__btn lgn__btn--log-in button button-outline">
-                            Log in
-                        </button>
-                    </div>
-                    <nav class="menu float-right">
-                        <ul class="clearfix">
-                            <li class="float-left">
-                                <ul class="card card--pdng">
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Basic
-                                            </h6>
-                                            <p>
-                                                Take great notes
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Premium
-                                            </h6>
-                                            <p>
-                                                Unclutter your life
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Business
-                                            </h6>
-                                            <p>
-                                                Bring your team together
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#">
-                                    Software Categories
-                                </a>
-                            </li>
-                            <li class="float-left">
-                                <a href="#">
-                                    Write a Review
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%= htmlWebpackPlugin.options.header %>
     <main class="container">
         <section class="row content">
-            <section class="write-review__section container" data-pid="Salesforce Lightning">
-                <section class="section">
+            <section class="content__main column">
+                <section class="write-review__section" data-pid="Salesforce Lightning">
                     <div class="section__header">
                         <h1 class="section__title">Review Salesforce Lightning</h1>
                     </div>
@@ -149,8 +80,9 @@
                         </form>
                     </div>
                 </section>
+                <div class="write-review__thanks">Thank you for submitting your review.</div>
             </section>
-            <div class="write-review__thanks container">Thank you for submitting your review.</div>
+            <section class="sidebar column column-25"></section>
         </section>
     </main>
     <%= htmlWebpackPlugin.options.footer %>    

@@ -1,0 +1,80 @@
+.features
+    &__section
+        margin-top: 4rem
+
+        .section__title
+            margin-bottom: 1.8rem
+
+    &__category
+        border-bottom: 1px solid $color-border
+
+    &__toggle
+        &#{&}
+            display: none
+
+    &__title
+        @include ellipsis
+
+        padding: 1.8rem 0
+        margin-bottom: 0
+
+        font-size: $font-h3
+        font-weight: $font-normal
+
+        @include mobile
+            font-size: $font-xl
+
+        &:hover
+            text-decoration: none
+
+        &::after
+            content: '❯'
+            display: inline-block
+
+            margin-left: 0.8rem
+
+            font-size: $font-l
+
+            transition: transform 0.2s
+
+            .features__toggle:checked ~ &
+                transform: rotate(90deg)
+
+    &__list
+        flex-wrap: wrap
+        overflow: hidden
+
+        max-height: 0
+        margin-bottom: 0
+
+        transition: max-height 0.2s, margin-bottom 0.2s
+
+        .features__toggle:checked ~ &
+            max-height: 40rem
+            margin-bottom: 1.8rem
+
+    &__item
+        @include ellipsis
+
+        line-height: 3.8rem
+
+        &#{&}
+            margin-bottom: 0
+
+        &::before
+            content: '✓'
+            display: inline-block
+
+            width: 2rem
+            line-height: 2rem
+            margin-right: 0.6rem
+            border-radius: $border-circle
+
+            text-align: center
+
+            background-color: $color-grey
+            color: $color-white
+
+        &--exists
+            &::before
+                background-color: $color-green
