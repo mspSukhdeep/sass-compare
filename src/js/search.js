@@ -96,7 +96,7 @@ function initSearch(response) {
 }
 
 $(".search__input").on("focus", function() {
-    $(this).parents(".search-wrapper").addClass("search-wrapper--page").find(".search").addClass("container");
+    $(this).parents(".search-wrapper").addClass("search-wrapper--page");
 
     if (MODAL.state.products.length === 0) {
         fetch(`https://www.zariance.com/api/product.php`).then(function(response) {
@@ -112,7 +112,7 @@ $(".search__input").on("focus", function() {
         });
     }
 }).on("blur", function() {
-    // $(this).parents(".search-wrapper").removeClass("search-wrapper--page").find(".search").removeClass("container");
+    // $(this).parents(".search-wrapper").removeClass("search-wrapper--page");
 });
 
 function productSearch(searchTerm) {

@@ -14,7 +14,6 @@ if (document.querySelectorAll(".slider").length > 0) {
 }
 
 $(".js-form").on("submit", function(event) {
-
     event.preventDefault();
 
     let $inputForm = $(this),
@@ -32,4 +31,8 @@ $(".js-form").on("submit", function(event) {
     }).catch(function(err) {
         console.log('Fetch Error :-S', err);
     });
+});
+
+$(".js-expand-product-description").on("click", function () {
+    $(this).parents(".product-overview__description-wrapper").addClass("product-overview__description-wrapper--expanded");
 });

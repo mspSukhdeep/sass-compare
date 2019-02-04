@@ -9,11 +9,11 @@
 	&__title
 		font-weight: 600
 		line-height: 1.2
-	
+
 	&__image
 		max-width: 15rem
 		max-height: 15rem
-		
+
 		&-wrapper
 			&#{&}
 				display: flex
@@ -25,44 +25,93 @@
 		align-items: center
 
 		&-item
-			padding-right: 1.0rem
+			padding-right: 1rem
+
 			& + &
 				border-left: 1px solid $color-border
-				padding-left: 1.0rem
+				padding-left: 1rem
+
+			&--rating
+				.rating
+					&__num
+						margin-right: 0.4rem
+
+			&--reviews
+				.rating
+					&__num
+						margin-left: 0
 
 	&__description
-		margin-top: 15px
+		&-wrapper
+			margin-top: 1.5rem
+
 		@include line-clamp(3)
 
+		max-height: $line-height * 3em // 3 lines
 
-@media screen and (max-width: $breakpoint-mobile)
+		.product-overview__description-wrapper--expanded &
+			-webkit-line-clamp: unset
+
+			max-height: $line-height * 20em // 20 lines
+
+		&-more
+			float: right
+
+			font-weight: $font-semibold
+
+			.product-overview__description-wrapper--expanded &
+				display: none
+
+@include mobile
 	.product-overview
 		text-align: center
+
+		&__title
+			margin-bottom: 0.4rem
+
+			font-size: 3rem
 
 		& &__image
 			&-wrapper.column
 				max-width: 100%
-		
+
 		&__button
-			margin-top: 3.0rem
+			margin-top: 3rem
 
 		&__link
 			white-space: nowrap
-		
+
 		&__description
 			text-align: left
-			
-		&__property
-			text-align: center
-			align-items: initial
-			
-			&-item
-				// max-width: 33.3%
-				flex: 0 0 33.3%
 
-				&--small
-					display: flex
-					justify-content: center
+			transition: max-height 0.2s
+
+		&__property
+			flex-wrap: wrap
+
+			&-item
+				flex-basis: 50%
+
+				& + &
+					line-height: 2.4em
+
+				&--offered-by
+					flex-basis: 100%
+
+					padding-left: 1rem
+					margin-bottom: 1.6rem
+
+				&--rating
+					&#{&}
+						border-left: none
+
+					.rating
+						display: block
+
+						&__star
+							display: inline-block
+
+							vertical-align: text-top
 
 				.rating
 					&__num

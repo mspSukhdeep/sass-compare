@@ -8,82 +8,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>SASS Compare | A copy of G2Crowd</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:700" rel="stylesheet" />
-<link href="css/style.css?v=4b4e8cdba14dfbb77779" rel="stylesheet"></head>
+<link href="css/style.css?v=8c5ae69584e3e3cd8358" rel="stylesheet"></head>
 <body>
     <header class="hdr">
-        <div class="hdr__inr container">
-            <div class="row">
-                <div class="logo__wrpr column column-20">
-                    <img class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg" alt="Zariance">
-                </div>
-                <div class="srch__wrpr column">
-                    <input class="srch__inpt" placeholder="Search" type="search">
-                    </input>
-                </div>
-                <div class="menu__wrpr column column-50">
-                    <div class="lgn__wrpr float-right">
-                        <a class="lgn__btn lgn__btn--sign-up" href="#">
-                            Sign up
-                        </a>
-                        or
-                        <button class="lgn__btn lgn__btn--log-in button button-outline">
-                            Log in
-                        </button>
+    <div class="hdr__inr container">
+        <div class="row hdr__row">
+            <div class="logo__wrpr column column-20">
+                <img alt="Zariance" class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg">
+                </img>
+            </div>
+            <div class="search-wrapper column">
+                <div class="search">
+                    <input class="search__input js-search-input" placeholder="Search for products and categories" type="search"/>
+                    <div class="search-result row">
+                        <div class="search-result__column column column-50">
+                            <h2 class="search-result__title">
+                                Popular Products
+                            </h2>
+                            <ul class="js-search-product-list">
+                            </ul>
+                        </div>
+                        <div class="search-result__column search-result__product--2 column column-50">
+                            <h2 class="search-result__title">
+                                Explore Categories
+                            </h2>
+                            <ul class="js-search-category-list">
+                            </ul>
+                        </div>
                     </div>
-                    <nav class="menu float-right">
-                        <ul class="clearfix">
-                            <li class="float-left">
-                                <ul class="card card--pdng">
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Basic
-                                            </h6>
-                                            <p>
-                                                Take great notes
-                                            </p>
-                                        </a>
+                </div>
+                <img class="search__close js-search-close" src="https://assets.mspcdn.net/zariance/icon/close.svg"/>
+            </div>
+            <div class="hdr__nav column column-20">
+                <div class="menu-wrapper menu-wrapper--right">
+                    <nav class="menu">
+                        <ul class="menu__ul-1">
+                            <li class="menu__li-1 menu__li-1--expandable js-expand-list">
+                                Software Categories
+                                <ul class="card card--pdng menu__ul-2">
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Basic
+                                        </h6>
+                                        <p>
+                                            Take great notes
+                                        </p>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Premium
-                                            </h6>
-                                            <p>
-                                                Unclutter your life
-                                            </p>
-                                        </a>
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Premium
+                                        </h6>
+                                        <p>
+                                            Unclutter your life
+                                        </p>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <h6>
-                                                Business
-                                            </h6>
-                                            <p>
-                                                Bring your team together
-                                            </p>
-                                        </a>
+                                    <li class="menu__li-2">
+                                        <h6>
+                                            Business
+                                        </h6>
+                                        <p>
+                                            Bring your team together
+                                        </p>
                                     </li>
                                 </ul>
-                                <a href="#">
-                                    Software Categories
-                                </a>
-                            </li>
-                            <li class="float-left">
-                                <a href="#">
-                                    Write a Review
-                                </a>
                             </li>
                         </ul>
                     </nav>
+                    <img class="menu__close js-close-menu" src="https://assets.mspcdn.net/zariance/icon/close_white.svg" />
                 </div>
             </div>
+            <div class="menu__icon-wrapper column column-10">
+                <img class="menu__icon js-mob-nav" src="https://assets.mspcdn.net/zariance/icon/menu.svg"/>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
     <main class="container">
         <section class="row content">
-            <section class="write-review__section container" data-pid="Salesforce Lightning">
-                <section class="section">
+            <section class="content__main column">
+                <section class="write-review__section" data-pid="Salesforce Lightning">
                     <div class="section__header">
                         <h1 class="section__title">Review Salesforce Lightning</h1>
                     </div>
@@ -149,8 +152,9 @@
                         </form>
                     </div>
                 </section>
+                <div class="write-review__thanks">Thank you for submitting your review.</div>
             </section>
-            <div class="write-review__thanks container">Thank you for submitting your review.</div>
+            <section class="sidebar column column-25"></section>
         </section>
     </main>
     <footer class="footer">
@@ -158,7 +162,7 @@
         <div class="row">
             <div class="column">
                 <img class="footer__logo" src="https://assets.mspcdn.net/zariance/logo/logo-grey.svg" alt="Logo">
-                <div class="footer__copyright">© 2018 zariance.com &middot; All rights reserved.</div>
+                <div class="footer__copyright">© 2019 zariance.com &middot; All rights reserved.</div>
             </div>
             <div class="column">
                 <div class="footer__india">Made with <span class="footer__heart">❤</span> in India</div>
