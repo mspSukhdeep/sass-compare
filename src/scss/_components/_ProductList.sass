@@ -59,3 +59,35 @@ $image-size--mobile: 9rem
             display: inline-block
 
             margin-bottom: 1.5rem
+
+    &__pagination
+        text-align: center
+        margin-top: 3rem
+
+        &-item
+            margin: 0 .5rem
+            display: inline-block
+            border: 1px solid $color-grey
+            border-radius: 3px
+            min-width: 3rem
+            height: 3.2rem
+            line-height: 3rem
+            cursor: pointer
+            transition: .1s ease-in-out
+            padding: 0 1rem
+
+            &:not(&--disabled):not(&--active):hover
+                color: $color-white
+                background-color: lighten($color-primary, 10%)
+                border-color: lighten($color-primary, 10%)
+            
+            &--active
+                background-color: $color-primary
+                border-color: $color-primary
+                color: $color-white
+            
+            &--disabled
+                background-color: $color-grey
+                color: $color-white
+                cursor: not-allowed
+                

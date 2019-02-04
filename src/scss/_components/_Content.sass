@@ -7,6 +7,19 @@
 
 		.product-list
 			padding-top: 1.5rem
+	
+	&--inv
+		flex-flow: row-reverse
+
+		.content__main
+			padding-left: 4rem
+			padding-right: 1rem
+
+		.sidebar
+			border-right: 1px solid $color-border
+			border-left: 0
+			padding-right: 2rem
+			padding-left: 1rem
 
 @media screen and (max-width: $breakpoint-mobile)
 	.content
@@ -14,3 +27,7 @@
 
 		&__main.content__main
 			padding-right: 0
+		
+		&--inv
+			.content__main
+				padding-left: 0

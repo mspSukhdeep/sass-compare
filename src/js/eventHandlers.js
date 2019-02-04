@@ -67,14 +67,15 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
         },
         find: function(selector) {
             var collection = $();
-            this.forEach(function(node) {
-                var child;
-                Array.prototype.map.call(node.children, (child) => {
-                    if ((selector && $(child).is(selector)) || !selector) {
-                        collection.push(child);
-                    }
-                })
-            });
+
+            this.forEach(function(itemGroup){
+                var items = itemGroup.querySelectorAll(selector);
+
+                for(var i=0;i<items.length;i++){
+                    collection.push(items[i]);
+                }
+            })
+            
             return collection;
         },
         val: function (newVal) {
@@ -85,6 +86,12 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
                 return this;
             }
             return this[0].value;
+        },
+        hasClass: function(className) {
+            if(this[0].classList.contains(className)){
+                return true;
+            }
+            return false;
         },
         addClass: function(className) {
             this.forEach(function(node) {
@@ -126,7 +133,7 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             return this;
         },
         attr: function (name, value) {
-            if (name) {
+            if (name && this[0]) {
                 if (value) {
                     this[0].setAttribute(name, value);
                 }
