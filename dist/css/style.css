@@ -1204,7 +1204,9 @@ input[type="search"] {
   left: 0;
   max-width: 100%;
   min-height: 100%;
-  margin: auto; }
+  margin: auto;
+  max-width: 10rem;
+  max-height: 10rem; }
   .product-list__img-wrpr {
     position: relative;
     width: 12rem;
@@ -1242,7 +1244,23 @@ input[type="search"] {
   font-size: 1.4rem; }
 
 .product-list__description {
-  margin: 1rem 0 1.5rem; }
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+  max-height: 6em;
+  margin: 1rem 0 1.5rem;
+  transition: max-height 0.2s; }
+  .product-list__details--expanded .product-list__description {
+    -webkit-line-clamp: unset;
+    max-height: 30em; }
+  .product-list__description-more {
+    float: right;
+    margin: -1.5rem 0 1.5rem;
+    font-weight: 500; }
+    .product-list__details--expanded .product-list__description-more {
+      display: none; }
 
 .product-list__PDP-link {
   line-height: 3.8rem; }
@@ -1266,17 +1284,23 @@ input[type="search"] {
     transition: .1s ease-in-out;
     padding: 0 1rem; }
     .product-list__pagination-item:not(.product-list__pagination-item--disabled):not(.product-list__pagination-item--active):hover {
-      color: #fff;
       background-color: #488fed;
       border-color: #488fed; }
+      .product-list__pagination-item:not(.product-list__pagination-item--disabled):not(.product-list__pagination-item--active):hover a {
+        color: #fff; }
     .product-list__pagination-item--active {
       background-color: #1a73e8;
-      border-color: #1a73e8;
-      color: #fff; }
+      border-color: #1a73e8; }
+      .product-list__pagination-item--active a {
+        color: #fff; }
     .product-list__pagination-item--disabled {
       background-color: #dfe1e8;
-      color: #fff;
       cursor: not-allowed; }
+      .product-list__pagination-item--disabled a {
+        color: #fff;
+        cursor: not-allowed; }
+    .product-list__pagination-item a {
+      text-decoration: none; }
 
 .content {
   margin-top: 30px;
@@ -1950,7 +1974,9 @@ input[type="search"] {
 
 .alternatives-sidebar__img {
   width: 7.2rem;
-  height: 7.2rem; }
+  max-width: 7.2rem;
+  height: 7.2rem;
+  max-height: 7.2rem; }
 
 .alternatives-sidebar__name {
   display: -webkit-box;
@@ -2187,4 +2213,4 @@ tr.pricing__column--feature td {
       transform: scale(1.2); }
 
 
-/*# sourceMappingURL=style.css.map?v=8c5ae69584e3e3cd8358*/
+/*# sourceMappingURL=style.css.map?v=209c85680795dc8952bb*/
