@@ -33,6 +33,10 @@ $(".js-form").on("submit", function(event) {
     });
 });
 
-$(".js-expand-product-description").on("click", function () {
+$(".js-expand-product-list-description").on("click", function () {
+    $(this).parents(".product-list__details").addClass("product-list__details--expanded");
+});
+
+$(".js-expand-product-overview-description").on("click", function () {
     $(this).parents(".product-overview__description-wrapper").addClass("product-overview__description-wrapper--expanded");
 });

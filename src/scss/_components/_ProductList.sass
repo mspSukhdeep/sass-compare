@@ -28,6 +28,9 @@ $image-size--mobile: 9rem
 
         @include absolute-center
 
+        max-width: 10rem
+        max-height: 10rem
+
     &__details
         margin-left: $image-size + 2rem
 
@@ -50,7 +53,27 @@ $image-size--mobile: 9rem
         font-size: $font-s
 
     &__description
+        @include line-clamp(4)
+
+        max-height: $line-height * 4em // 4 lines
         margin: 1rem 0 1.5rem
+
+        transition: max-height 0.2s
+
+        .product-list__details--expanded &
+            -webkit-line-clamp: unset
+
+            max-height: $line-height * 20em // 20 lines
+
+        &-more
+            float: right
+
+            margin: -1.5rem 0 1.5rem
+
+            font-weight: $font-semibold
+
+            .product-list__details--expanded &
+                display: none
 
     &__PDP-link
         line-height: 3.8rem
@@ -77,17 +100,26 @@ $image-size--mobile: 9rem
             padding: 0 1rem
 
             &:not(&--disabled):not(&--active):hover
-                color: $color-white
                 background-color: lighten($color-primary, 10%)
                 border-color: lighten($color-primary, 10%)
-            
+
+                a
+                    color: $color-white
+
             &--active
                 background-color: $color-primary
                 border-color: $color-primary
-                color: $color-white
-            
+
+                a
+                    color: $color-white
+
             &--disabled
                 background-color: $color-grey
-                color: $color-white
                 cursor: not-allowed
-                
+
+                a
+                    color: $color-white
+                    cursor: not-allowed
+
+            a
+                text-decoration: none
