@@ -120,6 +120,11 @@ window.$ = (function(window, document, fn, nsRegAndEvents, id, s_EventListener, 
             this[0].innerHTML = content;
             return this;
         },
+        append: function(content) {
+            let fragment = document.createRange().createContextualFragment(content);
+            this[0].appendChild(fragment);
+            return this;
+        },
         hide: function () {
             this.forEach(function (node) {
                 node.style.display = "none";

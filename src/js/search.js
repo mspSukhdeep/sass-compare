@@ -89,6 +89,20 @@ let DOMElements = {
 }
 
 function initSearch(response) {
+    if (!$(".search-result").length) {
+        $(".search").append(`
+            <div class="search-result row">
+                <div class="search-result__column column column-50">
+                    <h2 class="search-result__title">Popular Products</h2>
+                    <ul class="js-search-product-list"></ul>
+                </div>
+                <div class="search-result__column search-result__product--2 column column-50">
+                    <h2 class="search-result__title">Explore Categories</h2>
+                    <ul class="js-search-category-list"></ul>
+                </div>
+            </div>
+        `);
+    }
     MODAL.state.products = response.products.data;
     MODAL.state.categories = response.categories.data;
     $(".js-search-product-list").html(DOMElements.create.productList(response.products.data.slice(0,MODAL.searchOptions.product.slice)));
