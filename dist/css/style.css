@@ -914,8 +914,8 @@ body {
     padding: 1.5rem;
     transition: .2s ease-in-out;
     border-radius: 3px; }
-    .menu__li-2 p {
-      margin: 0; }
+    .menu__li-2 h6 {
+      margin-bottom: 0; }
     .menu__li-2:hover {
       background-color: #1a73e8;
       color: #fff; }
@@ -1003,8 +1003,6 @@ body {
     .menu__li-1--expandable:after {
       right: 1rem;
       top: 2.4rem; }
-    .menu__li-1--expandable p {
-      font-weight: 400; }
     .menu__li-1--expandable.menu__li-1--expandable:hover .menu__ul-2 {
       max-height: 0;
       padding: 0;
@@ -1087,7 +1085,7 @@ input[type="search"] {
     display: none; }
   .search-result {
     display: none;
-    margin-top: 4.0rem;
+    margin-top: 4rem;
     cursor: pointer; }
     .search-result__link {
       display: flex;
@@ -1168,6 +1166,12 @@ input[type="search"] {
       display: flex; }
     .search-wrapper--page .search__close {
       display: block; }
+  .search__loader {
+    margin-top: 4rem;
+    text-align: center; }
+    .search__loader img {
+      width: 6rem;
+      height: 6rem; }
 
 @media screen and (max-width: 48rem) {
   .search-wrapper--page.search-wrapper--page {
@@ -1413,7 +1417,7 @@ input[type="search"] {
       .intro-section .intro-section__body-item {
         display: inline-block;
         box-sizing: content-box;
-        max-width: 43.5rem;
+        max-width: 43rem;
         padding: 6.4rem 4rem 16.6rem 4rem;
         vertical-align: middle; }
         .intro-section .intro-section__body-item--small {
@@ -1594,6 +1598,7 @@ input[type="search"] {
     margin: 20px;
     cursor: pointer; }
     .slider-thumnail__img {
+      max-height: 15rem;
       transition: .2s ease-in-out; }
       .slider-thumnail__img:hover {
         transform: scale(1.02); }
@@ -1652,7 +1657,7 @@ input[type="search"] {
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     display: none;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -2213,4 +2218,4 @@ tr.pricing__column--feature td {
       transform: scale(1.2); }
 
 
-/*# sourceMappingURL=style.css.map?v=398a21293dffe2782af8*/
+/*# sourceMappingURL=style.css.map?v=c4c89ae0d7bbddf00329*/
