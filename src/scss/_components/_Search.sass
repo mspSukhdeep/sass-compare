@@ -22,7 +22,7 @@ input[type="search"]
 
 	&-result
 		display: none
-		margin-top: 4.0rem
+		margin-top: 4rem
 		cursor: pointer
 
 		&__link
@@ -104,7 +104,6 @@ input[type="search"]
 				.search-result__product-title
 					color: $color-primary
 
-
 	&__input
 		&#{&}:focus
 			background-color: $color-input
@@ -134,6 +133,15 @@ input[type="search"]
 
 			.search__close
 				display: block
+
+	&__loader
+		margin-top: 4rem
+
+		text-align: center
+
+		img
+			width: 6rem
+			height: 6rem
 
 
 @media screen and (max-width: $breakpoint-mobile)

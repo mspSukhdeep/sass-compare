@@ -88,7 +88,7 @@ let DOMElements = {
     }
 }
 
-function initSearch(response) {
+function showSearchPopup() {
     if (!$(".search-result").length) {
         $(".search").append(`
             <div class="search-result row">
@@ -101,8 +101,15 @@ function initSearch(response) {
                     <ul class="js-search-category-list"></ul>
                 </div>
             </div>
+            <div class="search__loader">
+                <img src="https://assets.mspcdn.net/zariance/icon/loader.svg">
+            </div>
         `);
     }
+}
+
+function initSearch(response) {
+    $(".search__loader").hide();
     MODAL.state.products = response.products.data;
     MODAL.state.categories = response.categories.data;
     $(".js-search-product-list").html(DOMElements.create.productList(response.products.data.slice(0,MODAL.searchOptions.product.slice)));
@@ -113,6 +120,7 @@ $(".search__input").on("focus", function() {
     $(this).parents(".search-wrapper").addClass("search-wrapper--page");
 
     if (MODAL.state.products.length === 0) {
+        showSearchPopup();
         fetch(`https://www.zariance.com/api/product.php`).then(function(response) {
             if (response.status !== 200) {
                 console.log('Looks like there was a problem. Status Code: ' + response.status);
@@ -156,8 +164,9 @@ $(".js-search-input").on("input", function() {
     console.log(searchTerm);
     productSearch(searchTerm);
     categorySearch(searchTerm);
-})
+});
 
 $(".js-search-close").on("click", function() {
     $(".search-wrapper").removeClass("search-wrapper--page");
-})
+    $(".search__loader").hide();
+});
