@@ -7,14 +7,11 @@ $color-light: #444
 		height: 27.8rem
 
 	&__title
+		line-height: 1.3
+		margin-top: 4rem
 		font-weight: 600
 		font-size: 3.6rem
 		color: $color-dark
-		line-height: 1.3
-
-		&-sub
-			margin-top: 3rem
-			font-size: 2.0rem
 
 	&__form
 		display: flex
@@ -58,14 +55,28 @@ $color-light: #444
 		margin: 11.0rem auto 0 auto
 		color: $color-light
 		max-width: 96rem
+
 		&__body
 			margin-top: 3rem
+
+		&__column
+			&#{&}
+				padding: 0 2rem
+
+		&__heading
+			font-weight: $font-semibold
+
+			img
+				width: 3.6rem
+				height: 3.6rem
+				margin-right: 0.4rem
+
+				vertical-align: bottom
 
 		&__cat
 			&-link
 				display: block
-				border-bottom: 1px solid #dfe1e8
-				padding: .8rem 0
+				padding: 0.8rem 0
 				font-weight: 400
 				position: relative
 
@@ -79,10 +90,12 @@ $color-light: #444
 
 				&:hover
 					text-decoration: none
-			
-			&:nth-child(-n+2)
-				.intro-section__cat-link
-					border-top: 1px solid #dfe1e8
+
+				&:not(a)
+					color: $color-dark-grey
+
+					&:after
+						content: none
 
 		&--center
 			text-align: center
@@ -180,11 +193,12 @@ $color-light: #444
 		text-align: center
 
 		&__title
+			margin-top: 2rem
 			font-size: 3.0rem
 
 		& &__inr
 			max-width: 100% !important
-			height: 30rem
+			height: auto
 
 		&__body
 			z-index: -1
@@ -213,13 +227,23 @@ $color-light: #444
 				& &-item--small
 					right: 0
 
+			&__column
+				& + &
+					margin-top: 3rem
+
+				&#{&}#{&}
+					max-width: 100%
+					padding: 0
+
 			&__title
 				font-size: 2.4rem
 
 				&-sub
 					font-size: 2.0rem
+
 		&-footer
-			padding: 3rem 0
+			padding-top: 3rem
+			padding-bottom: 3rem
 
 			&__title
 				font-size: 2.4rem
