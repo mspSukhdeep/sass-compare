@@ -1337,13 +1337,11 @@ input[type="search"] {
   .intro__inr {
     height: 27.8rem; }
   .intro__title {
+    line-height: 1.3;
+    margin-top: 4rem;
     font-weight: 600;
     font-size: 3.6rem;
-    color: #111;
-    line-height: 1.3; }
-    .intro__title-sub {
-      margin-top: 3rem;
-      font-size: 2.0rem; }
+    color: #111; }
   .intro__form {
     display: flex;
     margin-top: 3rem; }
@@ -1381,10 +1379,18 @@ input[type="search"] {
     max-width: 96rem; }
     .intro-section__body {
       margin-top: 3rem; }
+    .intro-section__column.intro-section__column {
+      padding: 0 2rem; }
+    .intro-section__heading {
+      font-weight: 500; }
+      .intro-section__heading img {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: 0.4rem;
+        vertical-align: bottom; }
     .intro-section__cat-link {
       display: block;
-      border-bottom: 1px solid #dfe1e8;
-      padding: .8rem 0;
+      padding: 0.8rem 0;
       font-weight: 400;
       position: relative; }
       .intro-section__cat-link:after {
@@ -1396,8 +1402,10 @@ input[type="search"] {
         content: '\203A'; }
       .intro-section__cat-link:hover {
         text-decoration: none; }
-    .intro-section__cat:nth-child(-n+2) .intro-section__cat-link {
-      border-top: 1px solid #dfe1e8; }
+      .intro-section__cat-link:not(a) {
+        color: #5f6368; }
+        .intro-section__cat-link:not(a):after {
+          content: none; }
     .intro-section--center {
       text-align: center; }
     .intro-section__para {
@@ -1470,10 +1478,11 @@ input[type="search"] {
     padding-top: 25rem;
     text-align: center; }
     .intro__title {
+      margin-top: 2rem;
       font-size: 3.0rem; }
     .intro .intro__inr {
       max-width: 100% !important;
-      height: 30rem; }
+      height: auto; }
     .intro__body {
       z-index: -1; }
       .intro__body-inr__img {
@@ -1490,12 +1499,18 @@ input[type="search"] {
         padding: 5rem 3rem; }
       .intro-section__body .intro-section__body-item--small {
         right: 0; }
+      .intro-section__column + .intro-section__column {
+        margin-top: 3rem; }
+      .intro-section__column.intro-section__column.intro-section__column {
+        max-width: 100%;
+        padding: 0; }
       .intro-section__title {
         font-size: 2.4rem; }
         .intro-section__title-sub {
           font-size: 2.0rem; }
     .intro-footer {
-      padding: 3rem 0; }
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
       .intro-footer__title {
         font-size: 2.4rem;
         line-height: 3.0rem; }
@@ -2218,4 +2233,4 @@ tr.pricing__column--feature td {
       transform: scale(1.2); }
 
 
-/*# sourceMappingURL=style.css.map?v=c4c89ae0d7bbddf00329*/
+/*# sourceMappingURL=style.css.map?v=a9e68c82e20c796c8fc2*/
