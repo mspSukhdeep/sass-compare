@@ -98,6 +98,20 @@ module.exports = {
             filename: 'review.html',
             header: header,
             footer: footer
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About Us Page',
+            template: 'src/about.html',
+            filename: 'about.html',
+            header: header,
+            footer: footer
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Meet Our Team Page',
+            template: 'src/team.html',
+            filename: 'team.html',
+            header: header,
+            footer: footer
         })
     ],
     watch: true,
