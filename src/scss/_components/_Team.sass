@@ -1,0 +1,87 @@
+.team
+	&__header
+		text-align: center
+
+		&-image
+			height: 32rem
+
+		&-title
+			margin: 4.8rem 0 1.6rem
+
+			font-size: 4.2rem
+			font-weight: $font-bold
+
+		&-description
+			max-width: 96rem
+			margin: 0 auto
+
+			font-size: $font-xl
+
+	&__body
+		flex-wrap: wrap
+		justify-content: space-between
+
+		margin-top: 4rem
+		margin-bottom: 4rem
+
+	&__member
+		&#{&}
+			flex: 0 0 31%
+
+			max-width: 31%
+			margin: 4rem 0
+
+		&-photo
+			float: left
+
+			box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2)
+
+			border-radius: $border-circle
+
+		&-details
+			padding: 1.6rem 0
+			margin-left: 9.6rem
+
+		&-name
+			font-size: $font-l
+			font-weight: $font-bold
+
+		&-title
+			font-size: $font-s
+
+			color: $color-dark-grey
+
+		&-description
+			@include line-clamp(4)
+
+			height: 9.6rem
+			margin-top: 1.6rem
+
+@include mobile
+	.team
+		&__header
+			&-image
+				height: auto
+
+			&-description
+				font-size: $font-l
+
+		&__member
+			&#{&}
+				max-width: none
+				margin: 2.4rem 0
+
+			&-details
+				margin-left: 10.8rem
+
+			&-name
+				font-size: $font-xl
+
+			&-title
+				font-size: $font-m
+
+			&-description
+				height: auto
+				max-height: 10.8rem
+
+				font-size: $font-l
