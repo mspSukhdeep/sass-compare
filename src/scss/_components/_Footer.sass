@@ -1,52 +1,66 @@
 .footer
-    padding: 4.3rem 0
-    margin-top: 2rem
+	padding: 4.3rem 0
+	margin-top: 2rem
 
-    background-color: $color-light-grey
-    color: $color-dark-grey
+	background-color: $color-light-grey
+	color: $color-dark-grey
 
-    & + &
-        margin-top: 0
+	& + &
+		margin-top: 0
 
-    &--white
-        background-color: $color-white
+	&--white
+		background-color: $color-white
 
-    &--intro
-        padding: 6rem 0
-        margin-top: 7rem
+	&--blue
+		background-color: $color-secondary
 
-        text-align: center
+	&--intro
+		padding: 6rem 0
+		margin-top: 7rem
 
-    &__main
-        @include mobile
-            text-align: center
+		.intro-section
+			margin-top: 0
 
-    &__logo
-        height: 2.6rem
+	&__main
+		@include mobile
+			text-align: center
 
-    &__copyright
-        margin-top: 1.2rem
+			& > .row
+				flex-direction: column-reverse
 
-        font-size: $font-s
+	&__logo
+		height: 2.6rem
 
-    &__india
-        margin-top: 2.5rem
+	&__copyright
+		margin-top: 1.2rem
 
-        font-size: $font-xs
+		font-size: $font-s
 
-        text-align: right
+	&__social
+		text-align: right
 
-        cursor: default
+		&-link
+			svg
+				box-sizing: content-box
 
-        @include mobile
-            text-align: inherit
+				fill: $color-dark-grey
 
-    &__heart
-        display: inline-block
+				padding: 0.1rem
 
-        transition: color 0.2s, transform 0.2s
+				transition: fill 0.2s
 
-        .footer__india:hover &
-                color: $color-red
+			&:hover
+				svg
+					fill: $color-primary
 
-                transform: scale(1.2)
+		@include mobile
+			flex-direction: row
+			justify-content: center
+
+			margin-bottom: 4.3rem
+
+			text-align: inherit
+
+			.column
+				&:first-child
+					margin: 0 10% 0 0
