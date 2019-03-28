@@ -18,6 +18,26 @@
 		padding: 0 2rem
 
 .explainer
+	&__path
+		position: absolute
+
+		@include mobile
+			display: none
+
+		&--1
+			top: 23.5%;
+			left: 3.5%;
+
+			width: 57rem;
+			height: 28rem;
+
+		&--2
+			top: 51.2%;
+			left: 3.3%;
+
+			width: 58rem;
+			height: 33rem;
+
 	&__img
 		.intro-section__body:nth-of-type(even) &
 			text-align: right
