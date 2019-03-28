@@ -1,0 +1,52 @@
+.intro-section
+	&--explainer
+		position: relative
+
+	&--explainer &__body
+		align-items: center
+
+		margin-top: 8rem
+
+		&:nth-of-type(even)
+			@include mobile
+				flex-direction: column-reverse
+
+				.intro-section__column + .intro-section__column
+					margin: 0 0 3rem
+
+	&--explainer &__column
+		padding: 0 2rem
+
+.explainer
+	&__img
+		.intro-section__body:nth-of-type(even) &
+			text-align: right
+
+		img
+			max-width: 48rem
+
+			@include mobile
+				max-width: 100%
+
+	&__step
+		@include mobile
+			flex-direction: row
+
+		&-number
+			line-height: 1
+
+			font-size: 4.8rem
+			font-weight: $font-bold
+
+			@include mobile
+				line-height: 1.2
+
+				font-size: 3.2rem
+
+		&-text
+			font-size: $font-h3
+
+			@include mobile
+				&#{&}#{&}
+					flex-basis: 85%
+					max-width: 85%

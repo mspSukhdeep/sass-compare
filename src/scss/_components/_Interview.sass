@@ -1,0 +1,87 @@
+.intro-section
+	&--interview
+		.button
+			margin: 1.5rem 0 0
+
+.interview
+	position: relative
+
+	display: block
+	overflow: hidden
+
+	height: 100%
+
+	&__bottom
+		padding: 1rem 1.5rem 3.6rem
+
+	&__quote
+		font-size: $font-l
+		font-style: italic
+		font-weight: $font-normal
+
+		color: $color-dark-grey
+
+		&::before,
+		&::after
+			font-family: $font-monospace
+			font-size: $font-xl
+			font-weight: $font-bold
+
+			color: lighten($color-dark-grey, 20%)
+
+		&::before
+			content: "\201c"
+
+			margin-right: 0.4rem
+
+		&::after
+			content: "\201d"
+
+			margin-left: 0.4rem
+
+		&-label
+			color: $color-dark-grey
+
+		&-link
+			position: absolute
+			right: 1.5rem
+			bottom: 1rem
+
+			text-align: right
+
+			font-size: $font-l
+
+	&__top
+		padding: 1rem
+
+		background-color: transparentize($color-primary, 0.9)
+
+	&__photo
+		float: left
+
+		width: 7rem
+		height: 7rem
+		margin: 0.4rem 0
+		border-radius: $border-circle
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2)
+
+	&__details
+		margin-left: 8rem
+
+	&__name
+		@include ellipsis
+
+		font-size: $font-l
+		font-weight: $font-bold
+
+	&__title,
+	&__company
+		@include ellipsis
+
+		color: $color-dark-grey
+
+	&__title
+		font-size: $font-xl
+
+	&__company
+		font-size: $font-s

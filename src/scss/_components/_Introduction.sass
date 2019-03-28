@@ -6,20 +6,27 @@ $color-light: #444
 	&__inr
 		height: 27.8rem
 
-		&#{&}#{&}
-			flex-basis: 45%
-			max-width: 45%
-
 	&__title
 		line-height: 1.3
 		margin-top: 4rem
 		font-weight: 600
-		font-size: 3.8rem
+		font-size: 4rem
 		letter-spacing: 0.12rem
-		color: $color-secondary
 
-		&::first-line
-			color: $color-light
+	&__list
+		list-style-type: none
+		margin-top: 3.6rem
+
+		&-item
+			display: inline-block
+			padding-left: 2.6rem
+			font-size: $font-xl
+			font-weight: $font-bold
+			background: url(https://assets.mspimages.in/zariance/icon/check-blue.svg) left center no-repeat
+			color: $color-secondary
+
+			& + &
+				margin-left: 1.6rem
 
 	&__form
 		display: flex
@@ -44,6 +51,10 @@ $color-light: #444
 		font-size: 2.0rem
 		background-image: radial-gradient(circle at 0 0, #fff 0, rgba(255, 255, 255, 0.91) 9%, rgba(26, 115, 232, 0) 24%, rgba(26, 115, 232, 0) 100%), linear-gradient(120deg, #e2edf3 0, #fff 70%, #fff 100%);
 
+		@include mobile
+			height: 70rem
+			background-image: radial-gradient(circle at 50% 0, #fff 0, rgb(226, 237, 243) 24%, rgb(226, 237, 243) 100%)
+
 		&-inr
 			position: absolute
 			width: 100%
@@ -62,17 +73,33 @@ $color-light: #444
 	&-section
 		margin: 11.0rem auto 0 auto
 		color: $color-light
-		max-width: 96rem
+
+		&--join
+			max-width: 96rem
+
+		&--categories &__column
+			padding: 0 3rem
 
 		&__body
 			margin-top: 3rem
 
-		&__column
-			&#{&}
-				padding: 0 2rem
-
 		&__heading
 			font-weight: $font-semibold
+
+			&--tag
+				&::after
+					content: 'Coming Soon'
+
+					padding: 0.2rem 0.6rem
+					border: 1px solid transparentize($color-dark-grey, 0.25)
+					border-radius: 10rem
+
+					font-size: 1rem
+
+					vertical-align: top
+					text-transform: uppercase
+
+					color: $color-dark-grey
 
 			img
 				width: 3.6rem
@@ -101,62 +128,12 @@ $color-light: #444
 
 		&--center
 			text-align: center
-		
-		&__para
-				background: url('https://assets.mspcdn.net/f_auto/zariance/icon/check-circle.png') no-repeat center left / 32px
-				padding-left: 52px
 
 		&__title
+			margin-bottom: 5rem
 			font-weight: 600
 			font-size: 4.2rem
 			color: $color-dark
-
-			&-sub
-				font-weight: 600
-				font-size: 3.6rem
-				margin: 3.0rem 0 2rem 0
-
-		& &__body
-			justify-content: center
-
-			&-item
-				display: inline-block
-				box-sizing: content-box
-				max-width: 43rem
-				padding: 6.4rem 4rem 16.6rem 4rem
-				vertical-align: middle
-
-				&--small
-					padding: 4.4rem 4rem
-					font-size: 1.6rem
-					position: relative
-					right: -10px
-					max-width: 36rem
-
-					.intro-section
-						&__title-sub
-							font-size: 2.6rem
-							margin: 2.0rem 0 2rem 0
-						
-						&__para
-							font-size: 1.6rem
-							margin-bottom: 1.8rem
-							background: url('https://assets.mspcdn.net/f_auto/zariance/icon/alert-circle.png') no-repeat center left / 20px
-							padding-left: 30px
-
-				& + .intro-section__body-item
-					// margin-left: 10rem
-			
-		&__img
-			width: 100%
-
-			&-wrpr
-				background-color: #f2f3f5
-				border-radius: 50%
-				width: 120px
-				height: 120px
-				display: flex
-				justify-content: center
 
 	&-footer
 		&__inr
@@ -166,6 +143,10 @@ $color-light: #444
 			font-size: 4.2rem
 			font-weight: 600
 			line-height: 5.0rem
+			text-transform: uppercase
+
+			&-sub
+				margin-top: 1.2rem
 
 		.intro__form
 			&-input
@@ -189,11 +170,18 @@ $color-light: #444
 				flex-direction: row
 	.intro
 		padding-top: 25rem
-		text-align: center
 
 		&__title
 			margin-top: 2rem
-			font-size: 3.0rem
+			font-size: 3.2rem
+
+		&__list
+			&-item
+				display: block
+				font-size: $font-h3
+
+				& + &
+					margin-left: 0
 
 		& &__inr
 			max-width: 100% !important
@@ -235,10 +223,9 @@ $color-light: #444
 					padding: 0
 
 			&__title
-				font-size: 2.4rem
-
-				&-sub
-					font-size: 2.0rem
+				line-height: 1.2
+				font-size: 3.2rem
+				text-align: left
 
 		&-footer
 			&__title
