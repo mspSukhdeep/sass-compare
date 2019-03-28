@@ -19,6 +19,18 @@
         align-items: center
 
     &__link
+        padding: 16px 20px
+        border-radius: 40px
+        box-shadow: $box-shadow
+        background-color: #fff
+        display: inline-block
+        &:hover
+            background: #fafafa
+        & + #{&}
+            margin-left: 24px
+        &__img
+            height: 17px
+            display: block
         &-wrapper
             text-align: right
 
