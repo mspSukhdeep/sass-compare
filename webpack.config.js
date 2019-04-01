@@ -17,9 +17,11 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(sa|sc|c)ss$/,
-            use: [{
+            use: [
+                {
                     loader: MiniCssExtractPlugin.loader
                 },
+                // 'style-loader',
                 'css-loader', 'sass-loader'
             ]
         }]
@@ -110,6 +112,13 @@ module.exports = {
             title: 'Meet Our Team Page',
             template: 'src/team.html',
             filename: 'team.html',
+            header: header,
+            footer: footer
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Contact Us Page',
+            template: 'src/contact.html',
+            filename: 'contact.html',
             header: header,
             footer: footer
         })

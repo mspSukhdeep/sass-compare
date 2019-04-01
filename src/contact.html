@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Zariance | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:700" rel="stylesheet" />
+</head>
+<body>
+    <%= htmlWebpackPlugin.options.header %>
+    <main class="container">
+        <section class="contact__form-wrapper row content content--inv">
+            <section class="content__main column">
+                <form class="contact__form">
+                    <h1>Contact us</h1>
+                    <h3>Have a question or feedback? Please fill the form below to contact us.</h3>
+                    <div class="contact__form-field contact__form-field--name">
+                        <label class="contact__form-label">
+                            Name
+                            <input type="text" class="contact__form-input" required>
+                        </label>
+                        <div class="contact__form-error">Please enter your name</div>
+                    </div>
+                    <div class="contact__form-field contact__form-field--email">
+                        <label class="contact__form-label">
+                            Email
+                            <input type="email" class="contact__form-input" required>
+                        </label>
+                        <div class="contact__form-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="contact__form-field contact__form-field--message">
+                        <label class="contact__form-label">
+                            Message
+                            <textarea class="contact__form-input" required></textarea>
+                        </label>
+                        <div class="contact__form-error">Please write a brief feedback description</div>
+                    </div>
+                    <div class="contact__form-field contact__form-field--submit">
+                        <input type="submit" class="btn btn--l btn--blue" value="Submit Feedback">
+                    </div>
+                </form>
+                <div class="contact__done">Thank you for contacting us.</div>
+            </section>
+            <section class="sidebar column">
+                <div class="sidebar__section">
+                    <h2>Email us at</h2>
+                    <div class="contact__item">
+                        <a class="contact__link" href="mailto:hello@zariance.com">hello@zariance.com</a>
+                        <div class="contact__label">for Website Feedback / Customer Care</div>
+                    </div>
+                </div>
+                <div class="sidebar__section">
+                    <h2>Our registered office</h2>
+                    <p>
+                        Zariance<br>
+                        4th Floor, GNR's RV Insignia<br>
+                        Image Garden Rd, Silicon Valley<br>
+                        Madhapur, Hyderabad – 500081<br>
+                        Telangana, India
+                    </p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <%= htmlWebpackPlugin.options.footer %>    
+</body>
+</html>
