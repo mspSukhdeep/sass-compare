@@ -246,6 +246,12 @@ hr {
   border-top: 0.1rem solid #dfe1e8;
   margin: 3.0rem 0; }
 
+input,
+textarea,
+select,
+button {
+  font-family: inherit; }
+
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -701,14 +707,15 @@ h1.section__title {
 
 .sidebar {
   border-left: 1px solid #dfe1e8; }
+  @media screen and (max-width: 48rem) {
+    .sidebar.sidebar.sidebar {
+      padding-left: 0;
+      border: 0;
+      margin-top: 3.0rem; } }
+  .sidebar__section + .sidebar__section {
+    margin-top: 2.5rem; }
   .sidebar.sidebar {
     padding-left: 2rem; }
-
-@media screen and (max-width: 48rem) {
-  .sidebar.sidebar {
-    padding-left: 0;
-    border: 0;
-    margin-top: 3.0rem; } }
 
 .card {
   box-sizing: border-box;
@@ -2401,6 +2408,45 @@ tr.pricing__column--feature td {
     max-height: 10.8rem;
     font-size: 1.8rem; } }
 
+.contact__form {
+  overflow: hidden;
+  margin-bottom: 0;
+  transition: max-height 0.2s; }
+  .contact__form-wrapper .content__main {
+    max-width: 70%; }
+    @media screen and (max-width: 48rem) {
+      .contact__form-wrapper .content__main {
+        max-width: 100%; } }
+  .contact__form-wrapper .sidebar {
+    max-width: 30%; }
+    @media screen and (max-width: 48rem) {
+      .contact__form-wrapper .sidebar {
+        max-width: 100%; } }
+  .contact__form--done {
+    max-height: 0 !important; }
+  .contact__form-field {
+    margin-top: 2.5rem; }
+  .contact__form-input {
+    margin: 0.5rem 0 0; }
+    .contact__form-field--error .contact__form-input.contact__form-input {
+      border-color: #c00; }
+  .contact__form-error {
+    display: none;
+    font-size: 1.4rem;
+    color: #c00; }
+    .contact__form-field--error .contact__form-error {
+      display: block; }
+
+.contact__done {
+  overflow: hidden;
+  max-height: 0;
+  line-height: 40rem;
+  font-size: 2rem;
+  text-align: center;
+  transition: max-height 0.2s; }
+  .contact__form--done + .contact__done {
+    max-height: 40rem; }
+
 .footer {
   padding: 4.3rem 0;
   margin-top: 2rem;
@@ -2446,4 +2492,4 @@ tr.pricing__column--feature td {
           margin: 0 10% 0 0; } }
 
 
-/*# sourceMappingURL=style.css.map?v=3bb31c3e79ecf56e3e6d*/
+/*# sourceMappingURL=style.css.map?v=744d58516febe22dab4c*/

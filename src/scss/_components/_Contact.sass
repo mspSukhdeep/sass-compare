@@ -1,0 +1,57 @@
+.contact
+    &__form
+        &-wrapper
+            .content__main
+                max-width: 70%
+
+                @include mobile
+                    max-width: 100%
+
+            .sidebar
+                max-width: 30%
+
+                @include mobile
+                    max-width: 100%
+
+        overflow: hidden
+
+        margin-bottom: 0
+
+        transition: max-height 0.2s
+
+        &--done
+            max-height: 0 !important
+
+        &-field
+            margin-top: 2.5rem
+
+        &-input
+            margin: 0.5rem 0 0
+
+            .contact__form-field--error &#{&}
+                border-color: $color-red
+
+        &-error
+            display: none
+
+            font-size: $font-s
+
+            color: $color-red
+
+            .contact__form-field--error &
+                display: block
+
+    &__done
+        overflow: hidden
+
+        max-height: 0
+        line-height: 40rem
+
+        font-size: $font-xl
+
+        text-align: center
+
+        transition: max-height 0.2s
+
+        .contact__form--done + &
+            max-height: 40rem

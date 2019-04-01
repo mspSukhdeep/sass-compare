@@ -7,6 +7,7 @@ import './js/fuse.js';
 import './js/search.js';
 import './js/header.js';
 import './js/review.js';
+import './js/contact.js';
 
 //List Page
 import './js/filter.js';
