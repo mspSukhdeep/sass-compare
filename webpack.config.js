@@ -46,6 +46,13 @@ module.exports = {
             footer: footer
         }),
         new HtmlWebpackPlugin({
+            title: 'Tool Page',
+            template: 'src/tool.html',
+            filename: 'tool.html',
+            header: header,
+            footer: footer
+        }),
+        new HtmlWebpackPlugin({
             title: 'List Page',
             template: 'src/list.html',
             filename: 'list.html',
