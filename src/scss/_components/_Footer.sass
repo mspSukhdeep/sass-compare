@@ -30,9 +30,10 @@
 
 	&__logo
 		height: 2.6rem
+		display: block
 
 	&__copyright
-		margin-top: 1.2rem
+		margin-top: 1.5rem
 
 		font-size: $font-s
 
@@ -64,3 +65,11 @@
 			.column
 				&:first-child
 					margin: 0 10% 0 0
+
+	&__link
+		flex-direction: row-reverse
+		margin-top: .9rem
+		&-item
+			font-size: 1.4rem
+			& + &
+				margin-right: 1.5rem

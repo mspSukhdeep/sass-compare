@@ -2469,9 +2469,10 @@ tr.pricing__column--feature td {
       .footer__main > .row {
         flex-direction: column-reverse; } }
   .footer__logo {
-    height: 2.6rem; }
+    height: 2.6rem;
+    display: block; }
   .footer__copyright {
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
     font-size: 1.4rem; }
   .footer__social {
     text-align: right; }
@@ -2490,6 +2491,13 @@ tr.pricing__column--feature td {
         text-align: inherit; }
         .footer__social .column:first-child {
           margin: 0 10% 0 0; } }
+  .footer__link {
+    flex-direction: row-reverse;
+    margin-top: .9rem; }
+    .footer__link-item {
+      font-size: 1.4rem; }
+      .footer__link-item + .footer__link-item {
+        margin-right: 1.5rem; }
 
 
-/*# sourceMappingURL=style.css.map?v=4b34d8475d0988f2552d*/
+/*# sourceMappingURL=style.css.map?v=0f9b32007cf6eb16a782*/
