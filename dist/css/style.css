@@ -1358,6 +1358,9 @@ input[type="search"] {
       padding-right: 2rem;
       padding-left: 1rem; }
 
+.about__content {
+  font-size: 2rem; }
+
 @media screen and (max-width: 48rem) {
   .content {
     flex-flow: column; }
@@ -2365,12 +2368,14 @@ tr.pricing__column--feature td {
 
 .team__member-photo {
   float: left;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 50%; }
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); }
 
 .team__member-details {
   padding: 1.6rem 0;
-  margin-left: 9.6rem; }
+  margin-left: 96px; }
 
 .team__member-name {
   font-size: 1.8rem;
@@ -2397,8 +2402,6 @@ tr.pricing__column--feature td {
   .team__member.team__member {
     max-width: none;
     margin: 2.4rem 0; }
-  .team__member-details {
-    margin-left: 10.8rem; }
   .team__member-name {
     font-size: 2rem; }
   .team__member-title {
@@ -2500,4 +2503,4 @@ tr.pricing__column--feature td {
         margin-right: 1.5rem; }
 
 
-/*# sourceMappingURL=style.css.map?v=0f9b32007cf6eb16a782*/
+/*# sourceMappingURL=style.css.map?v=5674b6a915f06a2663a4*/
