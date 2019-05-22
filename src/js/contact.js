@@ -37,8 +37,11 @@ $(".contact__form").on("submit", function (e) {
     formData.append("email", emailVal);
     formData.append("message", messageVal);
 
-    fetch("/contactussub.php", {
+    fetch("/contact/messages/", {
         method: "POST",
+        headers: {
+            "X-CSRFToken": $("input[name='csrfmiddlewaretoken']").val()
+        },
         body: formData
     });
 
