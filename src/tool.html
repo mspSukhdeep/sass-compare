@@ -18,6 +18,21 @@
                         <img alt="Zariance" class="logo" src="https://assets.mspcdn.net/zariance/logo/logo.svg">
                         </img>
                     </div>
+                    <div class="hdr__nav column column-20">
+                        <div class="menu-wrapper menu-wrapper--right">
+                            <nav class="menu">
+                                <ul class="menu__ul-1">
+                                    <li class="menu__li-1 js-inpg-link" data-href="#benefits">
+                                            Benefits
+                                    </li>
+                                    <li class="menu__li-1 js-inpg-link" data-href="#how-to-use">
+                                            How to use
+                                    </li>
+                                </ul>
+                            </nav>
+                            <img class="menu__close js-close-menu" src="https://assets.mspcdn.net/zariance/icon/close_white.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -39,6 +54,9 @@
                             Chrome Web Store
                         </div>
                     </a>
+                    <div class="button__sub">
+                        Don't know how to use? <a class="js-inpg-link" data-href="#how-to-use">Click here</a>
+                    </div>
                     <ul class="intro__list">
                         <li class="intro__list-item">Track Search Updates</li>
                         <li class="intro__list-item">Impact Analysis</li>
@@ -46,10 +64,14 @@
                     </ul>
                 </div>
             </section>
-            <section class="intro-section intro-section--explainer">
+            <section class="intro-section intro-section--explainer" id="benefits">
+                    
                 <h2 class="intro-section__title text--center">
-                    How does it help you
+                        Benefits
                 </h2>
+                <h3 class="intro-section__title--2 text--center">
+                    How does it help you
+                </h3>
                 <div class="intro-section__body row">
                     <div class="intro-section__column column column-50">
                         <div class="explainer__img">
@@ -60,7 +82,7 @@
                         <div class="explainer__step row">
                             <div class="explainer__step-number column">01</div>
                             <div class="explainer__step-text column column-90">
-                                Plots Google Search updates on the analytics dashboard
+                                Plots Google Search updates on the analytics dashboard (Audience and Behavior sections in GA)
                             </div>
                         </div>
                     </div>
@@ -97,6 +119,38 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="intro-section intro-section--how-to"  id="how-to-use">
+                <h2 class="intro-section__title text--center">
+                        How to use Zeo Tools
+                </h2>
+                <div class="intro-section__body row">
+                    <div class="intro-section__column column column-40">
+                        <img src="https://assets.mspimages.in/zariance/ext/zeo/how-to-use.svg" />
+                    </div>
+                    <div class="intro-section__column column column-60 intro-section__column--center">
+                        <ol>
+                            <li>
+                                    Install the chrome extension from <a target="_blank" href="https://chrome.google.com/webstore/detail/klllcoehegdaomenjgcpnbdcnhbjaocl/">here</a>
+                            </li>
+                            <li>
+                                    Head over to your Google Analytics Dashboard
+                            </li>
+                            <li>
+                                    The visualization appears only on <span class="text--bold">Audience - Overview</span>and <span class="text--bold">Behavior - Overview sections</span>
+                            </li>
+                            <li>
+                                    The visualization appears below the default GA graph/plots
+                            </li>
+                            <li>
+                                    <span class="text--bold">Select/Enlarge the date range</span> to view the update impact history for previous times (We have Google algo updates data since 2014)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="intro-section__foot-note">
+                We don't collect any data. The extension helps in visualizing google search algo updates over one's Google Analytics data/dashboard.
             </section>
         </main>
         <footer class="footer footer--intro footer--blue">
@@ -184,6 +238,36 @@
             .explainer__path--2{
                 top: 59.7%;
                 height: 32rem;
+            }
+            .intro-section__foot-note{
+                text-align: right;
+                font-size: 1.3rem;
+                position: relative;
+                top: 60px;
+            }
+            .intro-section__column.intro-section__column--center{
+                display: flex;
+                align-items: center;
+            }
+            .text--bold{
+                font-weight: 500;
+            }
+            .intro-section__title{
+                margin-bottom: 1.0rem;
+            }
+            .intro-section__title--2{
+                font-size: 2.8rem;
+            }
+            .button__sub{
+                display: block;
+                font-size: 1.4rem;
+                color: #444;
+                font-weight: 400;
+                position: absolute;
+                
+            }
+            .button__sub span{
+                color: #174ea6
             }
         </style>
     <script src="https://unpkg.com/slendr/dist/slendr.min.js">
